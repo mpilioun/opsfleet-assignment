@@ -3,7 +3,7 @@ from langchain_core.messages import ToolMessage
 from langchain_core.tools import tool
 from pydantic import BaseModel, Field
 
-from src.clients.llm_client import get_llm_model
+from src.agent.structured_llm import run_structured
 
 JUDGE_SYSTEM_PROMPT = (
     "You are a strict QA reviewer for a data-analysis report written for a retail "
@@ -27,18 +27,11 @@ async def verify_output(
     question, is grounded in real data, and leaks no PII. Call this before
     presenting a final report to the user.
     """
-    judge = get_llm_model(model="gemini-flash", effort="low").with_structured_output(
-        VerifyResult
-    )
     try:
-        result = await judge.ainvoke(
-            [
-                {"role": "system", "content": JUDGE_SYSTEM_PROMPT},
-                {
-                    "role": "user",
-                    "content": f"ORIGINAL QUESTION:\n{question}\n\nDRAFT REPORT:\n{draft_report}",
-                },
-            ]
+        result = await run_structured(
+            system_prompt=JUDGE_SYSTEM_PROMPT,
+            user_content=f"ORIGINAL QUESTION:\n{question}\n\nDRAFT REPORT:\n{draft_report}",
+            response_format=VerifyResult,
         )
     except Exception as exc:  # noqa: BLE001 - tool boundary: never raise, always return a ToolMessage
         return ToolMessage(
