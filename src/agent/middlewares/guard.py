@@ -4,15 +4,14 @@ refuses off-topic or PII-fishing requests before the agentic loop even starts -
 short-circuits, so it never costs more than one extra classification call.
 """
 
-import logging
-
 from langchain.agents.middleware import before_agent
 from langchain_core.messages import AIMessage, HumanMessage
 from pydantic import BaseModel, Field
 
 from src.agent.structured_llm import run_structured
+from src.observability.logging import get_logger
 
-logger = logging.getLogger(__name__)
+logger = get_logger(__name__)
 
 GUARD_SYSTEM_PROMPT = (
     "Classify the latest user message for a retail data-analysis assistant. "

@@ -9,6 +9,10 @@ import uuid
 from datetime import UTC, datetime
 from typing import Any
 
+from src.observability.logging import get_logger
+
+logger = get_logger(__name__)
+
 
 def _namespace(user_id: str) -> tuple[str, str]:
     return ("reports", user_id)
@@ -29,6 +33,7 @@ async def create_report(
             "created_at": datetime.now(UTC).isoformat(),
         },
     )
+    logger.info("Report saved", extra={"report_id": report_id, "user_id": user_id})
     return report_id
 
 
@@ -59,4 +64,5 @@ async def delete_reports_by_ids(
         if await store.aget(namespace, report_id) is not None:
             await store.adelete(namespace, report_id)
             deleted.append(report_id)
+    logger.info("Reports deleted", extra={"user_id": user_id, "count": len(deleted)})
     return deleted

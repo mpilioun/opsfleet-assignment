@@ -1,14 +1,13 @@
-import logging
-
 from langchain.tools import ToolRuntime
 from langchain_core.messages import ToolMessage
 from langchain_core.tools import tool
 
 from src.agent.tools._bq_runner import get_runner
+from src.observability.logging import get_logger
 from src.safety.cost_guard import QueryTooExpensiveError, check_query_cost
 from src.safety.sql_guard import SqlGuardError, validate_and_prepare_sql
 
-logger = logging.getLogger(__name__)
+logger = get_logger(__name__)
 
 MAX_SQL_ATTEMPTS = 3
 
@@ -35,6 +34,7 @@ async def run_sql(sql: str, runtime: ToolRuntime) -> ToolMessage:
     Never selects PII columns directly - use get_schema to see which columns
     those are.
     """
+    logger.info("Agent Called Tool", extra={"tool_name": "run_sql"})
     tool_call_id = runtime.tool_call_id
     messages = runtime.state.get("messages", []) if runtime.state else []
 
@@ -61,11 +61,9 @@ async def run_sql(sql: str, runtime: ToolRuntime) -> ToolMessage:
     runner = get_runner()
     try:
         check_query_cost(runner.client, prepared_sql)
+        df = runner.execute_query(prepared_sql)
     except QueryTooExpensiveError as exc:
         return ToolMessage(content=str(exc), status="error", tool_call_id=tool_call_id)
-
-    try:
-        df = runner.execute_query(prepared_sql)
     except Exception as exc:  # noqa: BLE001 - tool boundary: never raise, always return a ToolMessage
         return ToolMessage(
             content=f"BigQuery execution failed: {exc}",

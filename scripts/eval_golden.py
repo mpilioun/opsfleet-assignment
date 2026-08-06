@@ -14,7 +14,6 @@ import uuid
 from langchain_core.messages import AIMessage, HumanMessage
 
 from src.agent.agent import build_agent
-from src.agent.context import AgentContext
 from src.agent.golden_bucket import SEED_TRIOS
 from src.agent.structured_llm import run_structured
 from src.agent.tools.verify_output import VerifyResult
@@ -43,8 +42,7 @@ async def _run_one(agent, trio: dict) -> VerifyResult:
     thread_id = f"eval-{uuid.uuid4()}"
     result = await agent.ainvoke(
         {"messages": [HumanMessage(content=trio["question"])]},
-        config={"configurable": {"thread_id": thread_id}},
-        context=AgentContext(user_id="eval-golden", thread_id=thread_id),
+        config={"configurable": {"thread_id": thread_id, "user_id": "eval-golden"}},
     )
     draft_report = _final_report_text(result)
 

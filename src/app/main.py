@@ -8,10 +8,14 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
+from src.config.env_config import env_config
+from src.observability.logging import setup_logging
+
+setup_logging()
+
 from src.agent import golden_bucket, persona
 from src.agent.api.ag_ui_agent_wrapper import build_ag_ui_agent
 from src.app.routes.copilotkit_route import setup_copilotkit_endpoint
-from src.config.env_config import env_config
 from src.database.postgres_manager import postgres_manager
 
 CHARTS_DIR = Path("charts")

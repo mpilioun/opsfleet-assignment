@@ -6,14 +6,14 @@ traces go to the main OTLP collector.
 """
 
 import asyncio
-import logging
 
 from langfuse import Langfuse
 from langfuse.langchain import CallbackHandler
 
 from src.config.env_config import env_config
+from src.observability.logging import get_logger
 
-logger = logging.getLogger(__name__)
+logger = get_logger(__name__)
 
 _langfuse_client: Langfuse | None = None
 

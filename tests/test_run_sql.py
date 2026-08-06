@@ -2,6 +2,7 @@ from types import SimpleNamespace
 from unittest.mock import MagicMock, patch
 
 import pandas as pd
+from google.api_core.exceptions import BadRequest
 from langchain_core.messages import ToolMessage
 
 from src.agent.tools.run_sql import _count_recent_run_sql_failures, run_sql
@@ -74,6 +75,21 @@ async def test_run_sql_returns_markdown_table_on_success(mock_get_runner):
 
     assert result.status == "success"
     assert "1" in result.content and "2" in result.content
+
+
+@patch("src.agent.tools.run_sql.get_runner")
+async def test_run_sql_returns_error_when_dry_run_rejects_sql(mock_get_runner):
+    mock_runner = MagicMock()
+    mock_runner.client.query.side_effect = BadRequest(
+        "The HAVING clause only allows aggregation if GROUP BY or SELECT list "
+        "aggregation is present"
+    )
+    mock_get_runner.return_value = mock_runner
+
+    result = await run_sql.coroutine(sql="SELECT id FROM products", runtime=_fake_runtime())
+
+    assert result.status == "error"
+    assert "having clause" in result.content.lower()
 
 
 @patch("src.agent.tools.run_sql.check_query_cost")

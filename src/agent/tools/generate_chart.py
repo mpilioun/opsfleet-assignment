@@ -10,6 +10,10 @@ from langchain.tools import ToolRuntime
 from langchain_core.messages import ToolMessage
 from langchain_core.tools import tool
 
+from src.observability.logging import get_logger
+
+logger = get_logger(__name__)
+
 CHARTS_DIR = Path("charts")
 
 
@@ -25,6 +29,7 @@ async def generate_chart(
     Example extensibility hook - new output formats (email, other chart types,
     web-search-sourced charts) plug in the same way: one tool, no framework changes.
     """
+    logger.info("Agent Called Tool", extra={"tool_name": "generate_chart"})
     if len(labels) != len(values):
         return ToolMessage(
             content="labels and values must be the same length.",

@@ -4,6 +4,7 @@ always run make compile for formatting at the end of you code changes
 
 for all new features utils whatever create tests units and more
 
+At the start of each tool add a log that says Agent Called Tool and in extra={"tool_name":tool_name}
 ## After editing code — always review
 
 Whenever you finish editing code, before considering the task done, run both review

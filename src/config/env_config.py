@@ -8,6 +8,7 @@ EnvironmentType = Literal["local", "development", "staging", "production", "test
 
 class EnvironmentConfig(BaseSettings):
     ENVIRONMENT: EnvironmentType = "local"
+    LOG_LEVEL: str = "INFO"
 
     # Postgres (checkpointer / store backend)
     POSTGRES_HOST: str = "localhost"

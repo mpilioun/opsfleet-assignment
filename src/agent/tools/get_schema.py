@@ -3,7 +3,10 @@ from langchain_core.messages import ToolMessage
 from langchain_core.tools import tool
 
 from src.agent.tools._bq_runner import get_runner
+from src.observability.logging import get_logger
 from src.safety.sql_guard import ALLOWED_TABLES, PII_BLOCKED_COLUMNS
+
+logger = get_logger(__name__)
 
 # Static because the join graph of a fixed 4-table public dataset doesn't change,
 # and BigQuery exposes no foreign keys to derive it from. Without this the model
@@ -55,6 +58,7 @@ async def get_schema(
     (orders, order_items, products, users) for just that table's columns. Use this
     instead of guessing column names.
     """
+    logger.info("Agent Called Tool", extra={"tool_name": "get_schema"})
     if table_name is not None and table_name not in ALLOWED_TABLES:
         return ToolMessage(
             content=f"Unknown table '{table_name}'. Available tables: {', '.join(sorted(ALLOWED_TABLES))}.",
