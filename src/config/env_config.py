@@ -29,7 +29,7 @@ class EnvironmentConfig(BaseSettings):
     # Google AI Studio (embeddings for the Store's semantic index - called directly,
     # not through LiteLLM, since embeddings are a distinct API from chat completions)
     GEMINI_API_KEY: str = ""
-    EMBEDDING_MODEL: str = "models/text-embedding-004"
+    EMBEDDING_MODEL: str = "models/gemini-embedding-001"
     EMBEDDING_DIMS: int = 768
     OPENROUTER_API_KEY: str = ""
 
