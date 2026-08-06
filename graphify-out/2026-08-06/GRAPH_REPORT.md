@@ -1,11 +1,11 @@
 # Graph Report - opsfleet-assignment  (2026-08-06)
 
 ## Corpus Check
-- 110 files · ~18,086 words
+- 110 files · ~18,019 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 632 nodes · 962 edges · 59 communities (50 shown, 9 thin omitted)
+- 631 nodes · 959 edges · 60 communities (51 shown, 9 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 30 edges (avg confidence: 0.65)
 - Token cost: 0 input · 0 output
 
@@ -37,6 +37,7 @@
 - persona.py
 - Retail Insights Agent — High-Level Design
 - index.ts
+- test_guard.py
 - agent-provider.tsx
 - tool-card.tsx
 - compilerOptions
@@ -83,7 +84,7 @@
 ## Hyperedges (group relationships)
 - **Post-Edit Workflow Steps** — claude_md_conventional_commits, claude_md_make_compile, claude_md_code_review_skill, claude_md_ponytail_review_skill [INFERRED 0.85]
 
-## Communities (59 total, 9 thin omitted)
+## Communities (60 total, 9 thin omitted)
 
 ### Community 0 - "PostgresManager"
 Cohesion: 0.13
@@ -118,12 +119,12 @@ Cohesion: 0.08
 Nodes (39): BaseStore, ChatOpenAI, CompositeBackend, main(), build_agent(), build_backend(), Ephemeral state by default; /memory/ persists per-user in the Store; /skills/…, datetime_prompt() (+31 more)
 
 ### Community 21 - "eval_golden.py"
-Cohesion: 0.08
-Nodes (39): before_agent, _final_report_text(), main(), Offline QA eval: replay each golden-bucket seed question through the live agent…, _run_one(), _last_human_message_content(), BaseModel, Scope/safety guard (requirement 2, "safeguarded against malicious users"): a… (+31 more)
+Cohesion: 0.11
+Nodes (27): _final_report_text(), main(), Offline QA eval: replay each golden-bucket seed question through the live agent…, _run_one(), BaseModel, One-shot structured output via a forced tool call (ToolStrategy), not…, run_structured(), BaseModel (+19 more)
 
 ### Community 22 - "test_run_sql.py"
 Cohesion: 0.12
-Nodes (27): Client, Exception, _count_recent_run_sql_failures(), tool, ToolMessage, ToolRuntime, Consecutive run_sql failures counting back from the latest message, reset by a…, Validate and execute a read-only SQL query against BigQuery (orders,… (+19 more)
+Nodes (26): Client, Exception, _count_recent_run_sql_failures(), tool, ToolMessage, ToolRuntime, Consecutive run_sql failures counting back from the latest message, reset by a…, Validate and execute a read-only SQL query against BigQuery (orders,… (+18 more)
 
 ### Community 23 - "dependencies"
 Cohesion: 0.07
@@ -156,6 +157,10 @@ Nodes (15): 0. Scope note: CLI → web UI, 10. Requirement 7 — Observability, 
 ### Community 30 - "index.ts"
 Cohesion: 0.19
 Nodes (11): createCorsMiddleware(), AGENT_BACKEND_URL, AGENT_NAME, COPILOTKIT_BASE_PATH, COPILOTKIT_SERVER_PORT, CORS_ALLOWED_ORIGINS, projectRoot, srcDir (+3 more)
+
+### Community 31 - "test_guard.py"
+Cohesion: 0.25
+Nodes (12): before_agent, _last_human_message_content(), BaseModel, Scope/safety guard (requirement 2, "safeguarded against malicious users"): a…, scope_guard(), ScopeResult, patch, test_classifier_failure_fails_open() (+4 more)
 
 ### Community 32 - "agent-provider.tsx"
 Cohesion: 0.24
