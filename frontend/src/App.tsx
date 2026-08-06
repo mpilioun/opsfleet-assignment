@@ -1,51 +1,20 @@
 import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import { AgentProvider } from "./copilot/agent-provider";
 import { Chat } from "./copilot/chat";
 
 const STORAGE_KEY = "retail-insights-user-id";
 
-function ManagerIdGate({ onSubmit }: { onSubmit: (userId: string) => void }) {
-  const [value, setValue] = useState("");
-
-  return (
-    <div className="gate">
-      <form
-        className="gate-form"
-        onSubmit={(e) => {
-          e.preventDefault();
-          const trimmed = value.trim();
-          if (trimmed) onSubmit(trimmed);
-        }}
-      >
-        <h1>Retail Insights Agent</h1>
-        <p>Enter a manager ID to start (no auth in this prototype).</p>
-        <input
-          autoFocus
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-          placeholder="e.g. manager-1"
-        />
-        <button type="submit" className="btn btn-approve">
-          Continue
-        </button>
-      </form>
-    </div>
-  );
+function getOrCreateUserId(): string {
+  const existing = localStorage.getItem(STORAGE_KEY);
+  if (existing) return existing;
+  const generated = uuidv4();
+  localStorage.setItem(STORAGE_KEY, generated);
+  return generated;
 }
 
 export default function App() {
-  const [userId, setUserId] = useState<string | null>(() => localStorage.getItem(STORAGE_KEY));
-
-  if (!userId) {
-    return (
-      <ManagerIdGate
-        onSubmit={(id) => {
-          localStorage.setItem(STORAGE_KEY, id);
-          setUserId(id);
-        }}
-      />
-    );
-  }
+  const [userId] = useState<string>(getOrCreateUserId);
 
   return (
     <div className="app-shell">
