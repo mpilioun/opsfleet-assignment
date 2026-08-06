@@ -15,6 +15,16 @@ import {
   CORS_ALLOWED_ORIGINS,
 } from "./env.js";
 
+// A dropped connection to the backend (e.g. it hot-reloads mid-stream) throws
+// an unhandled error deep inside undici's fetch, which would otherwise crash
+// this whole process instead of just failing that one request. Log and stay up.
+process.on("uncaughtException", (err) => {
+  console.error("Uncaught exception (backend connection likely dropped) - continuing", err);
+});
+process.on("unhandledRejection", (reason) => {
+  console.error("Unhandled rejection (backend connection likely dropped) - continuing", reason);
+});
+
 const serviceAdapter = new ExperimentalEmptyAdapter();
 const agentUrl = `${AGENT_BACKEND_URL}/${AGENT_NAME}`;
 
@@ -32,8 +42,11 @@ app.get("/health", (_req, res) => {
 
 app.use(createCorsMiddleware());
 
+// Mounted at root, not at COPILOTKIT_BASE_PATH: the handler's own internal
+// router does its own basePath-based matching against the full request path
+// (via options.endpoint) - mounting it with a path here would make Express
+// strip that prefix first, so the handler's router would never match.
 app.use(
-  COPILOTKIT_BASE_PATH,
   copilotRuntimeNodeExpressEndpoint({
     endpoint: COPILOTKIT_BASE_PATH,
     runtime,

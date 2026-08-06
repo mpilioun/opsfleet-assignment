@@ -8,7 +8,9 @@ description: How to recover from a failed or empty run_sql call instead of givin
 When `run_sql` returns `status="error"`:
 
 1. Read the error message - it already tells you what to fix (rejected PII column,
-   disallowed table, BigQuery syntax error, cost cap exceeded, or empty result).
+   disallowed table, BigQuery syntax error, cost cap exceeded, empty result, or
+   "must be qualified with a dataset" - the fix for that last one is always to
+   prefix every table with `bigquery-public-data.thelook_ecommerce.`).
 2. Fix the specific issue named in the error and retry with a corrected query. Don't
    change unrelated parts of the query.
 3. If the error says the self-repair limit was reached, **stop calling `run_sql`**.

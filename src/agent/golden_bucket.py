@@ -25,7 +25,8 @@ SEED_TRIOS: list[dict[str, Any]] = [
         "question": "Who are our top 10 customers by total spend?",
         "sql": (
             "SELECT user_id, SUM(sale_price) AS total_spend "
-            "FROM order_items GROUP BY user_id ORDER BY total_spend DESC LIMIT 10"
+            "FROM bigquery-public-data.thelook_ecommerce.order_items "
+            "GROUP BY user_id ORDER BY total_spend DESC LIMIT 10"
         ),
         "report": (
             "## Top Customers by Spend\n\n"
@@ -41,8 +42,8 @@ SEED_TRIOS: list[dict[str, Any]] = [
         "question": "Compare the performance of Product A and Product B and explain why they differ.",
         "sql": (
             "SELECT p.name, COUNT(oi.id) AS units_sold, SUM(oi.sale_price) AS revenue, "
-            "AVG(oi.sale_price) AS avg_price FROM order_items oi "
-            "JOIN products p ON p.id = oi.product_id "
+            "AVG(oi.sale_price) AS avg_price FROM bigquery-public-data.thelook_ecommerce.order_items oi "
+            "JOIN bigquery-public-data.thelook_ecommerce.products p ON p.id = oi.product_id "
             "WHERE p.name IN ('Product A', 'Product B') GROUP BY p.name"
         ),
         "report": (
@@ -60,7 +61,8 @@ SEED_TRIOS: list[dict[str, Any]] = [
         "question": "What is our monthly revenue trend over the last 12 months?",
         "sql": (
             "SELECT DATE_TRUNC(o.created_at, MONTH) AS month, SUM(oi.sale_price) AS revenue "
-            "FROM orders o JOIN order_items oi ON oi.order_id = o.order_id "
+            "FROM bigquery-public-data.thelook_ecommerce.orders o "
+            "JOIN bigquery-public-data.thelook_ecommerce.order_items oi ON oi.order_id = o.order_id "
             "GROUP BY month ORDER BY month"
         ),
         "report": (
@@ -76,7 +78,7 @@ SEED_TRIOS: list[dict[str, Any]] = [
         "sql": (
             "SELECT DATE_TRUNC(o.created_at, MONTH) AS month, "
             "COUNTIF(o.status IN ('Cancelled', 'Returned')) / COUNT(*) AS cancel_return_rate "
-            "FROM orders o GROUP BY month ORDER BY month"
+            "FROM bigquery-public-data.thelook_ecommerce.orders o GROUP BY month ORDER BY month"
         ),
         "report": (
             "## Churn / Cancellation Spike\n\n"
@@ -94,8 +96,9 @@ SEED_TRIOS: list[dict[str, Any]] = [
         "question": "Why are users in state X underspending, and how does that compare to state Y?",
         "sql": (
             "SELECT u.state, AVG(spend.total_spend) AS avg_spend_per_customer "
-            "FROM users u JOIN ("
-            "SELECT user_id, SUM(sale_price) AS total_spend FROM order_items GROUP BY user_id"
+            "FROM bigquery-public-data.thelook_ecommerce.users u JOIN ("
+            "SELECT user_id, SUM(sale_price) AS total_spend "
+            "FROM bigquery-public-data.thelook_ecommerce.order_items GROUP BY user_id"
             ") spend ON spend.user_id = u.id "
             "WHERE u.state IN ('State X', 'State Y') GROUP BY u.state"
         ),
