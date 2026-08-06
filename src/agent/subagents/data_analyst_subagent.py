@@ -1,8 +1,10 @@
 from deepagents import SubAgent
+from langchain.agents.structured_output import ToolStrategy
 
 from src.agent.tools import DATA_ANALYST_TOOLS
 from src.artifacts import ArtifactTypes, read_artifact
 from src.clients.llm_client import get_llm_model
+from src.models.subagent_results import DataAnalystResult
 
 SKILLS_SOURCE = "/skills/data_analyst_subagent/"
 
@@ -23,4 +25,5 @@ def build_data_analyst_subagent() -> SubAgent:
             effort=prompt.metadata.get("effort"),
         ),
         skills=[SKILLS_SOURCE],
+        response_format=ToolStrategy(DataAnalystResult),
     )
