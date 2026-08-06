@@ -2,10 +2,10 @@ from langchain.tools import ToolRuntime
 from langchain_core.messages import ToolMessage
 from langchain_core.tools import tool
 
-from src.agent.tools._bq_runner import get_runner
 from src.observability.logging import get_logger
 from src.safety.cost_guard import QueryTooExpensiveError, check_query_cost
 from src.safety.sql_guard import SqlGuardError, validate_and_prepare_sql
+from src.utils.bq_runner import get_runner
 
 logger = get_logger(__name__)
 

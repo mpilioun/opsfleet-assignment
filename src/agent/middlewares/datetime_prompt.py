@@ -27,8 +27,8 @@ def datetime_section() -> str:
 
 @dynamic_prompt
 async def datetime_prompt(request: ModelRequest) -> str:
-    """Append the datetime section after whatever earlier middleware already built
-    (persona, skills index, memory) - additive, never replaces it.
+    """Append the datetime section after whatever is already in the system message
+    (the persona `system_prompt`, skills index, memory) - additive, never replaces it.
     """
     existing = request.system_message.content if request.system_message else ""
     if not existing:

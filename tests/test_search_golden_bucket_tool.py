@@ -2,7 +2,7 @@ from types import SimpleNamespace
 
 from langgraph.store.memory import InMemoryStore
 
-from src.agent.golden_bucket import ensure_seeded
+from src.agent.utils.golden_bucket import ensure_seeded
 from src.agent.tools.search_golden_bucket import search_golden_bucket
 
 

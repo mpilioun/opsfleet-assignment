@@ -2,9 +2,9 @@ from langchain.tools import ToolRuntime
 from langchain_core.messages import ToolMessage
 from langchain_core.tools import tool
 
-from src.agent.tools._bq_runner import get_runner
 from src.observability.logging import get_logger
 from src.safety.sql_guard import ALLOWED_TABLES, PII_BLOCKED_COLUMNS
+from src.utils.bq_runner import get_runner
 
 logger = get_logger(__name__)
 

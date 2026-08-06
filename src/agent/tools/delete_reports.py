@@ -2,8 +2,8 @@ from langchain.tools import ToolRuntime
 from langchain_core.messages import ToolMessage
 from langchain_core.tools import tool
 
-from src.agent.reports import delete_reports_by_ids
 from src.agent.utils.agent_config import get_user_id
+from src.agent.utils.reports import delete_reports_by_ids
 from src.observability.logging import get_logger
 
 logger = get_logger(__name__)

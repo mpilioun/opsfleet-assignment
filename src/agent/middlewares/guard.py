@@ -8,7 +8,7 @@ from langchain.agents.middleware import before_agent
 from langchain_core.messages import AIMessage, HumanMessage
 from pydantic import BaseModel, Field
 
-from src.agent.structured_llm import run_structured
+from src.agent.utils.structured_llm import run_structured
 from src.observability.logging import get_logger
 
 logger = get_logger(__name__)

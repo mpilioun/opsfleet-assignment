@@ -3,7 +3,7 @@ from langchain_core.messages import ToolMessage
 from langchain_core.tools import tool
 from pydantic import BaseModel, Field
 
-from src.agent.structured_llm import run_structured
+from src.agent.utils.structured_llm import run_structured
 from src.observability.logging import get_logger
 
 logger = get_logger(__name__)
