@@ -7,13 +7,14 @@ help:
 	@echo "Development targets:"
 	@echo "  make format                   isort + ruff format"
 	@echo "  make compile                   format + ruff check --fix"
-	@echo "  make run                       Run the FastAPI/AG-UI backend"
+	@echo "  make run                       Alias for run-be"
 	@echo ""
-	@echo "Web UI (3 processes: backend, runtime, frontend):"
+	@echo "Web UI (3 separate processes - run each in its own terminal):"
+	@echo "  make run-be                    Backend: FastAPI/AG-UI agent (:8000)"
+	@echo "  make run-runtime               Runtime: CopilotKit Node bridge (:3001)"
+	@echo "  make run-fe                    Frontend: Vite dev server (:5173) - opens the chat UI"
 	@echo "  make frontend-install           npm install in frontend/"
-	@echo "  make frontend-dev               Run the Vite dev server (:5173)"
 	@echo "  make runtime-install            npm install in runtime/"
-	@echo "  make runtime-dev                Run the CopilotKit Node runtime (:3001)"
 	@echo ""
 	@echo "Docker image:"
 	@echo "  make docker-build              Build opsfleet-assignment image"
@@ -50,25 +51,28 @@ format:
 compile: format
 	uvx ruff check src --fix
 
-.PHONY: run
-run:
+.PHONY: run run-be
+run: run-be
+run-be:
 	uv run src/app/main.py
+
+.PHONY: run-fe frontend-dev
+run-fe: frontend-dev
+frontend-dev:
+	cd frontend && npm run dev
 
 .PHONY: frontend-install
 frontend-install:
 	cd frontend && npm install
 
-.PHONY: frontend-dev
-frontend-dev:
-	cd frontend && npm run dev
+.PHONY: run-runtime runtime-dev
+run-runtime: runtime-dev
+runtime-dev:
+	cd runtime && npm run dev
 
 .PHONY: runtime-install
 runtime-install:
 	cd runtime && npm install
-
-.PHONY: runtime-dev
-runtime-dev:
-	cd runtime && npm run dev
 
 .PHONY: docker-build
 docker-build:

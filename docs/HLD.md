@@ -322,13 +322,15 @@ gcloud auth application-default login
 make db-up
 
 # 5. Backend (FastAPI/AG-UI) - runs migrations + seeds the golden bucket on startup
-make run          # http://localhost:8000
+make run-be          # http://localhost:8000
 
 # 6. CopilotKit runtime (separate terminal)
-cd runtime && cp .env.example .env && npm install && npm run dev   # http://localhost:3001
+cp runtime/.env.example runtime/.env
+make runtime-install && make run-runtime   # http://localhost:3001
 
 # 7. Frontend (separate terminal)
-cd frontend && cp .env.example .env && npm install && npm run dev  # http://localhost:5173
+cp frontend/.env.example frontend/.env
+make frontend-install && make run-fe       # http://localhost:5173
 ```
 
 Open `http://localhost:5173`, enter any manager id (no auth in this prototype), and
