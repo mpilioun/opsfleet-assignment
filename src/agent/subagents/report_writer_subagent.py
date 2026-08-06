@@ -1,6 +1,7 @@
 from deepagents import SubAgent
 from langchain.agents.structured_output import ToolStrategy
 
+from src.agent.middlewares.datetime_prompt import datetime_prompt
 from src.agent.tools import REPORT_WRITER_TOOLS
 from src.artifacts import ArtifactTypes, read_artifact
 from src.clients.llm_client import get_llm_model
@@ -25,5 +26,6 @@ def build_report_writer_subagent() -> SubAgent:
             effort=prompt.metadata.get("effort"),
         ),
         skills=[SKILLS_SOURCE],
+        middleware=[datetime_prompt],
         response_format=ToolStrategy(ReportWriterResult),
     )

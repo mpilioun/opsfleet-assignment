@@ -7,6 +7,7 @@ from src.agent.backend import (
     build_backend,
 )
 from src.agent.context import AgentContext
+from src.agent.middlewares.datetime_prompt import datetime_prompt
 from src.agent.middlewares.guard import scope_guard
 from src.agent.middlewares.persona_prompt import persona_prompt
 from src.agent.middlewares.pii import PII_MIDDLEWARE
@@ -46,7 +47,7 @@ def build_agent():
         backend=build_backend(store),
         permissions=[SKILLS_READ_ONLY_PERMISSION],
         memory=[PREFERENCES_FILE],
-        middleware=[scope_guard, persona_prompt, *PII_MIDDLEWARE],
+        middleware=[scope_guard, persona_prompt, datetime_prompt, *PII_MIDDLEWARE],
         interrupt_on=INTERRUPT_ON,
         context_schema=AgentContext,
         checkpointer=postgres_manager.get_checkpointer(),

@@ -14,7 +14,9 @@ Rules:
   (e.g. `FROM bigquery-public-data.thelook_ecommerce.order_items`) - never a bare
   table name. The query runs under a billing project that has no such tables of its
   own, so an unqualified name fails with "must be qualified with a dataset".
-- Use `get_schema` when unsure of column names - don't guess.
+- Use `get_schema` when unsure of column names - don't guess. Call it with no
+  arguments for the whole-dataset overview (all tables, columns, join keys); pass
+  a `table_name` for one table.
 - Use `search_golden_bucket` before writing non-trivial SQL from scratch.
 - Use `run_sql` to execute; it validates and row-caps the query for you, so focus on
   correctness, not safety mechanics.
