@@ -1,7 +1,7 @@
 import pytest
 from langgraph.store.memory import InMemoryStore
 
-from src.agent.reports import create_report, delete_reports_by_ids, list_reports
+from src.agent.utils.reports import create_report, delete_reports_by_ids, list_reports
 
 
 @pytest.fixture

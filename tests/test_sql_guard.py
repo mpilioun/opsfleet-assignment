@@ -28,6 +28,13 @@ def test_pii_column_blocked_even_inside_aggregate():
         validate_and_prepare_sql("SELECT COUNT(street_address) FROM users")
 
 
+def test_geo_point_column_is_blocked():
+    """user_geom encodes the same exact location as latitude/longitude - must be
+    blocked too, or it's a straight bypass of the lat/long block."""
+    with pytest.raises(SqlGuardError, match="user_geom"):
+        validate_and_prepare_sql("SELECT user_geom FROM users")
+
+
 def test_non_pii_users_columns_are_allowed():
     sql = validate_and_prepare_sql("SELECT state, COUNT(*) FROM users GROUP BY state")
     assert "state" in sql.lower()

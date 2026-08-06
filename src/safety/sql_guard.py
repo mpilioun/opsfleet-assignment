@@ -14,6 +14,9 @@ PII_BLOCKED_COLUMNS = {
     "postal_code",
     "latitude",
     "longitude",
+    # GEOGRAPHY point built from latitude/longitude - same precise location, just
+    # a different encoding. Selecting it bypasses the lat/long block outright.
+    "user_geom",
 }
 
 MAX_ROW_LIMIT = 1000

@@ -4,7 +4,7 @@ import math
 import pytest
 from langgraph.store.memory import InMemoryStore
 
-from src.agent.golden_bucket import (
+from src.agent.utils.golden_bucket import (
     CANDIDATE_NAMESPACE,
     GOLDEN_NAMESPACE,
     SEED_TRIOS,

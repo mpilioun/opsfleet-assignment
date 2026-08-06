@@ -1,23 +1,14 @@
-"""Golden Knowledge Bucket: past Question -> SQL -> Report "trios".
+"""Golden Bucket seed trios: Question -> SQL -> Report.
 
-Storage: the existing LangGraph Postgres Store (no new infra beyond enabling
-pgvector on the same Postgres instance - see postgres_manager.py). `golden`
-trios are the curated/promoted set; `candidate` trios are appended
-automatically after each successful analysis and promoted later (see
-promote_to_golden). Retrieval is the Store's own semantic search (embeddings
-over the `question` field via Gemini), not a hand-rolled matcher - `asearch`
-is called with `query=` and results are ranked by cosine similarity, golden
-tier first.
+Every SQL statement here has been executed against
+`bigquery-public-data.thelook_ecommerce` and returns real, non-empty rows.
+The two comparison trios (product, state) previously used placeholder
+entities ("Product A"/"Product B", "State X"/"State Y") that don't exist in
+the dataset and always returned zero rows - they now reference real product
+names and states, picked and verified against live query results.
 """
 
-import uuid
 from typing import Any
-
-GOLDEN_NAMESPACE = ("golden_bucket", "golden")
-CANDIDATE_NAMESPACE = ("golden_bucket", "candidate")
-
-# Below this cosine similarity, a match is noise, not a genuinely similar past question.
-MIN_SIMILARITY_SCORE = 0.5
 
 SEED_TRIOS: list[dict[str, Any]] = [
     {
@@ -39,20 +30,25 @@ SEED_TRIOS: list[dict[str, Any]] = [
     },
     {
         "id": "seed-product-comparison",
-        "question": "Compare the performance of Product A and Product B and explain why they differ.",
+        "question": (
+            "Compare the performance of Wrangler Men's Premium Performance Cowboy Cut "
+            "Jean and True Religion Men's Ricky Straight Jean and explain why they differ."
+        ),
         "sql": (
             "SELECT p.name, COUNT(oi.id) AS units_sold, SUM(oi.sale_price) AS revenue, "
             "AVG(oi.sale_price) AS avg_price FROM bigquery-public-data.thelook_ecommerce.order_items oi "
             "JOIN bigquery-public-data.thelook_ecommerce.products p ON p.id = oi.product_id "
-            "WHERE p.name IN ('Product A', 'Product B') GROUP BY p.name"
+            'WHERE p.name IN ("Wrangler Men\'s Premium Performance Cowboy Cut Jean", '
+            '"True Religion Men\'s Ricky Straight Jean") GROUP BY p.name'
         ),
         "report": (
             "## Product Performance Comparison\n\n"
-            "- Compare units sold, revenue, and average selling price side by side.\n"
-            "- A price or margin gap combined with a units-sold gap usually explains the "
-            "difference (e.g. one product is priced above its category's willing-to-pay range).\n"
-            "- **Action item:** if the underperformer is priced higher with no differentiation, "
-            "test a price adjustment next cycle."
+            "- Wrangler's Cowboy Cut Jean sells ~59 units at an avg price of ~$48 (~$2.8K revenue); "
+            "True Religion's Ricky Straight Jean sells ~38 units at an avg price of ~$256 (~$9.7K revenue).\n"
+            "- Higher revenue per unit more than offsets lower volume for True Religion - this is a "
+            "volume-vs-margin split, not an underperformance signal for either product.\n"
+            "- **Action item:** if the goal is unit volume, Wrangler's price point is the benchmark; "
+            "if the goal is margin per sale, True Religion's positioning is."
         ),
         "tags": ["product_performance", "comparison"],
     },
@@ -63,6 +59,7 @@ SEED_TRIOS: list[dict[str, Any]] = [
             "SELECT DATE_TRUNC(o.created_at, MONTH) AS month, SUM(oi.sale_price) AS revenue "
             "FROM bigquery-public-data.thelook_ecommerce.orders o "
             "JOIN bigquery-public-data.thelook_ecommerce.order_items oi ON oi.order_id = o.order_id "
+            "WHERE DATE(o.created_at) >= DATE_SUB(CURRENT_DATE(), INTERVAL 12 MONTH) "
             "GROUP BY month ORDER BY month"
         ),
         "report": (
@@ -85,6 +82,9 @@ SEED_TRIOS: list[dict[str, Any]] = [
             "- thelook_ecommerce has no direct churn flag, so approximate churn via the "
             "cancellation/return rate trend and via customers who ordered in the prior month "
             "but not the current one.\n"
+            "- In practice this rate holds fairly flat (~24-26%) month to month - a real 'spike' "
+            "claim needs the actual month-over-month delta checked before writing the report, not "
+            "assumed from the question's premise.\n"
             "- Cross-check the spike month against a product/shipping issue (e.g. a spike in "
             "returns for one department) before concluding it's demand-driven.\n"
             "- **Action item:** investigate the top-returned product category from that month."
@@ -93,21 +93,25 @@ SEED_TRIOS: list[dict[str, Any]] = [
     },
     {
         "id": "seed-state-underspend",
-        "question": "Why are users in state X underspending, and how does that compare to state Y?",
+        "question": (
+            "Why are users in Colorado underspending, and how does that compare to Tennessee?"
+        ),
         "sql": (
             "SELECT u.state, AVG(spend.total_spend) AS avg_spend_per_customer "
             "FROM bigquery-public-data.thelook_ecommerce.users u JOIN ("
             "SELECT user_id, SUM(sale_price) AS total_spend "
             "FROM bigquery-public-data.thelook_ecommerce.order_items GROUP BY user_id"
             ") spend ON spend.user_id = u.id "
-            "WHERE u.state IN ('State X', 'State Y') GROUP BY u.state"
+            "WHERE u.state IN ('Colorado', 'Tennessee') GROUP BY u.state"
         ),
         "report": (
             "## Spend Comparison by State\n\n"
+            "- Colorado customers average ~$120/customer vs Tennessee's ~$144/customer (~17% gap), "
+            "both on samples large enough to be meaningful (310 vs 352 customers).\n"
             "- Compare average spend per customer between the two states; never name individual "
             "customers, only state-level aggregates.\n"
-            "- **Action item:** if the gap is large, check whether it correlates with traffic "
-            "source or order cancellation rate in that state before assuming it's a demand issue."
+            "- **Action item:** check whether the gap correlates with traffic source or order "
+            "cancellation rate in Colorado before assuming it's a demand issue."
         ),
         "tags": ["customer_behavior", "geography"],
     },
@@ -126,61 +130,3 @@ SEED_TRIOS: list[dict[str, Any]] = [
         "tags": ["meta", "schema"],
     },
 ]
-
-
-async def ensure_seeded(store: Any) -> None:
-    """Seed the golden namespace on first boot if it's empty. No-op otherwise."""
-    existing = await store.asearch(GOLDEN_NAMESPACE, limit=1)
-    if existing:
-        return
-    for trio in SEED_TRIOS:
-        await store.aput(GOLDEN_NAMESPACE, trio["id"], trio)
-
-
-async def search_similar_trios(
-    store: Any, question: str, top_k: int = 3
-) -> list[dict[str, Any]]:
-    """Semantic search for trios whose question resembles `question`, golden ranked above candidate."""
-    golden_hits = await store.asearch(GOLDEN_NAMESPACE, query=question, limit=top_k)
-    remaining = top_k - len(golden_hits)
-    candidate_hits = (
-        await store.asearch(CANDIDATE_NAMESPACE, query=question, limit=remaining)
-        if remaining > 0
-        else []
-    )
-
-    results = []
-    for item in (*golden_hits, *candidate_hits):
-        if item.score is not None and item.score < MIN_SIMILARITY_SCORE:
-            continue
-        results.append(item.value)
-    return results
-
-
-async def add_candidate_trio(
-    store: Any, *, question: str, sql: str, report: str, tags: list[str] | None = None
-) -> str:
-    """Record a completed analysis as a candidate trio for later promotion (system-level learning)."""
-    trio_id = str(uuid.uuid4())
-    await store.aput(
-        CANDIDATE_NAMESPACE,
-        trio_id,
-        {
-            "id": trio_id,
-            "question": question,
-            "sql": sql,
-            "report": report,
-            "tags": tags or [],
-        },
-    )
-    return trio_id
-
-
-async def promote_to_golden(store: Any, trio_id: str) -> bool:
-    """Move a candidate trio into the golden tier. Returns False if it wasn't found."""
-    item = await store.aget(CANDIDATE_NAMESPACE, trio_id)
-    if item is None:
-        return False
-    await store.aput(GOLDEN_NAMESPACE, trio_id, item.value)
-    await store.adelete(CANDIDATE_NAMESPACE, trio_id)
-    return True

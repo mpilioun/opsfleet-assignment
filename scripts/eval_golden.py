@@ -14,8 +14,8 @@ import uuid
 from langchain_core.messages import AIMessage, HumanMessage
 
 from src.agent.agent import build_agent
-from src.agent.golden_bucket import SEED_TRIOS
-from src.agent.structured_llm import run_structured
+from src.agent.utils.golden_bucket import SEED_TRIOS
+from src.agent.utils.structured_llm import run_structured
 from src.agent.tools.verify_output import VerifyResult
 from src.database.postgres_manager import postgres_manager
 

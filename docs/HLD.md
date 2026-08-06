@@ -40,13 +40,12 @@ flowchart TB
     subgraph BE["src/app/ — FastAPI"]
         AGUI["AG-UI endpoint<br/>/retail-insights-agent"]
         ThreadState["/threads/{id}/state"]
-        Admin["POST /admin/persona"]
         Static["/charts static files"]
     end
 
     subgraph Agent["src/agent/ — deepagents / LangGraph graph"]
         Guard["scope_guard<br/>before_agent, once per turn"]
-        Root["Root agent<br/>persona_prompt + PIIMiddleware"]
+        Root["Root agent<br/>system_prompt (persona artifact) + PIIMiddleware"]
         HITL["HumanInTheLoopMiddleware<br/>delete_reports only"]
         Analyst["data-analyst subagent<br/>get_schema · run_sql · search_golden_bucket"]
         Writer["report-writer subagent<br/>generate_chart · verify_output"]
@@ -54,7 +53,7 @@ flowchart TB
 
     subgraph Data["Data layer"]
         BQ[("BigQuery<br/>thelook_ecommerce (read-only)")]
-        PG[("Postgres + pgvector<br/>Checkpointer (conversation state)<br/>Store (golden_bucket / reports / persona / user_prefs)")]
+        PG[("Postgres + pgvector<br/>Checkpointer (conversation state)<br/>Store (golden_bucket / reports / user_prefs)")]
     end
 
     subgraph LLMs["LLM layer"]
@@ -88,7 +87,6 @@ flowchart TB
     LiteLLM -.on failure.-> Azure
     LiteLLM -.on Azure failure too.-> OpenRouter
     PG -.embeds question/content.-> Embed
-    Admin --> PG
     Root -.traces.-> Langfuse
 ```
 
@@ -101,7 +99,7 @@ flowchart TB
 | Chat LLM fallback | Azure OpenAI (tier 1, paid/reliable), then OpenRouter free tier (tier 2, last resort) | A single LiteLLM `router_settings.fallbacks` list, tried in order — one YAML line, no code. Two tiers because a single free-tier fallback proved insufficient in practice (see §8): OpenRouter's free models rotate across backend providers with inconsistent tool-schema support, so a paid, single-provider tier goes first. |
 | Embeddings | Gemini `gemini-embedding-001`, called **directly** (not through LiteLLM) | Embeddings are a distinct API from chat completions; routing them through the chat proxy buys nothing. Called from `postgres_manager.py` only, at Store-construction time. |
 | Warehouse | BigQuery, `bigquery-public-data.thelook_ecommerce`, read-only | Given by the assignment. `src/clients/bq_client.py` is the assignment's own reference file, untouched. |
-| Durable state | Postgres (`pgvector/pgvector:pg16`) | One database serves three different jobs: LangGraph `AsyncPostgresSaver` (conversation checkpoints), `AsyncPostgresStore` (golden bucket / saved reports / persona / user prefs), and pgvector (semantic search over the Store). Fewer moving parts than a separate vector DB. |
+| Durable state | Postgres (`pgvector/pgvector:pg16`) | One database serves three different jobs: LangGraph `AsyncPostgresSaver` (conversation checkpoints), `AsyncPostgresStore` (golden bucket / saved reports / user prefs), and pgvector (semantic search over the Store). Fewer moving parts than a separate vector DB. |
 | Orchestration surface | CopilotKit `/v2` + AG-UI protocol | See §0 for why a web UI at all; see §7 for the 3-process shape this implies. |
 | Observability | Langfuse | Already scaffolded in the repo; LangChain callback handler attaches per-request with session/user metadata (§8). |
 
@@ -119,7 +117,7 @@ flowchart TB
    cap), then executes via the untouched `BigQueryRunner`. Errors/empty results loop
    back to the model (bounded — §5).
 5. Root agent delegates to **report-writer**: turns the analyst's numbers into a
-   report (tone from the live persona — §9), optionally calls `generate_chart`
+   report (tone from the persona system prompt — §11), optionally calls `generate_chart`
    (matplotlib → PNG → `charts/`, served by FastAPI's `StaticFiles` mount), then
    self-checks with `verify_output` (LLM-judge) before returning.
 6. `PIIMiddleware` scans tool results and the final answer for structural PII
@@ -294,22 +292,23 @@ log-correlation exercise across systems.
 
 ## 11. Requirement 8 — Agility (Persona Management)
 
-Two layers, matching the artifact convention already used for prompts/skills
+One layer, matching the artifact convention already used for prompts/skills
 (`src/artifacts/`, frontmatter markdown + `read_artifact()` — same shape as the
 grant-agent reference this repo followed):
 
-- `src/artifacts/prompts/retail_agent_persona.md` — the **versioned default**.
-  Redeploy to change it.
-- A Store row (`("system","persona")`) — the **live override**. `persona_prompt.py`
-  (a `@dynamic_prompt` middleware) reads it every turn through a 60-second in-process
-  cache, seeded from the artifact on first read, and **prepends** it to whatever the
-  framework/skills/memory middleware already put in the system message — additive,
-  so a persona change never wipes out the skills index or loaded memory.
-- `POST /admin/persona` (`src/app/main.py`) lets a non-developer overwrite the live
-  persona with a single HTTP call — no redeploy, no restart, every process picks up
-  the change within 60 seconds. **Left unauthenticated in this prototype** — flagged
-  explicitly in the endpoint's own docstring as needing a real admin-role gate before
-  production use.
+- `src/artifacts/prompts/retail_agent_persona.md` — the persona, read at
+  `build_agent()` time and passed straight through as `create_deep_agent(system_prompt=...)`.
+  Its frontmatter also selects the chat model. Editing the tone is a text-file edit
+  plus a redeploy; no code change, no separate admin surface to secure.
+- `datetime_prompt.py` (a `@dynamic_prompt` middleware) **appends** to whatever the
+  framework put in the system message rather than replacing it, so the persona,
+  skills index, and loaded memory all survive alongside the current-date grounding.
+
+A runtime Store override (`("system","persona")` + `POST /admin/persona`) was built and
+then removed: it bought a 60-second-stale hot reload at the cost of an unauthenticated
+mutation endpoint, a cache-invalidation path, and a second source of truth for the
+prompt. Redeploying a markdown file is the cheaper answer for a single-tenant
+prototype. Add it back when non-developers need to edit tone on their own.
 
 ## 12. Setup instructions
 
@@ -365,7 +364,6 @@ curl -N http://localhost:8000/retail-insights-agent/health
   live request path — a deliberate scope cut to keep the 4 implemented prototype
   requirements (PII, Oversight, Resilience, Observability) solid rather than spreading
   thinner across all 8. `scripts/eval_golden.py` (the offline QA eval) is implemented.
-- `POST /admin/persona` needs real authz before production.
 - The web UI's Node runtime skips Revmark_APP's custom thread-rehydration adapter
   (resuming an interrupt after a page refresh) and its `patch-package` patches
   (checked: minor Node-runtime stream-detection/event-ordering fixes) — both

@@ -2,7 +2,7 @@ from langchain.tools import ToolRuntime
 from langchain_core.messages import ToolMessage
 from langchain_core.tools import tool
 
-from src.agent.golden_bucket import search_similar_trios
+from src.agent.utils.golden_bucket import search_similar_trios
 from src.observability.logging import get_logger
 
 logger = get_logger(__name__)
