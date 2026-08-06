@@ -1,6 +1,6 @@
 services:
   pg:
-    image: postgres:latest
+    image: postgres:16
     container_name: pg
     restart: unless-stopped
     environment:
@@ -31,6 +31,27 @@ services:
         condition: service_healthy
     volumes:
       - pgadmin_data:/var/lib/pgadmin
+
+  litellm:
+    image: ghcr.io/berriai/litellm:main-latest
+    container_name: litellm
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+    environment:
+      LITELLM_MASTER_KEY: ${LITELLM_MASTER_KEY:-sk-litellm-master}
+      LITELLM_SALT_KEY: ${LITELLM_SALT_KEY:-sk-litellm-salt}
+      DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@pg:5432/${POSTGRES_DB:-postgres}
+      AZURE_OPENAI_API_KEY: ${AZURE_OPENAI_API_KEY:-}
+      AZURE_OPENAI_ENDPOINT: ${AZURE_OPENAI_ENDPOINT:-}
+      AZURE_OPENAI_API_VERSION: ${AZURE_OPENAI_API_VERSION:-2025-04-01-preview}
+      AZURE_OPENAI_EMBEDDING_API_VERSION: ${AZURE_OPENAI_EMBEDDING_API_VERSION:-2024-12-01-preview}
+    volumes:
+      - ./litellm/config.yaml:/app/config.yaml
+    command: ["--config", "/app/config.yaml", "--port", "4000"]
+    depends_on:
+      pg:
+        condition: service_healthy
 
 volumes:
   pg_data:

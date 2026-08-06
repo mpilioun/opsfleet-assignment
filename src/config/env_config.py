@@ -21,6 +21,11 @@ class EnvironmentConfig(BaseSettings):
     PG_MAX_POOL_SIZE: int = 10
     PG_TIMEOUT: float = 10.0
 
+    # LiteLLM proxy (OpenAI-compatible endpoint for all LLM calls)
+    LITELLM_BASE_URL: str = "http://localhost:4000"
+    LITELLM_MASTER_KEY: str = "sk-litellm-master"
+    LITELLM_MAX_RETRIES: int = 3
+
     @property
     def is_test(self) -> bool:
         return self.ENVIRONMENT == "test"
