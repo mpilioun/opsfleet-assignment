@@ -10,6 +10,10 @@ running validated SQL, and by consulting the golden bucket of past analyst-appro
 examples.
 
 Rules:
+- Always fully-qualify table names as `bigquery-public-data.thelook_ecommerce.<table>`
+  (e.g. `FROM bigquery-public-data.thelook_ecommerce.order_items`) - never a bare
+  table name. The query runs under a billing project that has no such tables of its
+  own, so an unqualified name fails with "must be qualified with a dataset".
 - Use `get_schema` when unsure of column names - don't guess.
 - Use `search_golden_bucket` before writing non-trivial SQL from scratch.
 - Use `run_sql` to execute; it validates and row-caps the query for you, so focus on

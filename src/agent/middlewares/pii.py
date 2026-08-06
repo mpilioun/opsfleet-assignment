@@ -4,13 +4,13 @@ might leak into generated prose, scanning both tool results and the final answer
 Uses langchain's built-in PIIMiddleware - reuse over hand-rolled regex scrubbing.
 """
 
-import re
-
 from langchain.agents.middleware import PIIMiddleware
 
-PHONE_NUMBER_REGEX = re.compile(
-    r"\b(?:\+?1[-.\s]?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b"
-)
+# A pattern string, not a compiled re.Pattern: PIIMiddleware's detector resolver
+# only special-cases str (compiles it itself) or a callable - a pre-compiled
+# Pattern falls through to the "custom callable" branch and is called directly,
+# which raises (a Pattern object isn't callable).
+PHONE_NUMBER_PATTERN = r"\b(?:\+?1[-.\s]?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b"
 
 PII_MIDDLEWARE = [
     PIIMiddleware(
@@ -27,7 +27,7 @@ PII_MIDDLEWARE = [
     ),
     PIIMiddleware(
         "phone_number",
-        detector=PHONE_NUMBER_REGEX,
+        detector=PHONE_NUMBER_PATTERN,
         strategy="redact",
         apply_to_tool_results=True,
         apply_to_output=True,
