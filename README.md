@@ -18,12 +18,13 @@ uv sync
 cp .env.example .env   # set GEMINI_API_KEY at minimum
 gcloud auth application-default login
 make db-up
-make run                                                   # backend  :8000
-(cd runtime  && cp .env.example .env && npm install && npm run dev)   # runtime  :3001
-(cd frontend && cp .env.example .env && npm install && npm run dev)   # frontend :5173
+make run-be                                                            # terminal 1 - backend  :8000
+cp runtime/.env.example runtime/.env   && make runtime-install  && make run-runtime  # terminal 2 - runtime  :3001
+cp frontend/.env.example frontend/.env && make frontend-install && make run-fe       # terminal 3 - frontend :5173 (opens the chat UI)
 ```
 
-Open `http://localhost:5173`.
+Open `http://localhost:5173`. All three (`run-be`/`run-runtime`/`run-fe`) need to be
+running at once, each in its own terminal - `run-fe` alone won't talk to the agent.
 
 ## Project layout
 
