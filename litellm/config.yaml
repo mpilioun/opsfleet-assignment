@@ -10,6 +10,12 @@ model_list:
 router_settings:
   fallbacks: [{"gemini-flash": ["gpt-oss-20b-openrouter"]}]
 
+litellm_settings:
+  # Not every fallback provider supports every param (e.g. OpenRouter free
+  # models rejecting reasoning_effort) - drop unsupported ones instead of
+  # failing the whole fallback attempt.
+  drop_params: true
+
 general_settings:
   master_key: os.environ/LITELLM_MASTER_KEY
   database_url: os.environ/DATABASE_URL
