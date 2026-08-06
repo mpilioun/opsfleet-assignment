@@ -1,5 +1,11 @@
 CURRENT_DIR:=$(shell pwd)
 
+POSTGRES_USER ?= postgres
+POSTGRES_PASSWORD ?= postgres
+POSTGRES_DB ?= postgres
+PGADMIN_DEFAULT_EMAIL ?= admin@admin.com
+PGADMIN_DEFAULT_PASSWORD ?= admin
+
 .PHONY: format
 format:
 	uvx isort src
@@ -33,3 +39,17 @@ docker-stop:
 .PHONY: docker-clean
 docker-clean: docker-stop
 	docker rmi opsfleet-assignment:latest 2>/dev/null || true
+
+.PHONY: db-up
+db-up:
+	POSTGRES_USER=$(POSTGRES_USER) POSTGRES_PASSWORD=$(POSTGRES_PASSWORD) POSTGRES_DB=$(POSTGRES_DB) \
+	PGADMIN_DEFAULT_EMAIL=$(PGADMIN_DEFAULT_EMAIL) PGADMIN_DEFAULT_PASSWORD=$(PGADMIN_DEFAULT_PASSWORD) \
+	docker compose up -d
+
+.PHONY: db-down
+db-down:
+	docker compose down
+
+.PHONY: db-clean
+db-clean:
+	docker compose down -v
