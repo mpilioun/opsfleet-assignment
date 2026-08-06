@@ -29,6 +29,7 @@ help:
 	@echo ""
 	@echo "Probes (manual smoke tests against live services):"
 	@echo "  make probe-llm                 Send a test chat request through the LiteLLM proxy"
+	@echo "  make probe-bq                  Fetch schemas for the 4 required BigQuery tables"
 
 POSTGRES_USER ?= postgres
 POSTGRES_PASSWORD ?= postgres
@@ -111,3 +112,7 @@ db-clean:
 .PHONY: probe-llm
 probe-llm:
 	uv run python scripts/probe_llm.py
+
+.PHONY: probe-bq
+probe-bq:
+	uv run python scripts/probe_bq.py
