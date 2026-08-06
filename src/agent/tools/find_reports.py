@@ -2,13 +2,16 @@ from langchain.tools import ToolRuntime
 from langchain_core.messages import ToolMessage
 from langchain_core.tools import tool
 
-from src.agent.context import AgentContext
 from src.agent.reports import list_reports
+from src.agent.utils.agent_config import get_thread_id, get_user_id
+from src.observability.logging import get_logger
+
+logger = get_logger(__name__)
 
 
 @tool
 async def find_reports(
-    runtime: ToolRuntime[AgentContext],
+    runtime: ToolRuntime,
     query: str | None = None,
     this_conversation_only: bool = False,
 ) -> ToolMessage:
@@ -16,10 +19,12 @@ async def find_reports(
     delete_reports to resolve a concrete list of report ids/titles - never call
     delete_reports with a guessed or vague filter.
     """
-    thread_id = runtime.context.thread_id if this_conversation_only else None
+    logger.info("Agent Called Tool", extra={"tool_name": "find_reports"})
+    thread_id = get_thread_id() if this_conversation_only else None
     reports = await list_reports(
-        runtime.store, user_id=runtime.context.user_id, thread_id=thread_id, query=query
+        runtime.store, user_id=get_user_id(), thread_id=thread_id, query=query
     )
+    logger.info("find_reports matched %d report(s)", len(reports))
     if not reports:
         return ToolMessage(
             content="No matching reports found.", tool_call_id=runtime.tool_call_id

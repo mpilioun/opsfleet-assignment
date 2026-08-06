@@ -4,6 +4,7 @@ from deepagents.backends.filesystem import FilesystemBackend
 from deepagents.backends.store import StoreBackend
 from langgraph.store.base import BaseStore
 
+from src.agent.utils.agent_config import get_user_id
 from src.artifacts import SKILLS_DIR
 
 MEMORY_PATH = "/memory/"
@@ -19,7 +20,7 @@ def build_backend(store: BaseStore | None) -> CompositeBackend:
         default=StateBackend(),
         routes={
             MEMORY_PATH: StoreBackend(
-                namespace=lambda runtime: ("user_prefs", runtime.context.user_id),
+                namespace=lambda _runtime: ("user_prefs", get_user_id()),
                 store=store,
             ),
             SKILLS_PATH: FilesystemBackend(root_dir=SKILLS_DIR, virtual_mode=True),
