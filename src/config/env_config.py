@@ -15,7 +15,7 @@ class EnvironmentConfig(BaseSettings):
     POSTGRES_PORT: int = 5432
     POSTGRES_DB: str = "postgres"
     POSTGRES_USER: str = "postgres"
-    POSTGRES_PASSWORD: str = "postgres"
+    POSTGRES_PASSWORD: str | None = None
     POSTGRES_SCHEMA: str = "public"
 
     PG_MIN_POOL_SIZE: int = 1
