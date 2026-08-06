@@ -48,6 +48,9 @@ tests/            pytest, one file per module
 ```bash
 make compile        # isort + ruff format + ruff check --fix
 uv run pytest -q    # 60+ unit tests, no external services required
+make probe-llm      # smoke test: a chat request through the LiteLLM proxy
+make probe-bq       # smoke test: fetch schemas for the 4 required BigQuery tables
+                     # requires `gcloud auth application-default login` first
 ```
 
 Both `/code-review` and `/ponytail:ponytail-review` were run on this diff per
