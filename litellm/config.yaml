@@ -3,12 +3,25 @@ model_list:
     litellm_params:
       model: gemini/gemini-flash-latest
       api_key: os.environ/GEMINI_API_KEY
-  - model_name: gpt-oss-20b-openrouter
+  - model_name: azure-gpt-5.4
     litellm_params:
+      # Fallback tier 1: paid, reliable, mature tool-calling - used when
+      # Gemini's free-tier daily quota (20 req/day) is exhausted.
+      model: azure/gpt-5.4
+      api_base: os.environ/AZURE_OPENAI_ENDPOINT
+      api_key: os.environ/AZURE_OPENAI_API_KEY
+      api_version: os.environ/AZURE_OPENAI_API_VERSION
+  - model_name: gemini-flash-openrouter
+    litellm_params:
+      # Fallback tier 2 (free, last resort): OpenRouter's free-tier models
+      # rotate across backend providers with inconsistent tool-schema support
+      # (e.g. one provider hosting openai/gpt-oss-20b:free rejected a JSON
+      # Schema `anyOf` that deepagents' built-in glob tool uses) - not as
+      # reliable as Azure, but free if both paid options are unavailable.
       model: openrouter/openai/gpt-oss-20b:free
       api_key: os.environ/OPENROUTER_API_KEY
 router_settings:
-  fallbacks: [{"gemini-flash": ["gpt-oss-20b-openrouter"]}]
+  fallbacks: [{"gemini-flash": ["azure-gpt-5.4", "gemini-flash-openrouter"]}]
 
 litellm_settings:
   # Not every fallback provider supports every param (e.g. OpenRouter free

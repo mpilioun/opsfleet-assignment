@@ -54,12 +54,19 @@ async def scope_guard(state, runtime):
     classifier = get_llm_model(
         model="gemini-flash", effort="low"
     ).with_structured_output(ScopeResult)
-    result = await classifier.ainvoke(
-        [
-            {"role": "system", "content": GUARD_SYSTEM_PROMPT},
-            {"role": "user", "content": content},
-        ]
-    )
+    try:
+        result = await classifier.ainvoke(
+            [
+                {"role": "system", "content": GUARD_SYSTEM_PROMPT},
+                {"role": "user", "content": content},
+            ]
+        )
+    except Exception as exc:  # noqa: BLE001 - fail open: a broken classifier must not take the whole run down
+        logger.warning(
+            "scope_guard classifier call failed, letting the request through: %s", exc
+        )
+        return None
+
     if result.in_scope:
         return None
 

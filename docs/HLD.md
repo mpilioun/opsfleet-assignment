@@ -60,7 +60,8 @@ flowchart TB
     subgraph LLMs["LLM layer"]
         LiteLLM["LiteLLM proxy"]
         Gemini["Gemini · Google AI Studio<br/>(primary, chat)"]
-        OpenRouter["OpenRouter<br/>(fallback, chat)"]
+        Azure["Azure OpenAI<br/>(fallback tier 1, chat)"]
+        OpenRouter["OpenRouter<br/>(fallback tier 2, chat)"]
         Embed["gemini-embedding-001<br/>(direct, Store semantic index)"]
     end
 
@@ -84,7 +85,8 @@ flowchart TB
     Analyst -.chat calls.-> LiteLLM
     Writer -.chat calls.-> LiteLLM
     LiteLLM --> Gemini
-    LiteLLM -.on failure.-> OpenRouter
+    LiteLLM -.on failure.-> Azure
+    LiteLLM -.on Azure failure too.-> OpenRouter
     PG -.embeds question/content.-> Embed
     Admin --> PG
     Root -.traces.-> Langfuse
@@ -96,7 +98,7 @@ flowchart TB
 |---|---|---|
 | Agent framework | `deepagents` on LangGraph | Supervisor + `SubAgent`s, `interrupt_on` HITL, `Store`-backed memory/skills/backend all come for free instead of hand-rolled. |
 | Chat LLM | Gemini (`gemini-flash-latest`) via Google AI Studio, fronted by **LiteLLM proxy** | Matches the assignment's model preference. LiteLLM's real value here is the cross-provider fallback router (see §5) and per-call cost-attribution tags — worth the extra container once there are 2 real providers to fail over between. |
-| Chat LLM fallback | OpenRouter (`amazon/nova-2-lite-v1:free`) | Same OpenAI-compatible surface, configured as a LiteLLM `router_settings.fallbacks` entry — one YAML line, no code. |
+| Chat LLM fallback | Azure OpenAI (tier 1, paid/reliable), then OpenRouter free tier (tier 2, last resort) | A single LiteLLM `router_settings.fallbacks` list, tried in order — one YAML line, no code. Two tiers because a single free-tier fallback proved insufficient in practice (see §8): OpenRouter's free models rotate across backend providers with inconsistent tool-schema support, so a paid, single-provider tier goes first. |
 | Embeddings | Gemini `gemini-embedding-001`, called **directly** (not through LiteLLM) | Embeddings are a distinct API from chat completions; routing them through the chat proxy buys nothing. Called from `postgres_manager.py` only, at Store-construction time. |
 | Warehouse | BigQuery, `bigquery-public-data.thelook_ecommerce`, read-only | Given by the assignment. `src/clients/bq_client.py` is the assignment's own reference file, untouched. |
 | Durable state | Postgres (`pgvector/pgvector:pg16`) | One database serves three different jobs: LangGraph `AsyncPostgresSaver` (conversation checkpoints), `AsyncPostgresStore` (golden bucket / saved reports / persona / user prefs), and pgvector (semantic search over the Store). Fewer moving parts than a separate vector DB. |
@@ -230,7 +232,18 @@ system learning *which analyses were good*, distinct from user preference learni
 - **Cost cap**: `cost_guard.py` dry-runs every query before executing it; anything
   over 500 MB estimated is rejected before it touches BigQuery at all.
 - **LLM provider outage**: the LiteLLM proxy's `router_settings.fallbacks` swaps to
-  OpenRouter automatically on a Gemini failure — invisible to the agent code.
+  Azure OpenAI, then OpenRouter's free tier, automatically on a Gemini failure —
+  invisible to the agent code. `litellm_settings.drop_params: true` keeps a fallback
+  provider that doesn't support some param (e.g. `reasoning_effort`) from failing
+  the whole fallback attempt over that alone.
+- **A single internal classifier/judge call failing must not take the whole run
+  down**: `scope_guard` (the safety classifier) and `verify_output` (the report
+  judge) both wrap their own model call in a try/except - on any failure (rate
+  limit, a malformed response from a flaky free-tier fallback, etc.) they degrade
+  rather than propagate: `scope_guard` fails open (lets the request through - the
+  SQL/PII layers are separate, still-active defenses regardless), `verify_output`
+  returns an error `ToolMessage` the report-writer can react to instead of crashing
+  the graph.
 - **UI never crashes on an agent-side failure**: FastAPI's AG-UI endpoint streams
   `RUN_ERROR` events over the same SSE channel as normal output; CopilotKit renders
   that as a chat-visible error rather than tearing down the page. `onError` in
@@ -302,8 +315,9 @@ grant-agent reference this repo followed):
 Requires: Python 3.12+, [uv](https://docs.astral.sh/uv/), Docker (for Postgres +
 LiteLLM), Node.js 20+ (for the web UI), a Google Cloud project with BigQuery API
 access (ADC via `gcloud auth application-default login`), a
-[Google AI Studio](https://aistudio.google.com/api-keys) API key, and (optional,
-fallback provider) an [OpenRouter](https://openrouter.ai/) API key.
+[Google AI Studio](https://aistudio.google.com/api-keys) API key, and (optional
+fallback providers) an Azure OpenAI deployment and/or an
+[OpenRouter](https://openrouter.ai/) API key.
 
 ```bash
 git clone <this-repo> && cd opsfleet-assignment
@@ -361,3 +375,13 @@ curl -N http://localhost:8000/retail-insights-agent/health
   *would* pull its weight for a future capability — cross-entity root-cause analysis
   (e.g. "which products, suppliers, and regions are all implicated in this quarter's
   return spike") — noted here as a real extensibility path, not a current gap.
+- Live testing surfaced that free-tier LLM fallbacks are themselves not fully
+  reliable: Gemini's free tier caps at 20 requests/day, and OpenRouter's free
+  models are routed across multiple backend providers per request, with
+  inconsistent JSON-Schema support for tool-calling (one provider hosting
+  `openai/gpt-oss-20b:free` rejected a schema using `anyOf`; a different request to
+  the same model slug, hitting a different backend, worked fine). The fallback
+  chain now has 3 tiers (Gemini → Azure OpenAI paid/reliable → OpenRouter free
+  last-resort) specifically because a single free-tier fallback proved
+  insufficient — in production, the middle paid tier would be primary and the free
+  tiers dropped entirely.

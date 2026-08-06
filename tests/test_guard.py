@@ -40,3 +40,15 @@ async def test_out_of_scope_request_is_refused(mock_get_llm_model):
 
     assert result["jump_to"] == "end"
     assert "email" in result["messages"][0].content.lower()
+
+
+@patch("src.agent.middlewares.guard.get_llm_model")
+async def test_classifier_failure_fails_open(mock_get_llm_model):
+    classifier = MagicMock()
+    classifier.ainvoke = AsyncMock(side_effect=RuntimeError("rate limited"))
+    mock_get_llm_model.return_value.with_structured_output.return_value = classifier
+
+    state = {"messages": [HumanMessage(content="What were top customers last month?")]}
+    result = await scope_guard.abefore_agent(state, SimpleNamespace())
+
+    assert result is None
