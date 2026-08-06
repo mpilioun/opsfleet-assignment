@@ -9,7 +9,7 @@ from src.agent.tools.verify_output import verify_output
 
 DATA_ANALYST_TOOLS = [get_schema, run_sql, search_golden_bucket]
 REPORT_WRITER_TOOLS = [generate_chart, verify_output]
-ROOT_TOOLS = [find_reports, save_report, delete_reports]
+ROOT_TOOLS = [get_schema, find_reports, save_report, delete_reports]
 
 __all__ = [
     "DATA_ANALYST_TOOLS",
