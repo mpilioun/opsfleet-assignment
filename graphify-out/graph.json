@@ -1,0 +1,858 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "claude_md_post_edit_workflow",
+        "label": "Post-Edit Workflow Steps",
+        "nodes": [
+          "claude_md_conventional_commits",
+          "claude_md_make_compile",
+          "claude_md_code_review_skill",
+          "claude_md_ponytail_review_skill"
+        ],
+        "relation": "form",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "CLAUDE.md"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "opsfleet-assignment",
+      "file_type": "code",
+      "type": "package",
+      "ecosystem": "python",
+      "source_file": "pyproject.toml",
+      "source_location": "L1",
+      "version": "0.1.0",
+      "_origin": "ast",
+      "id": "pkg_opsfleet_assignment",
+      "community": 9,
+      "norm_label": "opsfleet-assignment"
+    },
+    {
+      "label": "src/__init__.py",
+      "file_type": "code",
+      "source_file": "src/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_init",
+      "community": 17,
+      "norm_label": "src/__init__.py"
+    },
+    {
+      "label": "agent/__init__.py",
+      "file_type": "code",
+      "source_file": "src/agent/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_agent_init",
+      "community": 11,
+      "norm_label": "agent/__init__.py"
+    },
+    {
+      "label": "app/__init__.py",
+      "file_type": "code",
+      "source_file": "src/app/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_app_init",
+      "community": 12,
+      "norm_label": "app/__init__.py"
+    },
+    {
+      "label": "main.py",
+      "file_type": "code",
+      "source_file": "src/app/main.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_app_main",
+      "community": 6,
+      "norm_label": "main.py"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "src/app/main.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_app_main_main",
+      "community": 6,
+      "norm_label": "main()"
+    },
+    {
+      "label": "artifacts/__init__.py",
+      "file_type": "code",
+      "source_file": "src/artifacts/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_artifacts_init",
+      "community": 13,
+      "norm_label": "artifacts/__init__.py"
+    },
+    {
+      "label": "clients/__init__.py",
+      "file_type": "code",
+      "source_file": "src/clients/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_clients_init",
+      "community": 14,
+      "norm_label": "clients/__init__.py"
+    },
+    {
+      "label": "config/__init__.py",
+      "file_type": "code",
+      "source_file": "src/config/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_config_init",
+      "community": 15,
+      "norm_label": "config/__init__.py"
+    },
+    {
+      "label": "env_config.py",
+      "file_type": "code",
+      "source_file": "src/config/env_config.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_config_env_config",
+      "community": 1,
+      "norm_label": "env_config.py"
+    },
+    {
+      "label": "EnvironmentConfig",
+      "file_type": "code",
+      "source_file": "src/config/env_config.py",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "src_config_env_config_environmentconfig",
+      "community": 1,
+      "norm_label": "environmentconfig"
+    },
+    {
+      "label": "BaseSettings",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "basesettings",
+      "community": 1,
+      "norm_label": "basesettings"
+    },
+    {
+      "label": ".is_test()",
+      "file_type": "code",
+      "source_file": "src/config/env_config.py",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "src_config_env_config_environmentconfig_is_test",
+      "community": 1,
+      "norm_label": ".is_test()"
+    },
+    {
+      "label": ".postgres_conninfo()",
+      "file_type": "code",
+      "source_file": "src/config/env_config.py",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "src_config_env_config_environmentconfig_postgres_conninfo",
+      "community": 1,
+      "norm_label": ".postgres_conninfo()"
+    },
+    {
+      "label": "database/__init__.py",
+      "file_type": "code",
+      "source_file": "src/database/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_database_init",
+      "community": 16,
+      "norm_label": "database/__init__.py"
+    },
+    {
+      "label": "postgres_manager.py",
+      "file_type": "code",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_database_postgres_manager",
+      "community": 1,
+      "norm_label": "postgres_manager.py"
+    },
+    {
+      "label": "PostgresManager",
+      "file_type": "code",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "src_database_postgres_manager_postgresmanager",
+      "community": 0,
+      "norm_label": "postgresmanager"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "src_database_postgres_manager_postgresmanager_init",
+      "community": 0,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": "._create_pool()",
+      "file_type": "code",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "src_database_postgres_manager_postgresmanager_create_pool",
+      "community": 0,
+      "norm_label": "._create_pool()"
+    },
+    {
+      "label": "AsyncConnectionPool",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "asyncconnectionpool",
+      "community": 0,
+      "norm_label": "asyncconnectionpool"
+    },
+    {
+      "label": ".initialize()",
+      "file_type": "code",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "src_database_postgres_manager_postgresmanager_initialize",
+      "community": 2,
+      "norm_label": ".initialize()"
+    },
+    {
+      "label": ".close()",
+      "file_type": "code",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "src_database_postgres_manager_postgresmanager_close",
+      "community": 0,
+      "norm_label": ".close()"
+    },
+    {
+      "label": ".get_pool_stats()",
+      "file_type": "code",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L60",
+      "_origin": "ast",
+      "id": "src_database_postgres_manager_postgresmanager_get_pool_stats",
+      "community": 0,
+      "norm_label": ".get_pool_stats()"
+    },
+    {
+      "label": ".get_checkpointer()",
+      "file_type": "code",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L65",
+      "_origin": "ast",
+      "id": "src_database_postgres_manager_postgresmanager_get_checkpointer",
+      "community": 2,
+      "norm_label": ".get_checkpointer()"
+    },
+    {
+      "label": "AsyncPostgresSaver",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "asyncpostgressaver",
+      "community": 2,
+      "norm_label": "asyncpostgressaver"
+    },
+    {
+      "label": ".get_store()",
+      "file_type": "code",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L71",
+      "_origin": "ast",
+      "id": "src_database_postgres_manager_postgresmanager_get_store",
+      "community": 4,
+      "norm_label": ".get_store()"
+    },
+    {
+      "label": "AsyncPostgresStore",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "asyncpostgresstore",
+      "community": 4,
+      "norm_label": "asyncpostgresstore"
+    },
+    {
+      "label": "PostgreSQL connection pool and LangGraph persistence management.",
+      "file_type": "rationale",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_database_postgres_manager_rationale_1",
+      "community": 1,
+      "norm_label": "postgresql connection pool and langgraph persistence management."
+    },
+    {
+      "label": "Owns the async connection pool and hands out checkpointer/store instances.",
+      "file_type": "rationale",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "src_database_postgres_manager_rationale_18",
+      "community": 0,
+      "norm_label": "owns the async connection pool and hands out checkpointer/store instances."
+    },
+    {
+      "label": "Open the pool and run checkpointer/store schema setup once. Call on startup.",
+      "file_type": "rationale",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "src_database_postgres_manager_rationale_44",
+      "community": 2,
+      "norm_label": "open the pool and run checkpointer/store schema setup once. call on startup."
+    },
+    {
+      "label": "New checkpointer instance backed by the shared pool, or None in test mode.",
+      "file_type": "rationale",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "src_database_postgres_manager_rationale_66",
+      "community": 2,
+      "norm_label": "new checkpointer instance backed by the shared pool, or none in test mode."
+    },
+    {
+      "label": "New store instance backed by the shared pool, or None in test mode.",
+      "file_type": "rationale",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L72",
+      "_origin": "ast",
+      "id": "src_database_postgres_manager_rationale_72",
+      "community": 4,
+      "norm_label": "new store instance backed by the shared pool, or none in test mode."
+    },
+    {
+      "label": "models/__init__.py",
+      "file_type": "code",
+      "source_file": "src/models/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_models_init",
+      "community": 18,
+      "norm_label": "models/__init__.py"
+    },
+    {
+      "label": "observability/__init__.py",
+      "file_type": "code",
+      "source_file": "src/observability/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_observability_init",
+      "community": 19,
+      "norm_label": "observability/__init__.py"
+    },
+    {
+      "label": "utils/__init__.py",
+      "file_type": "code",
+      "source_file": "src/utils/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_utils_init",
+      "community": 20,
+      "norm_label": "utils/__init__.py"
+    },
+    {
+      "label": "Conventional Commit Names Rule",
+      "file_type": "rationale",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_md_conventional_commits",
+      "community": 7,
+      "norm_label": "conventional commit names rule"
+    },
+    {
+      "label": "make compile (formatting step)",
+      "file_type": "rationale",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_md_make_compile",
+      "community": 8,
+      "norm_label": "make compile (formatting step)"
+    },
+    {
+      "label": "/code-review skill",
+      "file_type": "concept",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_md_code_review_skill",
+      "community": 5,
+      "norm_label": "/code-review skill"
+    },
+    {
+      "label": "/ponytail:ponytail-review skill",
+      "file_type": "concept",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_md_ponytail_review_skill",
+      "community": 5,
+      "norm_label": "/ponytail:ponytail-review skill"
+    },
+    {
+      "label": "Mandatory Post-Edit Review Process",
+      "file_type": "rationale",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_md_post_edit_review_process",
+      "community": 5,
+      "norm_label": "mandatory post-edit review process"
+    },
+    {
+      "label": "opsfleet-assignment (project)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_opsfleet_assignment",
+      "community": 10,
+      "norm_label": "opsfleet-assignment (project)"
+    },
+    {
+      "label": "pg (Postgres service)",
+      "file_type": "code",
+      "source_file": "docker-compose.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docker_compose_pg_service",
+      "community": 3,
+      "norm_label": "pg (postgres service)"
+    },
+    {
+      "label": "pgadmin (pgAdmin4 service)",
+      "file_type": "code",
+      "source_file": "docker-compose.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docker_compose_pgadmin_service",
+      "community": 3,
+      "norm_label": "pgadmin (pgadmin4 service)"
+    },
+    {
+      "label": "pg_data volume",
+      "file_type": "code",
+      "source_file": "docker-compose.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docker_compose_pg_data_volume",
+      "community": 3,
+      "norm_label": "pg_data volume"
+    },
+    {
+      "label": "pgadmin_data volume",
+      "file_type": "code",
+      "source_file": "docker-compose.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docker_compose_pgadmin_data_volume",
+      "community": 3,
+      "norm_label": "pgadmin_data volume"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/main.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_main",
+      "target": "src_app_main_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/config/env_config.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_config_env_config",
+      "target": "src_config_env_config_environmentconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_database_postgres_manager",
+      "target": "src_config_env_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "src/config/env_config.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_config_env_config_environmentconfig",
+      "target": "basesettings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/config/env_config.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_config_env_config_environmentconfig",
+      "target": "src_config_env_config_environmentconfig_is_test",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/config/env_config.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_config_env_config_environmentconfig",
+      "target": "src_config_env_config_environmentconfig_postgres_conninfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_database_postgres_manager",
+      "target": "src_database_postgres_manager_postgresmanager",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_database_postgres_manager_rationale_1",
+      "target": "src_database_postgres_manager",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_database_postgres_manager_postgresmanager",
+      "target": "src_database_postgres_manager_postgresmanager_close",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_database_postgres_manager_postgresmanager",
+      "target": "src_database_postgres_manager_postgresmanager_create_pool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_database_postgres_manager_postgresmanager",
+      "target": "src_database_postgres_manager_postgresmanager_get_checkpointer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_database_postgres_manager_postgresmanager",
+      "target": "src_database_postgres_manager_postgresmanager_get_pool_stats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_database_postgres_manager_postgresmanager",
+      "target": "src_database_postgres_manager_postgresmanager_get_store",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_database_postgres_manager_postgresmanager",
+      "target": "src_database_postgres_manager_postgresmanager_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_database_postgres_manager_postgresmanager",
+      "target": "src_database_postgres_manager_postgresmanager_initialize",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_database_postgres_manager_rationale_18",
+      "target": "src_database_postgres_manager_postgresmanager",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_database_postgres_manager_postgresmanager_init",
+      "target": "src_database_postgres_manager_postgresmanager_create_pool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_database_postgres_manager_postgresmanager_create_pool",
+      "target": "asyncconnectionpool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_database_postgres_manager_postgresmanager_initialize",
+      "target": "src_database_postgres_manager_postgresmanager_get_checkpointer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_database_postgres_manager_postgresmanager_initialize",
+      "target": "src_database_postgres_manager_postgresmanager_get_store",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_database_postgres_manager_rationale_44",
+      "target": "src_database_postgres_manager_postgresmanager_initialize",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_database_postgres_manager_postgresmanager_get_checkpointer",
+      "target": "asyncpostgressaver",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_database_postgres_manager_rationale_66",
+      "target": "src_database_postgres_manager_postgresmanager_get_checkpointer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_database_postgres_manager_postgresmanager_get_store",
+      "target": "asyncpostgresstore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/postgres_manager.py",
+      "source_location": "L72",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_database_postgres_manager_rationale_72",
+      "target": "src_database_postgres_manager_postgresmanager_get_store",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "claude_md_post_edit_review_process",
+      "target": "claude_md_code_review_skill"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "claude_md_post_edit_review_process",
+      "target": "claude_md_ponytail_review_skill"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docker-compose.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docker_compose_pg_service",
+      "target": "docker_compose_pg_data_volume"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docker-compose.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docker_compose_pgadmin_service",
+      "target": "docker_compose_pg_service"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docker-compose.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docker_compose_pgadmin_service",
+      "target": "docker_compose_pgadmin_data_volume"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "claude_md_post_edit_workflow",
+      "label": "Post-Edit Workflow Steps",
+      "nodes": [
+        "claude_md_conventional_commits",
+        "claude_md_make_compile",
+        "claude_md_code_review_skill",
+        "claude_md_ponytail_review_skill"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CLAUDE.md"
+    }
+  ],
+  "built_at_commit": "d5349e2d32e9e301e24738cddabb8cf1aa9680d5"
+}
