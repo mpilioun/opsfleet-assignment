@@ -61,7 +61,7 @@ flowchart TB
         LiteLLM["LiteLLM proxy"]
         Gemini["Gemini · Google AI Studio<br/>(primary, chat)"]
         OpenRouter["OpenRouter<br/>(fallback, chat)"]
-        Embed["Gemini text-embedding-004<br/>(direct, Store semantic index)"]
+        Embed["gemini-embedding-001<br/>(direct, Store semantic index)"]
     end
 
     Langfuse["Langfuse<br/>tracing / observability"]
@@ -97,7 +97,7 @@ flowchart TB
 | Agent framework | `deepagents` on LangGraph | Supervisor + `SubAgent`s, `interrupt_on` HITL, `Store`-backed memory/skills/backend all come for free instead of hand-rolled. |
 | Chat LLM | Gemini (`gemini-flash-latest`) via Google AI Studio, fronted by **LiteLLM proxy** | Matches the assignment's model preference. LiteLLM's real value here is the cross-provider fallback router (see §5) and per-call cost-attribution tags — worth the extra container once there are 2 real providers to fail over between. |
 | Chat LLM fallback | OpenRouter (`amazon/nova-2-lite-v1:free`) | Same OpenAI-compatible surface, configured as a LiteLLM `router_settings.fallbacks` entry — one YAML line, no code. |
-| Embeddings | Gemini `text-embedding-004`, called **directly** (not through LiteLLM) | Embeddings are a distinct API from chat completions; routing them through the chat proxy buys nothing. Called from `postgres_manager.py` only, at Store-construction time. |
+| Embeddings | Gemini `gemini-embedding-001`, called **directly** (not through LiteLLM) | Embeddings are a distinct API from chat completions; routing them through the chat proxy buys nothing. Called from `postgres_manager.py` only, at Store-construction time. |
 | Warehouse | BigQuery, `bigquery-public-data.thelook_ecommerce`, read-only | Given by the assignment. `src/clients/bq_client.py` is the assignment's own reference file, untouched. |
 | Durable state | Postgres (`pgvector/pgvector:pg16`) | One database serves three different jobs: LangGraph `AsyncPostgresSaver` (conversation checkpoints), `AsyncPostgresStore` (golden bucket / saved reports / persona / user prefs), and pgvector (semantic search over the Store). Fewer moving parts than a separate vector DB. |
 | Orchestration surface | CopilotKit `/v2` + AG-UI protocol | See §0 for why a web UI at all; see §7 for the 3-process shape this implies. |
