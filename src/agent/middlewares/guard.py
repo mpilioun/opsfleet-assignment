@@ -10,7 +10,7 @@ from langchain.agents.middleware import before_agent
 from langchain_core.messages import AIMessage, HumanMessage
 from pydantic import BaseModel, Field
 
-from src.clients.llm_client import get_llm_model
+from src.agent.structured_llm import run_structured
 
 logger = logging.getLogger(__name__)
 
@@ -51,15 +51,11 @@ async def scope_guard(state, runtime):
     if not content:
         return None
 
-    classifier = get_llm_model(
-        model="gemini-flash", effort="low"
-    ).with_structured_output(ScopeResult)
     try:
-        result = await classifier.ainvoke(
-            [
-                {"role": "system", "content": GUARD_SYSTEM_PROMPT},
-                {"role": "user", "content": content},
-            ]
+        result = await run_structured(
+            system_prompt=GUARD_SYSTEM_PROMPT,
+            user_content=content,
+            response_format=ScopeResult,
         )
     except Exception as exc:  # noqa: BLE001 - fail open: a broken classifier must not take the whole run down
         logger.warning(
