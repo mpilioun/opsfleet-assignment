@@ -1,5 +1,6 @@
 """PostgreSQL connection pool and LangGraph persistence management."""
 
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langgraph.checkpoint.postgres.aio import AsyncPostgresSaver
 from langgraph.store.postgres.aio import AsyncPostgresStore
 from psycopg.rows import dict_row
@@ -12,6 +13,25 @@ CONNECTION_KWARGS = {
     "prepare_threshold": 0,
     "row_factory": dict_row,
 }
+
+
+def _build_store_index_config() -> dict:
+    """Indexes the "question" field of golden-bucket trios and the "content" field
+    of saved reports, so both search_golden_bucket and find_reports get semantic
+    (not just exact-match) search for free from the Store, via pgvector.
+
+    Built lazily (not at import time) so importing this module never requires a
+    Gemini API key - only actually opening a store does.
+    """
+    return {
+        "dims": env_config.EMBEDDING_DIMS,
+        "fields": ["question", "content"],
+        "embed": GoogleGenerativeAIEmbeddings(
+            model=env_config.EMBEDDING_MODEL,
+            google_api_key=env_config.GEMINI_API_KEY,
+            output_dimensionality=env_config.EMBEDDING_DIMS,
+        ),
+    }
 
 
 class PostgresManager:
@@ -72,7 +92,7 @@ class PostgresManager:
         """New store instance backed by the shared pool, or None in test mode."""
         if self._is_test_mode:
             return None
-        return AsyncPostgresStore(self._pool)
+        return AsyncPostgresStore(self._pool, index=_build_store_index_config())
 
 
 postgres_manager = PostgresManager()
