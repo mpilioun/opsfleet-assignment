@@ -26,6 +26,11 @@ class EnvironmentConfig(BaseSettings):
     LITELLM_MASTER_KEY: str = "sk-litellm-master"
     LITELLM_MAX_RETRIES: int = 3
 
+    # Langfuse
+    LANGFUSE_SECRET_KEY: str = ""
+    LANGFUSE_PUBLIC_KEY: str = ""
+    LANGFUSE_BASE_URL: str = "https://cloud.langfuse.com"
+
     @property
     def is_test(self) -> bool:
         return self.ENVIRONMENT == "test"
