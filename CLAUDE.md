@@ -2,7 +2,7 @@ ALways use conventional commit names
 
 always run make compile for formatting at the end of you code changes
 
-
+for all new features utils whatever create tests units and more
 
 ## After editing code — always review
 
