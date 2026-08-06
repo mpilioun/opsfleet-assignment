@@ -1,18 +1,14 @@
 model_list:
-  - model_name: azure-gpt-5.4
+  - model_name: gemini-flash
     litellm_params:
-      model: azure/gpt-5.4
-      api_base: os.environ/AZURE_OPENAI_ENDPOINT
-      api_key: os.environ/AZURE_OPENAI_API_KEY
-      api_version: os.environ/AZURE_OPENAI_API_VERSION
-  - model_name: azure-gpt-5.4-mini
+      model: gemini/gemini-flash-latest
+      api_key: os.environ/GEMINI_API_KEY
+  - model_name: gpt-oss-20b-openrouter
     litellm_params:
-      model: azure/gpt-5.4-mini
-      api_base: os.environ/AZURE_OPENAI_ENDPOINT
-      api_key: os.environ/AZURE_OPENAI_API_KEY
-      api_version: os.environ/AZURE_OPENAI_API_VERSION
+      model: openrouter/openai/gpt-oss-20b:free
+      api_key: os.environ/OPENROUTER_API_KEY
 router_settings:
-  fallbacks: [{"azure-gpt-5.4": ["azure-gpt-5.4-mini"]}]
+  fallbacks: [{"gemini-flash": ["gpt-oss-20b-openrouter"]}]
 
 general_settings:
   master_key: os.environ/LITELLM_MASTER_KEY

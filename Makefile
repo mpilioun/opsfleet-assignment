@@ -7,7 +7,13 @@ help:
 	@echo "Development targets:"
 	@echo "  make format                   isort + ruff format"
 	@echo "  make compile                   format + ruff check --fix"
-	@echo "  make run                       Run src/app/main.py"
+	@echo "  make run                       Run the FastAPI/AG-UI backend"
+	@echo ""
+	@echo "Web UI (3 processes: backend, runtime, frontend):"
+	@echo "  make frontend-install           npm install in frontend/"
+	@echo "  make frontend-dev               Run the Vite dev server (:5173)"
+	@echo "  make runtime-install            npm install in runtime/"
+	@echo "  make runtime-dev                Run the CopilotKit Node runtime (:3001)"
 	@echo ""
 	@echo "Docker image:"
 	@echo "  make docker-build              Build opsfleet-assignment image"
@@ -31,10 +37,8 @@ PGADMIN_DEFAULT_EMAIL ?= admin@admin.com
 PGADMIN_DEFAULT_PASSWORD ?= admin
 LITELLM_MASTER_KEY ?= sk-litellm-master
 LITELLM_SALT_KEY ?= sk-litellm-salt
-AZURE_OPENAI_API_KEY ?=
-AZURE_OPENAI_ENDPOINT ?=
-AZURE_OPENAI_API_VERSION ?= 2025-04-01-preview
-AZURE_OPENAI_EMBEDDING_API_VERSION ?= 2024-12-01-preview
+GEMINI_API_KEY ?=
+OPENROUTER_API_KEY ?=
 
 .PHONY: format
 format:
@@ -48,6 +52,22 @@ compile: format
 .PHONY: run
 run:
 	uv run src/app/main.py
+
+.PHONY: frontend-install
+frontend-install:
+	cd frontend && npm install
+
+.PHONY: frontend-dev
+frontend-dev:
+	cd frontend && npm run dev
+
+.PHONY: runtime-install
+runtime-install:
+	cd runtime && npm install
+
+.PHONY: runtime-dev
+runtime-dev:
+	cd runtime && npm run dev
 
 .PHONY: docker-build
 docker-build:
@@ -75,8 +95,7 @@ db-up:
 	POSTGRES_USER=$(POSTGRES_USER) POSTGRES_PASSWORD=$(POSTGRES_PASSWORD) POSTGRES_DB=$(POSTGRES_DB) \
 	PGADMIN_DEFAULT_EMAIL=$(PGADMIN_DEFAULT_EMAIL) PGADMIN_DEFAULT_PASSWORD=$(PGADMIN_DEFAULT_PASSWORD) \
 	LITELLM_MASTER_KEY=$(LITELLM_MASTER_KEY) LITELLM_SALT_KEY=$(LITELLM_SALT_KEY) \
-	AZURE_OPENAI_API_KEY=$(AZURE_OPENAI_API_KEY) AZURE_OPENAI_ENDPOINT=$(AZURE_OPENAI_ENDPOINT) \
-	AZURE_OPENAI_API_VERSION=$(AZURE_OPENAI_API_VERSION) AZURE_OPENAI_EMBEDDING_API_VERSION=$(AZURE_OPENAI_EMBEDDING_API_VERSION) \
+	GEMINI_API_KEY=$(GEMINI_API_KEY) OPENROUTER_API_KEY=$(OPENROUTER_API_KEY) \
 	docker compose up -d
 
 .PHONY: db-down

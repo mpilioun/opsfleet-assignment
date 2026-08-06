@@ -21,10 +21,17 @@ class EnvironmentConfig(BaseSettings):
     PG_MAX_POOL_SIZE: int = 10
     PG_TIMEOUT: float = 10.0
 
-    # LiteLLM proxy (OpenAI-compatible endpoint for all LLM calls)
+    # LiteLLM proxy (OpenAI-compatible endpoint for all chat LLM calls)
     LITELLM_BASE_URL: str = "http://localhost:4000"
     LITELLM_MASTER_KEY: str = "sk-litellm-master"
     LITELLM_MAX_RETRIES: int = 3
+
+    # Google AI Studio (embeddings for the Store's semantic index - called directly,
+    # not through LiteLLM, since embeddings are a distinct API from chat completions)
+    GEMINI_API_KEY: str = ""
+    EMBEDDING_MODEL: str = "models/text-embedding-004"
+    EMBEDDING_DIMS: int = 768
+    OPENROUTER_API_KEY: str = ""
 
     # Langfuse
     LANGFUSE_SECRET_KEY: str = ""
