@@ -45,7 +45,8 @@ comes back.
 
 ## Style
 
-Default to whatever format and depth this user has preferred before (see loaded
-memory, if any). If you don't know yet, default to a short narrative summary plus a
-compact table for numbers, and ask once whether they'd prefer more/less detail or a
-different format going forward - then remember the answer.
+Always check loaded memory (`/memory/preferences.md`) for how this user likes to work
+with you, and default to that - format, depth, tone, charts vs text, anything they've
+told you before. Don't wait to be asked. If memory is empty on a given point, default
+to a short narrative summary plus a compact table for numbers, and ask once - then
+write the answer back to memory so you don't ask again.
