@@ -1,6 +1,8 @@
 services:
   pg:
-    image: postgres:16
+    # pgvector/pgvector is a drop-in postgres:16 image with the pgvector extension
+    # binary preinstalled (needed for the Store's semantic index - see postgres_manager.py).
+    image: pgvector/pgvector:pg16
     container_name: pg
     restart: unless-stopped
     environment:
@@ -42,10 +44,8 @@ services:
       LITELLM_MASTER_KEY: ${LITELLM_MASTER_KEY:-sk-litellm-master}
       LITELLM_SALT_KEY: ${LITELLM_SALT_KEY:-sk-litellm-salt}
       DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@pg:5432/${POSTGRES_DB:-postgres}
-      AZURE_OPENAI_API_KEY: ${AZURE_OPENAI_API_KEY:-}
-      AZURE_OPENAI_ENDPOINT: ${AZURE_OPENAI_ENDPOINT:-}
-      AZURE_OPENAI_API_VERSION: ${AZURE_OPENAI_API_VERSION:-2025-04-01-preview}
-      AZURE_OPENAI_EMBEDDING_API_VERSION: ${AZURE_OPENAI_EMBEDDING_API_VERSION:-2024-12-01-preview}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY:-}
     volumes:
       - ./litellm/config.yaml:/app/config.yaml
     command: ["--config", "/app/config.yaml", "--port", "4000"]
