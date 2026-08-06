@@ -33,6 +33,9 @@ help:
 	@echo "  make probe-bq                  Fetch schemas for the 4 required BigQuery tables"
 	@echo "  make eval-golden               Replay golden-bucket seed questions, LLM-judge the reports"
 
+# Hardcoded defaults below: POC/local-run convenience only, minimizes env setup for
+# running locally. Never rely on these in a real production deployment - override
+# via env/secret manager there.
 POSTGRES_USER ?= postgres
 POSTGRES_PASSWORD ?= postgres
 POSTGRES_DB ?= postgres

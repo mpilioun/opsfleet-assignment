@@ -15,7 +15,10 @@ class EnvironmentConfig(BaseSettings):
     POSTGRES_PORT: int = 5432
     POSTGRES_DB: str = "postgres"
     POSTGRES_USER: str = "postgres"
-    POSTGRES_PASSWORD: str | None = None
+    # Hardcoded default: POC/local-run convenience only, minimizes env setup for
+    # running locally. Never rely on this default in a real production deployment -
+    # set POSTGRES_PASSWORD via env/secret manager there.
+    POSTGRES_PASSWORD: str = "postgres"
     POSTGRES_SCHEMA: str = "public"
 
     PG_MIN_POOL_SIZE: int = 1
@@ -24,6 +27,8 @@ class EnvironmentConfig(BaseSettings):
 
     # LiteLLM proxy (OpenAI-compatible endpoint for all chat LLM calls)
     LITELLM_BASE_URL: str = "http://localhost:4000"
+    # Hardcoded default: POC/local-run convenience only, same reasoning as
+    # POSTGRES_PASSWORD above. Not a real key - a real deployment sets its own.
     LITELLM_MASTER_KEY: str = "sk-litellm-master"
     LITELLM_MAX_RETRIES: int = 3
 

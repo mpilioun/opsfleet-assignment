@@ -6,6 +6,9 @@ services:
     container_name: pg
     restart: unless-stopped
     environment:
+      # Hardcoded defaults: POC/local-run convenience only, minimizes env setup for
+      # running locally. Never rely on these in a real production deployment -
+      # override via env/secret manager there.
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
       POSTGRES_DB: ${POSTGRES_DB:-postgres}
@@ -24,6 +27,9 @@ services:
     container_name: pgadmin
     restart: unless-stopped
     environment:
+      # Hardcoded defaults: POC/local-run convenience only, minimizes env setup for
+      # running locally. Never rely on these in a real production deployment -
+      # override via env/secret manager there.
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-admin@admin.com}
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
     ports:
