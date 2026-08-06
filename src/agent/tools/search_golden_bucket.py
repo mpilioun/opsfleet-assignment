@@ -3,6 +3,9 @@ from langchain_core.messages import ToolMessage
 from langchain_core.tools import tool
 
 from src.agent.golden_bucket import search_similar_trios
+from src.observability.logging import get_logger
+
+logger = get_logger(__name__)
 
 
 @tool
@@ -11,6 +14,7 @@ async def search_golden_bucket(question: str, runtime: ToolRuntime) -> ToolMessa
     examples similar to this one. Call this before writing SQL from scratch -
     a matching past example shows how analysts have interpreted similar questions.
     """
+    logger.info("Agent Called Tool", extra={"tool_name": "search_golden_bucket"})
     trios = await search_similar_trios(runtime.store, question, top_k=3)
     if not trios:
         return ToolMessage(

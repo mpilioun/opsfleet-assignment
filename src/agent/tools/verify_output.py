@@ -4,6 +4,9 @@ from langchain_core.tools import tool
 from pydantic import BaseModel, Field
 
 from src.agent.structured_llm import run_structured
+from src.observability.logging import get_logger
+
+logger = get_logger(__name__)
 
 JUDGE_SYSTEM_PROMPT = (
     "You are a strict QA reviewer for a data-analysis report written for a retail "
@@ -27,6 +30,7 @@ async def verify_output(
     question, is grounded in real data, and leaks no PII. Call this before
     presenting a final report to the user.
     """
+    logger.info("Agent Called Tool", extra={"tool_name": "verify_output"})
     try:
         result = await run_structured(
             system_prompt=JUDGE_SYSTEM_PROMPT,

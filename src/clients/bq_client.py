@@ -1,10 +1,11 @@
-import logging
 from typing import Any
 
 import pandas as pd
 from google.cloud import bigquery
 
-logger = logging.getLogger(__name__)
+from src.observability.logging import get_logger
+
+logger = get_logger(__name__)
 
 
 class BigQueryRunner:
