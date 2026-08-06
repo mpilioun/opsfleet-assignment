@@ -257,8 +257,9 @@ Resilience/Observability were prioritized. See gaps in §10 for what a full pass
 
 - **Pre-deployment eval set**: the golden bucket's own seed questions, replayed
   through the agent, scored by an LLM judge for groundedness (same pattern as
-  `verify_output`) and compared against the seed reports as a loose rubric — sketched
-  as the stretch `scripts/eval_golden.py`.
+  `verify_output`) and compared against the seed reports as a loose rubric —
+  `scripts/eval_golden.py` (`make eval-golden`; needs Postgres + Gemini + live
+  BigQuery, so it's a manual pre-deploy gate, not a pytest suite member).
 - **Verifying intent match in production**: `verify_output` runs on *every* final
   report before it's shown to the user (not just in offline eval) — the same judge
   prompt, applied live. A failed verification either gets fixed inline (bounded to 2
@@ -360,10 +361,10 @@ curl -N http://localhost:8000/retail-insights-agent/health
 
 ## 13. Known gaps / what a production pass adds
 
-- `scripts/eval_golden.py` and the automatic candidate-trio recording hook (§4) are
-  designed but not wired into the live request path — a deliberate scope cut to keep
-  the 4 implemented prototype requirements (PII, Oversight, Resilience, Observability)
-  solid rather than spreading thinner across all 8.
+- The automatic candidate-trio recording hook (§4) is designed but not wired into the
+  live request path — a deliberate scope cut to keep the 4 implemented prototype
+  requirements (PII, Oversight, Resilience, Observability) solid rather than spreading
+  thinner across all 8. `scripts/eval_golden.py` (the offline QA eval) is implemented.
 - `POST /admin/persona` needs real authz before production.
 - The web UI's Node runtime skips Revmark_APP's custom thread-rehydration adapter
   (resuming an interrupt after a page refresh) and its `patch-package` patches

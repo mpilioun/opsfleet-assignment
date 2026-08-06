@@ -31,6 +31,7 @@ help:
 	@echo "Probes (manual smoke tests against live services):"
 	@echo "  make probe-llm                 Send a test chat request through the LiteLLM proxy"
 	@echo "  make probe-bq                  Fetch schemas for the 4 required BigQuery tables"
+	@echo "  make eval-golden               Replay golden-bucket seed questions, LLM-judge the reports"
 
 POSTGRES_USER ?= postgres
 POSTGRES_PASSWORD ?= postgres
@@ -125,3 +126,7 @@ probe-llm:
 .PHONY: probe-bq
 probe-bq:
 	uv run python scripts/probe_bq.py
+
+.PHONY: eval-golden
+eval-golden:
+	uv run python scripts/eval_golden.py
