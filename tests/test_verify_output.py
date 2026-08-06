@@ -35,3 +35,17 @@ async def test_verify_output_reports_issues(mock_get_llm_model):
 
     assert result.status == "error"
     assert "email address" in result.content
+
+
+@patch("src.agent.tools.verify_output.get_llm_model")
+async def test_verify_output_handles_judge_failure(mock_get_llm_model):
+    judge = MagicMock()
+    judge.ainvoke = AsyncMock(side_effect=RuntimeError("rate limited"))
+    mock_get_llm_model.return_value.with_structured_output.return_value = judge
+
+    result = await verify_output.coroutine(
+        question="Top customers?", draft_report="Here they are.", runtime=_fake_runtime()
+    )
+
+    assert result.status == "error"
+    assert "auto-verified" in result.content

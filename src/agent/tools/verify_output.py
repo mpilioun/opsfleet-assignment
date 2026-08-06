@@ -30,15 +30,22 @@ async def verify_output(
     judge = get_llm_model(model="gemini-flash", effort="low").with_structured_output(
         VerifyResult
     )
-    result = await judge.ainvoke(
-        [
-            {"role": "system", "content": JUDGE_SYSTEM_PROMPT},
-            {
-                "role": "user",
-                "content": f"ORIGINAL QUESTION:\n{question}\n\nDRAFT REPORT:\n{draft_report}",
-            },
-        ]
-    )
+    try:
+        result = await judge.ainvoke(
+            [
+                {"role": "system", "content": JUDGE_SYSTEM_PROMPT},
+                {
+                    "role": "user",
+                    "content": f"ORIGINAL QUESTION:\n{question}\n\nDRAFT REPORT:\n{draft_report}",
+                },
+            ]
+        )
+    except Exception as exc:  # noqa: BLE001 - tool boundary: never raise, always return a ToolMessage
+        return ToolMessage(
+            content=f"Verification could not run ({exc}); present the report with a note that it wasn't auto-verified.",
+            status="error",
+            tool_call_id=runtime.tool_call_id,
+        )
 
     if result.passed:
         return ToolMessage(
