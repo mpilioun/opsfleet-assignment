@@ -654,6 +654,7 @@ git commit -m "refactor(frontend): render charts natively from tool-call args vi
 ### Task 7: Update the report-writer prompt, refresh the knowledge graph, final verification
 
 **Files:**
+- Modify: `src/artifacts/skills/report_writer_subagent/chart-generation/SKILL.md` (stale — found by Task 2's reviewer, see Step 1)
 - Modify: `src/artifacts/prompts/report_writer_subagent.md` (only if the tool's new args need explanation — check first)
 - Modify: `graphify-out/` (regenerated, not hand-edited)
 
@@ -661,11 +662,34 @@ git commit -m "refactor(frontend): render charts natively from tool-call args vi
 - Consumes: everything from Tasks 1-6.
 - Produces: nothing new — this is the final verification + housekeeping task.
 
-- [ ] **Step 1: Check whether the report-writer prompt needs updating**
+- [ ] **Step 1: Fix the stale chart-generation skill doc**
+
+Task 2's reviewer caught this: `src/artifacts/skills/report_writer_subagent/chart-generation/SKILL.md` still describes the *old* `generate_chart` (labels/values args, a saved file) — line 15 literally says "Mention the saved file path in your response," which is now false and would make the report-writer hallucinate a path, since Task 2 already removed all file I/O. Replace the file's contents with:
+
+```markdown
+---
+name: chart-generation
+description: When and how to use generate_chart
+---
+
+# Chart Generation
+
+1. Offer a chart when the data is naturally time-series or a comparison across a
+   handful of categories (e.g. monthly revenue, product A vs B) - not for single
+   numbers or long lists.
+2. Use `chart_type="line"` for trends over time, `"bar"` for comparisons across
+   categories, `"pie"` for a share-of-total breakdown.
+3. Pass the same aggregated, non-PII data rows you'd put in a report table -
+   never raw customer identifiers as a key's value.
+4. The chart renders directly from this tool call in the chat UI - there is no
+   file, so don't mention a path or tell the user where to find it.
+```
+
+- [ ] **Step 2: Check whether the report-writer prompt needs updating**
 
 Read `src/artifacts/prompts/report_writer_subagent.md`. It currently says "Optionally attach a chart when it clarifies a trend or comparison" with no mention of the tool's shape (the tool's own docstring carries that detail, per this codebase's existing convention — `run_sql`'s prompt doesn't restate its parameters either). Leave the prompt as-is unless you find it now says something factually wrong about the old PNG behavior (it doesn't, as of this plan's writing) — don't add unrequested detail.
 
-- [ ] **Step 2: Full backend verification**
+- [ ] **Step 3: Full backend verification**
 
 Run: `.venv/bin/python -m pytest tests/ -q`
 Expected: all pass.
@@ -673,21 +697,28 @@ Expected: all pass.
 Run: `make compile`
 Expected: clean.
 
-- [ ] **Step 3: Full frontend verification**
+- [ ] **Step 4: Full frontend verification**
 
 From `frontend/`, run: `npm run typecheck && npx vite build`
 Expected: both succeed.
 
-- [ ] **Step 4: Refresh the knowledge graph**
+- [ ] **Step 5: Commit the skill-doc fix (and prompt fix, if any)**
+
+```bash
+git add src/artifacts/skills/report_writer_subagent/chart-generation/SKILL.md
+git commit -m "fix(agent): correct chart-generation skill doc for the new generate_chart contract"
+```
+
+If Step 2 found a real prompt fix needed too, add and commit `src/artifacts/prompts/report_writer_subagent.md` with its own conventional-commit message here as well.
+
+- [ ] **Step 6: Refresh the knowledge graph**
 
 From the repo root, run: `graphify update .`
 Expected: "Code graph updated" with node/edge/community counts — this is AST-only, no LLM cost (see `CLAUDE.md`'s graphify rules).
 
-- [ ] **Step 5: Commit**
+- [ ] **Step 7: Commit the graph refresh**
 
 ```bash
 git add graphify-out
 git commit -m "chore(graphify): update knowledge graph after chart-rendering rewrite"
 ```
-
-If Step 1 found a real prompt fix needed, commit that separately first with its own conventional-commit message before this final graphify commit.
