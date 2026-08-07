@@ -32,6 +32,9 @@ class EnvironmentConfig(BaseSettings):
     LITELLM_MASTER_KEY: str = "sk-litellm-master"
     LITELLM_MAX_RETRIES: int = 3
 
+    # LangGraph
+    RECURSION_LIMIT: int = 100
+
     # Google AI Studio (embeddings for the Store's semantic index - called directly,
     # not through LiteLLM, since embeddings are a distinct API from chat completions)
     GEMINI_API_KEY: str = ""
