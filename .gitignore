@@ -228,3 +228,6 @@ graphify-out/.graphify_root
 node_modules/
 frontend/dist/
 *.tsbuildinfo
+
+# superpowers subagent-driven-development scratch workspace
+.superpowers/
