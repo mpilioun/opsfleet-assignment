@@ -1,16 +1,16 @@
 # Graph Report - opsfleet-assignment  (2026-08-07)
 
 ## Corpus Check
-- 130 files · ~53,232 words
+- 132 files · ~53,762 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 758 nodes · 1213 edges · 58 communities (49 shown, 9 thin omitted)
+- 767 nodes · 1230 edges · 57 communities (48 shown, 9 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 34 edges (avg confidence: 0.67)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `cf9ae243`
+- Built from commit: `4b4871ef`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -19,7 +19,7 @@
 - main.py
 - logging.py
 - pg (Postgres service)
-- BigQueryRunner
+- test_get_schema.py
 - Mandatory Post-Edit Review Process
 - test_golden_bucket.py
 - Conventional Commit Names Rule
@@ -27,7 +27,7 @@
 - opsfleet-assignment
 - opsfleet-assignment (project)
 - agent.py
-- eval_golden.py
+- run_structured
 - test_run_sql.py
 - generate_chart
 - runtime/package.json
@@ -37,9 +37,8 @@
 - persona.py
 - Retail Insights Agent — High-Level Design
 - index.ts
-- test_guard.py
 - agent-provider.tsx
-- tool-card.tsx
+- report-renderers.tsx
 - compilerOptions
 - validate_and_prepare_sql
 - Global Constraints
@@ -70,10 +69,10 @@
   tests/test_eval_golden.py → scripts/eval_golden.py
 - `test_final_report_text_skips_empty_ai_messages()` --calls--> `_final_report_text()`  [EXTRACTED]
   tests/test_eval_golden.py → scripts/eval_golden.py
-- `main()` --calls--> `build_agent()`  [EXTRACTED]
-  scripts/eval_golden.py → src/agent/agent.py
-- `main()` --calls--> `BigQueryRunner`  [EXTRACTED]
-  scripts/probe_bq.py → src/clients/bq_client.py
+- `_run_one()` --references--> `VerifyResult`  [EXTRACTED]
+  scripts/eval_golden.py → src/agent/tools/verify_output.py
+- `_run_one()` --calls--> `run_structured()`  [EXTRACTED]
+  scripts/eval_golden.py → src/agent/utils/structured_llm.py
 
 ## Import Cycles
 - None detected.
@@ -81,7 +80,7 @@
 ## Hyperedges (group relationships)
 - **Post-Edit Workflow Steps** — claude_md_conventional_commits, claude_md_make_compile, claude_md_code_review_skill, claude_md_ponytail_review_skill [INFERRED 0.85]
 
-## Communities (58 total, 9 thin omitted)
+## Communities (57 total, 9 thin omitted)
 
 ### Community 0 - "PostgresManager"
 Cohesion: 0.14
@@ -89,7 +88,7 @@ Nodes (10): AsyncConnectionPool, AsyncPostgresSaver, AsyncPostgresStore, _build_
 
 ### Community 1 - "main.py"
 Cohesion: 0.05
-Nodes (43): BaseSettings, CallbackHandler, get, Langfuse, LangGraphAgent, LangGraphAGUIAgent, post, build_ag_ui_agent() (+35 more)
+Nodes (42): BaseSettings, CallbackHandler, get, Langfuse, LangGraphAgent, LangGraphAGUIAgent, post, build_ag_ui_agent() (+34 more)
 
 ### Community 2 - "logging.py"
 Cohesion: 0.07
@@ -99,9 +98,9 @@ Nodes (56): Logger, delete_reports(), tool, ToolMessage, ToolRuntime, Permanentl
 Cohesion: 0.50
 Nodes (4): pg_data volume, pg (Postgres service), pgadmin_data volume, pgadmin (pgAdmin4 service)
 
-### Community 4 - "BigQueryRunner"
-Cohesion: 0.08
-Nodes (30): DataFrame, main(), _format_table(), get_schema(), tool, ToolMessage, ToolRuntime, Returns (formatted section, ok). A failure is reported inline rather than… (+22 more)
+### Community 4 - "test_get_schema.py"
+Cohesion: 0.42
+Nodes (9): _field(), patch, SimpleNamespace, _runtime(), test_failed_single_table_lookup_is_an_error(), test_no_argument_returns_full_overview(), test_one_unreadable_table_does_not_sink_the_overview(), test_rejects_unknown_table() (+1 more)
 
 ### Community 5 - "Mandatory Post-Edit Review Process"
 Cohesion: 0.67
@@ -112,19 +111,19 @@ Cohesion: 0.10
 Nodes (31): tool, ToolMessage, ToolRuntime, Search the golden bucket for past analyst-approved Question->SQL->Report…, search_golden_bucket(), add_candidate_trio(), ensure_seeded(), promote_to_golden() (+23 more)
 
 ### Community 13 - "agent.py"
-Cohesion: 0.06
-Nodes (47): BaseStore, ChatOpenAI, CompositeBackend, main(), build_agent(), build_backend(), Ephemeral state by default; /memory/ persists per-user in the Store; /skills/…, datetime_prompt() (+39 more)
+Cohesion: 0.05
+Nodes (55): BaseStore, ChatOpenAI, CompositeBackend, _final_report_text(), main(), Offline QA eval: replay each golden-bucket seed question through the live agent…, _run_one(), main() (+47 more)
 
-### Community 21 - "eval_golden.py"
-Cohesion: 0.10
-Nodes (27): _final_report_text(), main(), Offline QA eval: replay each golden-bucket seed question through the live agent…, _run_one(), BaseModel, tool, ToolMessage, ToolRuntime (+19 more)
+### Community 21 - "run_structured"
+Cohesion: 0.08
+Nodes (36): before_agent, _classifier_input(), BaseModel, Scope/safety guard (requirement 2, "safeguarded against malicious users"): a…, The latest user message, plus the assistant turn it replies to. Without that…, scope_guard(), ScopeResult, BaseModel (+28 more)
 
 ### Community 22 - "test_run_sql.py"
-Cohesion: 0.12
-Nodes (27): Client, Exception, _count_recent_run_sql_failures(), tool, ToolMessage, ToolRuntime, Consecutive run_sql failures counting back from the latest message, reset by a…, Validate and execute a read-only SQL query against BigQuery (orders,… (+19 more)
+Cohesion: 0.06
+Nodes (48): Client, DataFrame, Exception, main(), _format_table(), get_schema(), tool, ToolMessage (+40 more)
 
 ### Community 23 - "generate_chart"
-Cohesion: 0.13
+Cohesion: 0.14
 Nodes (20): ChartType, generate_chart(), tool, ToolMessage, ToolRuntime, Attach a chart to the report. chart_type picks the shape (line, bar, pie,…, ChartArtifact, ChartSeries (+12 more)
 
 ### Community 24 - "runtime/package.json"
@@ -133,7 +132,7 @@ Nodes (28): @copilotkit/runtime, cors, dotenv, express, dependencies, @copilotki
 
 ### Community 25 - "dependencies"
 Cohesion: 0.05
-Nodes (39): @copilotkit/react-core, @copilotkit/react-ui, @copilotkit/runtime-client-gql, @copilotkit/shared, dependencies, @copilotkit/react-core, @copilotkit/react-ui, @copilotkit/runtime-client-gql (+31 more)
+Nodes (42): @copilotkit/react-core, @copilotkit/react-ui, @copilotkit/runtime-client-gql, @copilotkit/shared, dependencies, @copilotkit/react-core, @copilotkit/react-ui, @copilotkit/runtime-client-gql (+34 more)
 
 ### Community 26 - "compilerOptions"
 Cohesion: 0.11
@@ -155,17 +154,13 @@ Nodes (20): 0. Scope note: CLI → web UI, 10. Requirement 7 — Observability, 
 Cohesion: 0.19
 Nodes (11): createCorsMiddleware(), AGENT_BACKEND_URL, AGENT_NAME, COPILOTKIT_BASE_PATH, COPILOTKIT_SERVER_PORT, CORS_ALLOWED_ORIGINS, projectRoot, srcDir (+3 more)
 
-### Community 31 - "test_guard.py"
-Cohesion: 0.20
-Nodes (16): before_agent, _classifier_input(), BaseModel, Scope/safety guard (requirement 2, "safeguarded against malicious users"): a…, The latest user message, plus the assistant turn it replies to. Without that…, scope_guard(), ScopeResult, patch (+8 more)
-
 ### Community 32 - "agent-provider.tsx"
 Cohesion: 0.06
-Nodes (33): App(), getOrCreateUserId(), AGENT_BACKEND_URL, AGENT_NAME, COPILOT_RUNTIME_URL, AgentContext, AgentContextValue, AgentProvider() (+25 more)
+Nodes (37): App(), askUserId(), AgentContext, AgentContextValue, AgentProvider(), AgentRegistrations(), InterruptRenderer(), useAgentContext() (+29 more)
 
-### Community 33 - "tool-card.tsx"
+### Community 33 - "report-renderers.tsx"
 Cohesion: 0.08
-Nodes (36): ApprovalCard, ApprovalCardArgsSection(), ApprovalCardDefaultActions(), ApprovalCardRoot(), ApprovalCardToolRow(), useInterruptContext(), RenderStatus, Tone (+28 more)
+Nodes (36): AGENT_BACKEND_URL, AGENT_NAME, COPILOT_RUNTIME_URL, formatSize(), ReportDocument(), slugify(), splitReportResult(), RenderStatus (+28 more)
 
 ### Community 34 - "compilerOptions"
 Cohesion: 0.12
@@ -188,24 +183,24 @@ Cohesion: 0.40
 Nodes (4): Destructive actions, Style, What you do, What you refuse
 
 ## Knowledge Gaps
-- **158 isolated node(s):** `name`, `private`, `version`, `type`, `dev` (+153 more)
+- **160 isolated node(s):** `name`, `private`, `version`, `type`, `dev` (+155 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `uuid` connect `dependencies` to `logging.py`, `eval_golden.py`, `test_golden_bucket.py`?**
-  _High betweenness centrality (0.064) - this node is a cross-community bridge._
+- **Why does `uuid` connect `dependencies` to `logging.py`, `agent.py`, `test_golden_bucket.py`?**
+  _High betweenness centrality (0.067) - this node is a cross-community bridge._
 - **Are the 4 inferred relationships involving `build_agent()` (e.g. with `datetime_prompt()` and `scope_guard()`) actually correct?**
   _`build_agent()` has 4 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `name`, `private`, `version` to the rest of the system?**
-  _158 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _160 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `PostgresManager` be split into smaller, more focused modules?**
   _Cohesion score 0.13970588235294118 - nodes in this community are weakly interconnected._
 - **Should `main.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.05194805194805195 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05380852550663871 - nodes in this community are weakly interconnected._
 - **Should `logging.py` be split into smaller, more focused modules?**
   _Cohesion score 0.06820119352088662 - nodes in this community are weakly interconnected._
-- **Should `BigQueryRunner` be split into smaller, more focused modules?**
-  _Cohesion score 0.07948717948717948 - nodes in this community are weakly interconnected._
+- **Should `test_golden_bucket.py` be split into smaller, more focused modules?**
+  _Cohesion score 0.0957983193277311 - nodes in this community are weakly interconnected._
