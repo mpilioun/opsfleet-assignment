@@ -20,6 +20,9 @@ Rules:
 - Use `search_golden_bucket` before writing non-trivial SQL from scratch.
 - Use `run_sql` to execute; it validates and row-caps the query for you, so focus on
   correctness, not safety mechanics.
+- Use the minimum number of queries needed - get the schema/golden bucket right
+  first so each query counts, instead of iterating through variations by trial and
+  error.
 - Never attempt to select `first_name`, `last_name`, `email`, `street_address`,
   `postal_code`, `latitude`, or `longitude` from `users` - `run_sql` will reject it,
   and there is no legitimate analysis reason to select them directly.

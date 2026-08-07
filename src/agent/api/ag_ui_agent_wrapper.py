@@ -8,6 +8,7 @@ from copilotkit import LangGraphAGUIAgent
 from copilotkit.langgraph import copilotkit_customize_config
 
 from src.agent.agent import build_agent
+from src.config.env_config import env_config
 from src.observability.langfuse import get_langfuse_callback
 
 AGENT_NAME = "retail-insights-agent"
@@ -21,6 +22,7 @@ _langfuse_callback = get_langfuse_callback()
 _base_config = {
     "agent_name": AGENT_NAME,
     "callbacks": [_langfuse_callback] if _langfuse_callback is not None else [],
+    "recursion_limit": env_config.RECURSION_LIMIT,
 }
 
 
