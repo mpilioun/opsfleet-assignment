@@ -2601,7 +2601,7 @@
       "label": "RetailInsightsAGUIAgent",
       "file_type": "code",
       "source_file": "src/agent/api/ag_ui_agent_wrapper.py",
-      "source_location": "L27",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "src_agent_api_ag_ui_agent_wrapper_retailinsightsaguiagent",
       "community": 1,
@@ -2623,7 +2623,7 @@
       "label": ".__init__()",
       "file_type": "code",
       "source_file": "src/agent/api/ag_ui_agent_wrapper.py",
-      "source_location": "L28",
+      "source_location": "L30",
       "_origin": "ast",
       "id": "src_agent_api_ag_ui_agent_wrapper_retailinsightsaguiagent_init",
       "community": 1,
@@ -2634,7 +2634,7 @@
       "label": ".prepare_stream()",
       "file_type": "code",
       "source_file": "src/agent/api/ag_ui_agent_wrapper.py",
-      "source_location": "L33",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "src_agent_api_ag_ui_agent_wrapper_retailinsightsaguiagent_prepare_stream",
       "community": 1,
@@ -2645,7 +2645,7 @@
       "label": "build_ag_ui_agent()",
       "file_type": "code",
       "source_file": "src/agent/api/ag_ui_agent_wrapper.py",
-      "source_location": "L57",
+      "source_location": "L59",
       "_origin": "ast",
       "id": "src_agent_api_ag_ui_agent_wrapper_build_ag_ui_agent",
       "community": 1,
@@ -2667,9 +2667,9 @@
       "label": "Inject user_id/thread_id into configurable and attach Langfuse metadata.",
       "file_type": "rationale",
       "source_file": "src/agent/api/ag_ui_agent_wrapper.py",
-      "source_location": "L34",
+      "source_location": "L36",
       "_origin": "ast",
-      "id": "src_agent_api_ag_ui_agent_wrapper_rationale_34",
+      "id": "src_agent_api_ag_ui_agent_wrapper_rationale_36",
       "community": 1,
       "community_name": "main.py",
       "norm_label": "inject user_id/thread_id into configurable and attach langfuse metadata."
@@ -2836,7 +2836,7 @@
       "_origin": "ast",
       "id": "src_agent_middlewares_guard",
       "community": 31,
-      "community_name": "run_structured",
+      "community_name": "guard.py",
       "norm_label": "guard.py"
     },
     {
@@ -2847,7 +2847,7 @@
       "_origin": "ast",
       "id": "src_agent_middlewares_guard_scoperesult",
       "community": 31,
-      "community_name": "run_structured",
+      "community_name": "guard.py",
       "norm_label": "scoperesult"
     },
     {
@@ -2858,7 +2858,7 @@
       "_origin": "ast",
       "id": "src_agent_middlewares_guard_py_basemodel",
       "community": 31,
-      "community_name": "run_structured",
+      "community_name": "guard.py",
       "norm_label": "basemodel"
     },
     {
@@ -2869,7 +2869,7 @@
       "_origin": "ast",
       "id": "src_agent_middlewares_guard_last_human_message_content",
       "community": 31,
-      "community_name": "run_structured",
+      "community_name": "guard.py",
       "norm_label": "_last_human_message_content()"
     },
     {
@@ -2880,7 +2880,7 @@
       "_origin": "ast",
       "id": "before_agent",
       "community": 31,
-      "community_name": "run_structured",
+      "community_name": "guard.py",
       "norm_label": "before_agent"
     },
     {
@@ -2891,7 +2891,7 @@
       "_origin": "ast",
       "id": "src_agent_middlewares_guard_scope_guard",
       "community": 31,
-      "community_name": "run_structured",
+      "community_name": "guard.py",
       "norm_label": "scope_guard()"
     },
     {
@@ -2902,7 +2902,7 @@
       "_origin": "ast",
       "id": "src_agent_middlewares_guard_rationale_1",
       "community": 31,
-      "community_name": "run_structured",
+      "community_name": "guard.py",
       "norm_label": "scope/safety guard (requirement 2, \"safeguarded against malicious users\"): a..."
     },
     {
@@ -3319,8 +3319,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_agent_tools_get_schema",
-      "community": 22,
-      "community_name": "validate_and_prepare_sql",
+      "community": 4,
+      "community_name": "BigQueryRunner",
       "norm_label": "get_schema.py"
     },
     {
@@ -3330,8 +3330,8 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "src_agent_tools_get_schema_format_table",
-      "community": 22,
-      "community_name": "validate_and_prepare_sql",
+      "community": 4,
+      "community_name": "BigQueryRunner",
       "norm_label": "_format_table()"
     },
     {
@@ -3341,8 +3341,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_agent_tools_get_schema_py_tool",
-      "community": 22,
-      "community_name": "validate_and_prepare_sql",
+      "community": 4,
+      "community_name": "BigQueryRunner",
       "norm_label": "tool"
     },
     {
@@ -3352,8 +3352,8 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "src_agent_tools_get_schema_get_schema",
-      "community": 22,
-      "community_name": "validate_and_prepare_sql",
+      "community": 4,
+      "community_name": "BigQueryRunner",
       "norm_label": "get_schema()"
     },
     {
@@ -3363,8 +3363,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_agent_tools_get_schema_py_toolruntime",
-      "community": 22,
-      "community_name": "validate_and_prepare_sql",
+      "community": 4,
+      "community_name": "BigQueryRunner",
       "norm_label": "toolruntime"
     },
     {
@@ -3374,8 +3374,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_agent_tools_get_schema_py_toolmessage",
-      "community": 22,
-      "community_name": "validate_and_prepare_sql",
+      "community": 4,
+      "community_name": "BigQueryRunner",
       "norm_label": "toolmessage"
     },
     {
@@ -3385,8 +3385,8 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "src_agent_tools_get_schema_rationale_29",
-      "community": 22,
-      "community_name": "validate_and_prepare_sql",
+      "community": 4,
+      "community_name": "BigQueryRunner",
       "norm_label": "returns (formatted section, ok). a failure is reported inline rather than..."
     },
     {
@@ -3396,8 +3396,8 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "src_agent_tools_get_schema_rationale_55",
-      "community": 22,
-      "community_name": "validate_and_prepare_sql",
+      "community": 4,
+      "community_name": "BigQueryRunner",
       "norm_label": "inspect the available data. call with no arguments for the full dataset..."
     },
     {
@@ -3627,8 +3627,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_agent_tools_verify_output",
-      "community": 2,
-      "community_name": "logging.py",
+      "community": 21,
+      "community_name": "eval_golden.py",
       "norm_label": "verify_output.py"
     },
     {
@@ -3902,8 +3902,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_agent_utils_persona",
-      "community": 1,
-      "community_name": "main.py",
+      "community": 28,
+      "community_name": "persona.py",
       "norm_label": "persona.py"
     },
     {
@@ -3913,8 +3913,8 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_agent_utils_persona_get_active_persona",
-      "community": 1,
-      "community_name": "main.py",
+      "community": 28,
+      "community_name": "persona.py",
       "norm_label": "get_active_persona()"
     },
     {
@@ -3924,8 +3924,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_agent_utils_persona_py_any",
-      "community": 1,
-      "community_name": "main.py",
+      "community": 28,
+      "community_name": "persona.py",
       "norm_label": "any"
     },
     {
@@ -3935,8 +3935,8 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "src_agent_utils_persona_set_active_persona",
-      "community": 1,
-      "community_name": "main.py",
+      "community": 28,
+      "community_name": "persona.py",
       "norm_label": "set_active_persona()"
     },
     {
@@ -3946,8 +3946,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_agent_utils_persona_rationale_1",
-      "community": 1,
-      "community_name": "main.py",
+      "community": 28,
+      "community_name": "persona.py",
       "norm_label": "persona hot-reload (requirement 8: the ceo changes report tone weekly, without..."
     },
     {
@@ -3957,8 +3957,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "src_agent_utils_persona_rationale_33",
-      "community": 1,
-      "community_name": "main.py",
+      "community": 28,
+      "community_name": "persona.py",
       "norm_label": "updates the live override. if no store is configured (e.g. test mode), degrades..."
     },
     {
@@ -4067,8 +4067,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_agent_utils_structured_llm",
-      "community": 13,
-      "community_name": "agent.py",
+      "community": 21,
+      "community_name": "eval_golden.py",
       "norm_label": "structured_llm.py"
     },
     {
@@ -4078,8 +4078,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_agent_utils_structured_llm_run_structured",
-      "community": 31,
-      "community_name": "run_structured",
+      "community": 21,
+      "community_name": "eval_golden.py",
       "norm_label": "run_structured()"
     },
     {
@@ -4089,8 +4089,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_agent_utils_structured_llm_py_basemodel",
-      "community": 31,
-      "community_name": "run_structured",
+      "community": 21,
+      "community_name": "eval_golden.py",
       "norm_label": "basemodel"
     },
     {
@@ -4100,8 +4100,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_agent_utils_structured_llm_rationale_17",
-      "community": 31,
-      "community_name": "run_structured",
+      "community": 21,
+      "community_name": "eval_golden.py",
       "norm_label": "one-shot structured output via a forced tool call (toolstrategy), not..."
     },
     {
@@ -4617,8 +4617,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_config_env_config",
-      "community": 27,
-      "community_name": "langfuse.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "env_config.py"
     },
     {
@@ -4628,8 +4628,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_config_env_config_environmentconfig",
-      "community": 27,
-      "community_name": "langfuse.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "environmentconfig"
     },
     {
@@ -4639,30 +4639,30 @@
       "source_location": "",
       "_origin": "ast",
       "id": "basesettings",
-      "community": 27,
-      "community_name": "langfuse.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "basesettings"
     },
     {
       "label": ".is_test()",
       "file_type": "code",
       "source_file": "src/config/env_config.py",
-      "source_location": "L48",
+      "source_location": "L51",
       "_origin": "ast",
       "id": "src_config_env_config_environmentconfig_is_test",
-      "community": 27,
-      "community_name": "langfuse.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": ".is_test()"
     },
     {
       "label": ".postgres_conninfo()",
       "file_type": "code",
       "source_file": "src/config/env_config.py",
-      "source_location": "L52",
+      "source_location": "L55",
       "_origin": "ast",
       "id": "src_config_env_config_environmentconfig_postgres_conninfo",
-      "community": 27,
-      "community_name": "langfuse.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": ".postgres_conninfo()"
     },
     {
@@ -4716,8 +4716,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_database_postgres_manager",
-      "community": 0,
-      "community_name": "PostgresManager",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "postgres_manager.py"
     },
     {
@@ -4859,8 +4859,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_database_postgres_manager_rationale_1",
-      "community": 0,
-      "community_name": "PostgresManager",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "postgresql connection pool and langgraph persistence management."
     },
     {
@@ -5013,8 +5013,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_observability_langfuse",
-      "community": 27,
-      "community_name": "langfuse.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "langfuse.py"
     },
     {
@@ -5024,8 +5024,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "src_observability_langfuse_init_langfuse",
-      "community": 27,
-      "community_name": "langfuse.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "init_langfuse()"
     },
     {
@@ -5035,8 +5035,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "langfuse",
-      "community": 27,
-      "community_name": "langfuse.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "langfuse"
     },
     {
@@ -5046,8 +5046,8 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "src_observability_langfuse_get_langfuse_client",
-      "community": 27,
-      "community_name": "langfuse.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "get_langfuse_client()"
     },
     {
@@ -5057,8 +5057,8 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "src_observability_langfuse_get_langfuse_callback",
-      "community": 27,
-      "community_name": "langfuse.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "get_langfuse_callback()"
     },
     {
@@ -5068,8 +5068,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "callbackhandler",
-      "community": 27,
-      "community_name": "langfuse.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "callbackhandler"
     },
     {
@@ -5079,8 +5079,8 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "src_observability_langfuse_flush_langfuse",
-      "community": 27,
-      "community_name": "langfuse.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "flush_langfuse()"
     },
     {
@@ -5090,8 +5090,8 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "src_observability_langfuse_shutdown_langfuse",
-      "community": 27,
-      "community_name": "langfuse.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "shutdown_langfuse()"
     },
     {
@@ -5101,8 +5101,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_observability_langfuse_rationale_1",
-      "community": 27,
-      "community_name": "langfuse.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "langfuse client with isolated tracerprovider. this module initializes langfuse..."
     },
     {
@@ -5112,8 +5112,8 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "src_observability_langfuse_rationale_22",
-      "community": 27,
-      "community_name": "langfuse.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "initialize langfuse client singleton with isolated tracerprovider."
     },
     {
@@ -5123,8 +5123,8 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "src_observability_langfuse_rationale_39",
-      "community": 27,
-      "community_name": "langfuse.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "get the langfuse client with isolated tracerprovider."
     },
     {
@@ -5134,8 +5134,8 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "src_observability_langfuse_rationale_44",
-      "community": 27,
-      "community_name": "langfuse.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "get a callbackhandler using the isolated langfuse client."
     },
     {
@@ -5145,8 +5145,8 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "src_observability_langfuse_rationale_52",
-      "community": 27,
-      "community_name": "langfuse.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "flush pending langfuse events to the server. runs the blocking flush in a..."
     },
     {
@@ -5156,8 +5156,8 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "src_observability_langfuse_rationale_68",
-      "community": 27,
-      "community_name": "langfuse.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "shutdown langfuse client."
     },
     {
@@ -5376,8 +5376,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_utils_bq_runner",
-      "community": 22,
-      "community_name": "validate_and_prepare_sql",
+      "community": 4,
+      "community_name": "BigQueryRunner",
       "norm_label": "bq_runner.py"
     },
     {
@@ -5387,8 +5387,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_utils_bq_runner_get_runner",
-      "community": 22,
-      "community_name": "validate_and_prepare_sql",
+      "community": 4,
+      "community_name": "BigQueryRunner",
       "norm_label": "get_runner()"
     },
     {
@@ -5442,8 +5442,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_app",
-      "community": 1,
-      "community_name": "main.py",
+      "community": 28,
+      "community_name": "persona.py",
       "norm_label": "test_app.py"
     },
     {
@@ -5453,8 +5453,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "tests_test_app_test_app_wires_up_expected_routes",
-      "community": 1,
-      "community_name": "main.py",
+      "community": 28,
+      "community_name": "persona.py",
       "norm_label": "test_app_wires_up_expected_routes()"
     },
     {
@@ -5464,8 +5464,8 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "tests_test_app_test_admin_persona_endpoint_updates_active_persona",
-      "community": 1,
-      "community_name": "main.py",
+      "community": 28,
+      "community_name": "persona.py",
       "norm_label": "test_admin_persona_endpoint_updates_active_persona()"
     },
     {
@@ -5519,8 +5519,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_bq_runner",
-      "community": 22,
-      "community_name": "validate_and_prepare_sql",
+      "community": 4,
+      "community_name": "BigQueryRunner",
       "norm_label": "test_bq_runner.py"
     },
     {
@@ -5530,8 +5530,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_bq_runner_py_patch",
-      "community": 22,
-      "community_name": "validate_and_prepare_sql",
+      "community": 4,
+      "community_name": "BigQueryRunner",
       "norm_label": "patch"
     },
     {
@@ -5541,8 +5541,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "tests_test_bq_runner_test_get_runner_is_a_lazy_singleton",
-      "community": 22,
-      "community_name": "validate_and_prepare_sql",
+      "community": 4,
+      "community_name": "BigQueryRunner",
       "norm_label": "test_get_runner_is_a_lazy_singleton()"
     },
     {
@@ -5761,8 +5761,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_get_schema",
-      "community": 28,
-      "community_name": "test_get_schema.py",
+      "community": 4,
+      "community_name": "BigQueryRunner",
       "norm_label": "test_get_schema.py"
     },
     {
@@ -5772,8 +5772,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "tests_test_get_schema_runtime",
-      "community": 28,
-      "community_name": "test_get_schema.py",
+      "community": 4,
+      "community_name": "BigQueryRunner",
       "norm_label": "_runtime()"
     },
     {
@@ -5783,8 +5783,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_get_schema_py_simplenamespace",
-      "community": 28,
-      "community_name": "test_get_schema.py",
+      "community": 4,
+      "community_name": "BigQueryRunner",
       "norm_label": "simplenamespace"
     },
     {
@@ -5794,8 +5794,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "tests_test_get_schema_field",
-      "community": 28,
-      "community_name": "test_get_schema.py",
+      "community": 4,
+      "community_name": "BigQueryRunner",
       "norm_label": "_field()"
     },
     {
@@ -5805,8 +5805,8 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "tests_test_get_schema_test_rejects_unknown_table",
-      "community": 28,
-      "community_name": "test_get_schema.py",
+      "community": 4,
+      "community_name": "BigQueryRunner",
       "norm_label": "test_rejects_unknown_table()"
     },
     {
@@ -5816,8 +5816,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_get_schema_py_patch",
-      "community": 28,
-      "community_name": "test_get_schema.py",
+      "community": 4,
+      "community_name": "BigQueryRunner",
       "norm_label": "patch"
     },
     {
@@ -5827,8 +5827,8 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "tests_test_get_schema_test_single_table_lists_columns_and_marks_pii",
-      "community": 28,
-      "community_name": "test_get_schema.py",
+      "community": 4,
+      "community_name": "BigQueryRunner",
       "norm_label": "test_single_table_lists_columns_and_marks_pii()"
     },
     {
@@ -5838,8 +5838,8 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "tests_test_get_schema_test_no_argument_returns_full_overview",
-      "community": 28,
-      "community_name": "test_get_schema.py",
+      "community": 4,
+      "community_name": "BigQueryRunner",
       "norm_label": "test_no_argument_returns_full_overview()"
     },
     {
@@ -5849,8 +5849,8 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "tests_test_get_schema_test_failed_single_table_lookup_is_an_error",
-      "community": 28,
-      "community_name": "test_get_schema.py",
+      "community": 4,
+      "community_name": "BigQueryRunner",
       "norm_label": "test_failed_single_table_lookup_is_an_error()"
     },
     {
@@ -5860,8 +5860,8 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "tests_test_get_schema_test_one_unreadable_table_does_not_sink_the_overview",
-      "community": 28,
-      "community_name": "test_get_schema.py",
+      "community": 4,
+      "community_name": "BigQueryRunner",
       "norm_label": "test_one_unreadable_table_does_not_sink_the_overview()"
     },
     {
@@ -6004,7 +6004,7 @@
       "_origin": "ast",
       "id": "tests_test_guard",
       "community": 31,
-      "community_name": "run_structured",
+      "community_name": "guard.py",
       "norm_label": "test_guard.py"
     },
     {
@@ -6015,7 +6015,7 @@
       "_origin": "ast",
       "id": "tests_test_guard_test_last_human_message_content_finds_most_recent",
       "community": 31,
-      "community_name": "run_structured",
+      "community_name": "guard.py",
       "norm_label": "test_last_human_message_content_finds_most_recent()"
     },
     {
@@ -6026,7 +6026,7 @@
       "_origin": "ast",
       "id": "tests_test_guard_test_last_human_message_content_empty_when_none",
       "community": 31,
-      "community_name": "run_structured",
+      "community_name": "guard.py",
       "norm_label": "test_last_human_message_content_empty_when_none()"
     },
     {
@@ -6037,7 +6037,7 @@
       "_origin": "ast",
       "id": "tests_test_guard_py_patch",
       "community": 31,
-      "community_name": "run_structured",
+      "community_name": "guard.py",
       "norm_label": "patch"
     },
     {
@@ -6048,7 +6048,7 @@
       "_origin": "ast",
       "id": "tests_test_guard_test_in_scope_request_passes_through",
       "community": 31,
-      "community_name": "run_structured",
+      "community_name": "guard.py",
       "norm_label": "test_in_scope_request_passes_through()"
     },
     {
@@ -6059,7 +6059,7 @@
       "_origin": "ast",
       "id": "tests_test_guard_test_out_of_scope_request_is_refused",
       "community": 31,
-      "community_name": "run_structured",
+      "community_name": "guard.py",
       "norm_label": "test_out_of_scope_request_is_refused()"
     },
     {
@@ -6070,7 +6070,7 @@
       "_origin": "ast",
       "id": "tests_test_guard_test_classifier_failure_fails_open",
       "community": 31,
-      "community_name": "run_structured",
+      "community_name": "guard.py",
       "norm_label": "test_classifier_failure_fails_open()"
     },
     {
@@ -6080,8 +6080,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_langfuse",
-      "community": 27,
-      "community_name": "langfuse.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "test_langfuse.py"
     },
     {
@@ -6091,8 +6091,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "tests_test_langfuse_reload_with_keys",
-      "community": 27,
-      "community_name": "langfuse.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "_reload_with_keys()"
     },
     {
@@ -6102,8 +6102,8 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "tests_test_langfuse_test_no_client_without_credentials",
-      "community": 27,
-      "community_name": "langfuse.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "test_no_client_without_credentials()"
     },
     {
@@ -6113,8 +6113,8 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "tests_test_langfuse_test_client_initialized_with_credentials",
-      "community": 27,
-      "community_name": "langfuse.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "test_client_initialized_with_credentials()"
     },
     {
@@ -6124,8 +6124,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_persona",
-      "community": 1,
-      "community_name": "main.py",
+      "community": 28,
+      "community_name": "persona.py",
       "norm_label": "test_persona.py"
     },
     {
@@ -6135,8 +6135,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "tests_test_persona_test_falls_back_to_default_when_store_empty",
-      "community": 1,
-      "community_name": "main.py",
+      "community": 28,
+      "community_name": "persona.py",
       "norm_label": "test_falls_back_to_default_when_store_empty()"
     },
     {
@@ -6146,8 +6146,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "tests_test_persona_test_set_then_get_returns_live_override",
-      "community": 1,
-      "community_name": "main.py",
+      "community": 28,
+      "community_name": "persona.py",
       "norm_label": "test_set_then_get_returns_live_override()"
     },
     {
@@ -6157,8 +6157,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "tests_test_persona_test_get_is_served_from_cache_without_hitting_store_again",
-      "community": 1,
-      "community_name": "main.py",
+      "community": 28,
+      "community_name": "persona.py",
       "norm_label": "test_get_is_served_from_cache_without_hitting_store_again()"
     },
     {
@@ -6168,8 +6168,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_persona_prompt",
-      "community": 1,
-      "community_name": "main.py",
+      "community": 28,
+      "community_name": "persona.py",
       "norm_label": "test_persona_prompt.py"
     },
     {
@@ -6179,8 +6179,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "tests_test_persona_prompt_fake_request",
-      "community": 1,
-      "community_name": "main.py",
+      "community": 28,
+      "community_name": "persona.py",
       "norm_label": "_fake_request()"
     },
     {
@@ -6190,8 +6190,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_persona_prompt_py_modelrequest",
-      "community": 1,
-      "community_name": "main.py",
+      "community": 28,
+      "community_name": "persona.py",
       "norm_label": "modelrequest"
     },
     {
@@ -6201,8 +6201,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "tests_test_persona_prompt_test_persona_prepended_when_other_content_exists",
-      "community": 1,
-      "community_name": "main.py",
+      "community": 28,
+      "community_name": "persona.py",
       "norm_label": "test_persona_prepended_when_other_content_exists()"
     },
     {
@@ -6212,8 +6212,8 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "tests_test_persona_prompt_test_persona_alone_when_no_other_content",
-      "community": 1,
-      "community_name": "main.py",
+      "community": 28,
+      "community_name": "persona.py",
       "norm_label": "test_persona_alone_when_no_other_content()"
     },
     {
@@ -6784,8 +6784,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_structured_llm",
-      "community": 31,
-      "community_name": "run_structured",
+      "community": 21,
+      "community_name": "eval_golden.py",
       "norm_label": "test_structured_llm.py"
     },
     {
@@ -6795,8 +6795,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "tests_test_structured_llm_fakeresult",
-      "community": 31,
-      "community_name": "run_structured",
+      "community": 21,
+      "community_name": "eval_golden.py",
       "norm_label": "_fakeresult"
     },
     {
@@ -6806,8 +6806,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_structured_llm_py_basemodel",
-      "community": 31,
-      "community_name": "run_structured",
+      "community": 21,
+      "community_name": "eval_golden.py",
       "norm_label": "basemodel"
     },
     {
@@ -6817,8 +6817,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_structured_llm_py_patch",
-      "community": 31,
-      "community_name": "run_structured",
+      "community": 21,
+      "community_name": "eval_golden.py",
       "norm_label": "patch"
     },
     {
@@ -6828,8 +6828,8 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "tests_test_structured_llm_test_run_structured_returns_structured_response",
-      "community": 31,
-      "community_name": "run_structured",
+      "community": 21,
+      "community_name": "eval_golden.py",
       "norm_label": "test_run_structured_returns_structured_response()"
     },
     {
@@ -7163,6 +7163,237 @@
       "norm_label": "13. known gaps / what a production pass adds"
     },
     {
+      "label": "TEST_CONVERSATIONS.md",
+      "file_type": "document",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_test_conversations",
+      "community": 27,
+      "community_name": "Retail Insights Agent \u2014 Test Conversations",
+      "norm_label": "test_conversations.md"
+    },
+    {
+      "label": "Retail Insights Agent \u2014 Test Conversations",
+      "file_type": "document",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_test_conversations_retail_insights_agent_test_conversations",
+      "community": 27,
+      "community_name": "Retail Insights Agent \u2014 Test Conversations",
+      "norm_label": "retail insights agent \u2014 test conversations"
+    },
+    {
+      "label": "1. Golden path \u2014 schema discovery \u2192 analysis \u2192 report",
+      "file_type": "document",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "docs_test_conversations_1_golden_path_schema_discovery_analysis_report",
+      "community": 27,
+      "community_name": "Retail Insights Agent \u2014 Test Conversations",
+      "norm_label": "1. golden path \u2014 schema discovery \u2192 analysis \u2192 report"
+    },
+    {
+      "label": "2. Multi-turn context / memory",
+      "file_type": "document",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "docs_test_conversations_2_multi_turn_context_memory",
+      "community": 27,
+      "community_name": "Retail Insights Agent \u2014 Test Conversations",
+      "norm_label": "2. multi-turn context / memory"
+    },
+    {
+      "label": "3. Scope guard \u2014 out-of-scope refusal (`scope_guard`)",
+      "file_type": "document",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "docs_test_conversations_3_scope_guard_out_of_scope_refusal_scope_guard",
+      "community": 27,
+      "community_name": "Retail Insights Agent \u2014 Test Conversations",
+      "norm_label": "3. scope guard \u2014 out-of-scope refusal (`scope_guard`)"
+    },
+    {
+      "label": "4. Scope guard \u2014 PII-fishing refusal",
+      "file_type": "document",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "docs_test_conversations_4_scope_guard_pii_fishing_refusal",
+      "community": 27,
+      "community_name": "Retail Insights Agent \u2014 Test Conversations",
+      "norm_label": "4. scope guard \u2014 pii-fishing refusal"
+    },
+    {
+      "label": "5. Prompt-injection / instruction-override attempts",
+      "file_type": "document",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L58",
+      "_origin": "ast",
+      "id": "docs_test_conversations_5_prompt_injection_instruction_override_attempts",
+      "community": 27,
+      "community_name": "Retail Insights Agent \u2014 Test Conversations",
+      "norm_label": "5. prompt-injection / instruction-override attempts"
+    },
+    {
+      "label": "6. SQL guard \u2014 disallowed tables / write ops (`sql_guard.py`)",
+      "file_type": "document",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L69",
+      "_origin": "ast",
+      "id": "docs_test_conversations_6_sql_guard_disallowed_tables_write_ops_sql_guard_py",
+      "community": 27,
+      "community_name": "Retail Insights Agent \u2014 Test Conversations",
+      "norm_label": "6. sql guard \u2014 disallowed tables / write ops (`sql_guard.py`)"
+    },
+    {
+      "label": "7. SQL guard \u2014 PII column blocking",
+      "file_type": "document",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L83",
+      "_origin": "ast",
+      "id": "docs_test_conversations_7_sql_guard_pii_column_blocking",
+      "community": 27,
+      "community_name": "Retail Insights Agent \u2014 Test Conversations",
+      "norm_label": "7. sql guard \u2014 pii column blocking"
+    },
+    {
+      "label": "8. SQL guard \u2014 row limit capping",
+      "file_type": "document",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L94",
+      "_origin": "ast",
+      "id": "docs_test_conversations_8_sql_guard_row_limit_capping",
+      "community": 27,
+      "community_name": "Retail Insights Agent \u2014 Test Conversations",
+      "norm_label": "8. sql guard \u2014 row limit capping"
+    },
+    {
+      "label": "9. Cost guard \u2014 expensive query rejection (`cost_guard.py`)",
+      "file_type": "document",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L102",
+      "_origin": "ast",
+      "id": "docs_test_conversations_9_cost_guard_expensive_query_rejection_cost_guard_py",
+      "community": 27,
+      "community_name": "Retail Insights Agent \u2014 Test Conversations",
+      "norm_label": "9. cost guard \u2014 expensive query rejection (`cost_guard.py`)"
+    },
+    {
+      "label": "10. PII middleware \u2014 output-side redaction (`pii.py`)",
+      "file_type": "document",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L112",
+      "_origin": "ast",
+      "id": "docs_test_conversations_10_pii_middleware_output_side_redaction_pii_py",
+      "community": 27,
+      "community_name": "Retail Insights Agent \u2014 Test Conversations",
+      "norm_label": "10. pii middleware \u2014 output-side redaction (`pii.py`)"
+    },
+    {
+      "label": "11. Human-in-the-loop approval \u2014 `delete_reports`",
+      "file_type": "document",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L124",
+      "_origin": "ast",
+      "id": "docs_test_conversations_11_human_in_the_loop_approval_delete_reports",
+      "community": 27,
+      "community_name": "Retail Insights Agent \u2014 Test Conversations",
+      "norm_label": "11. human-in-the-loop approval \u2014 `delete_reports`"
+    },
+    {
+      "label": "12. Report lifecycle edge cases",
+      "file_type": "document",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L138",
+      "_origin": "ast",
+      "id": "docs_test_conversations_12_report_lifecycle_edge_cases",
+      "community": 27,
+      "community_name": "Retail Insights Agent \u2014 Test Conversations",
+      "norm_label": "12. report lifecycle edge cases"
+    },
+    {
+      "label": "13. Chart generation edge cases (`generate_chart`, `verify_output`)",
+      "file_type": "document",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L151",
+      "_origin": "ast",
+      "id": "docs_test_conversations_13_chart_generation_edge_cases_generate_chart_verify_output",
+      "community": 27,
+      "community_name": "Retail Insights Agent \u2014 Test Conversations",
+      "norm_label": "13. chart generation edge cases (`generate_chart`, `verify_output`)"
+    },
+    {
+      "label": "14. Golden bucket / semantic lookup (`search_golden_bucket`)",
+      "file_type": "document",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L163",
+      "_origin": "ast",
+      "id": "docs_test_conversations_14_golden_bucket_semantic_lookup_search_golden_bucket",
+      "community": 27,
+      "community_name": "Retail Insights Agent \u2014 Test Conversations",
+      "norm_label": "14. golden bucket / semantic lookup (`search_golden_bucket`)"
+    },
+    {
+      "label": "15. Malformed / adversarial input",
+      "file_type": "document",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L172",
+      "_origin": "ast",
+      "id": "docs_test_conversations_15_malformed_adversarial_input",
+      "community": 27,
+      "community_name": "Retail Insights Agent \u2014 Test Conversations",
+      "norm_label": "15. malformed / adversarial input"
+    },
+    {
+      "label": "16. Ambiguous / underspecified requests",
+      "file_type": "document",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L182",
+      "_origin": "ast",
+      "id": "docs_test_conversations_16_ambiguous_underspecified_requests",
+      "community": 27,
+      "community_name": "Retail Insights Agent \u2014 Test Conversations",
+      "norm_label": "16. ambiguous / underspecified requests"
+    },
+    {
+      "label": "17. Concurrency / session isolation (if testable via two clients)",
+      "file_type": "document",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L189",
+      "_origin": "ast",
+      "id": "docs_test_conversations_17_concurrency_session_isolation_if_testable_via_two_clients",
+      "community": 27,
+      "community_name": "Retail Insights Agent \u2014 Test Conversations",
+      "norm_label": "17. concurrency / session isolation (if testable via two clients)"
+    },
+    {
+      "label": "18. Persona / tone consistency",
+      "file_type": "document",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L198",
+      "_origin": "ast",
+      "id": "docs_test_conversations_18_persona_tone_consistency",
+      "community": 27,
+      "community_name": "Retail Insights Agent \u2014 Test Conversations",
+      "norm_label": "18. persona / tone consistency"
+    },
+    {
+      "label": "Running notes",
+      "file_type": "document",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L209",
+      "_origin": "ast",
+      "id": "docs_test_conversations_running_notes",
+      "community": 27,
+      "community_name": "Retail Insights Agent \u2014 Test Conversations",
+      "norm_label": "running notes"
+    },
+    {
       "label": "data_analyst_subagent.md",
       "file_type": "document",
       "source_file": "src/artifacts/prompts/data_analyst_subagent.md",
@@ -7221,7 +7452,7 @@
       "label": "Destructive actions",
       "file_type": "document",
       "source_file": "src/artifacts/prompts/retail_agent_persona.md",
-      "source_location": "L37",
+      "source_location": "L40",
       "_origin": "ast",
       "id": "src_artifacts_prompts_retail_agent_persona_destructive_actions",
       "community": 41,
@@ -7232,7 +7463,7 @@
       "label": "Style",
       "file_type": "document",
       "source_file": "src/artifacts/prompts/retail_agent_persona.md",
-      "source_location": "L46",
+      "source_location": "L49",
       "_origin": "ast",
       "id": "src_artifacts_prompts_retail_agent_persona_style",
       "community": 41,
@@ -11789,7 +12020,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/agent/api/ag_ui_agent_wrapper.py",
-      "source_location": "L61",
+      "source_location": "L63",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_agent_api_ag_ui_agent_wrapper_build_ag_ui_agent",
@@ -11824,7 +12055,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/agent/api/ag_ui_agent_wrapper.py",
-      "source_location": "L57",
+      "source_location": "L59",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_agent_api_ag_ui_agent_wrapper",
@@ -11835,7 +12066,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/agent/api/ag_ui_agent_wrapper.py",
-      "source_location": "L27",
+      "source_location": "L29",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_agent_api_ag_ui_agent_wrapper",
@@ -11851,6 +12082,18 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_agent_api_ag_ui_agent_wrapper",
+      "target": "src_config_env_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/api/ag_ui_agent_wrapper.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_agent_api_ag_ui_agent_wrapper",
       "target": "src_observability_langfuse",
       "confidence_score": 1.0
     },
@@ -11859,7 +12102,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/agent/api/ag_ui_agent_wrapper.py",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_agent_api_ag_ui_agent_wrapper",
@@ -11906,7 +12149,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "src/agent/api/ag_ui_agent_wrapper.py",
-      "source_location": "L57",
+      "source_location": "L59",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_agent_api_ag_ui_agent_wrapper_build_ag_ui_agent",
@@ -11917,7 +12160,7 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "src/agent/api/ag_ui_agent_wrapper.py",
-      "source_location": "L27",
+      "source_location": "L29",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_agent_api_ag_ui_agent_wrapper_retailinsightsaguiagent",
@@ -11928,7 +12171,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/agent/api/ag_ui_agent_wrapper.py",
-      "source_location": "L28",
+      "source_location": "L30",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_agent_api_ag_ui_agent_wrapper_retailinsightsaguiagent",
@@ -11939,7 +12182,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/agent/api/ag_ui_agent_wrapper.py",
-      "source_location": "L33",
+      "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_agent_api_ag_ui_agent_wrapper_retailinsightsaguiagent",
@@ -11974,10 +12217,10 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "src/agent/api/ag_ui_agent_wrapper.py",
-      "source_location": "L34",
+      "source_location": "L36",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_agent_api_ag_ui_agent_wrapper_rationale_34",
+      "source": "src_agent_api_ag_ui_agent_wrapper_rationale_36",
       "target": "src_agent_api_ag_ui_agent_wrapper_retailinsightsaguiagent_prepare_stream",
       "confidence_score": 1.0
     },
@@ -16738,7 +16981,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/config/env_config.py",
-      "source_location": "L48",
+      "source_location": "L51",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_config_env_config_environmentconfig",
@@ -16749,7 +16992,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/config/env_config.py",
-      "source_location": "L52",
+      "source_location": "L55",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_config_env_config_environmentconfig",
@@ -19966,8 +20209,228 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_test_conversations",
+      "target": "docs_test_conversations_retail_insights_agent_test_conversations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L112",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_test_conversations_retail_insights_agent_test_conversations",
+      "target": "docs_test_conversations_10_pii_middleware_output_side_redaction_pii_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L124",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_test_conversations_retail_insights_agent_test_conversations",
+      "target": "docs_test_conversations_11_human_in_the_loop_approval_delete_reports",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L138",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_test_conversations_retail_insights_agent_test_conversations",
+      "target": "docs_test_conversations_12_report_lifecycle_edge_cases",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L151",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_test_conversations_retail_insights_agent_test_conversations",
+      "target": "docs_test_conversations_13_chart_generation_edge_cases_generate_chart_verify_output",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L163",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_test_conversations_retail_insights_agent_test_conversations",
+      "target": "docs_test_conversations_14_golden_bucket_semantic_lookup_search_golden_bucket",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L172",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_test_conversations_retail_insights_agent_test_conversations",
+      "target": "docs_test_conversations_15_malformed_adversarial_input",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L182",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_test_conversations_retail_insights_agent_test_conversations",
+      "target": "docs_test_conversations_16_ambiguous_underspecified_requests",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L189",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_test_conversations_retail_insights_agent_test_conversations",
+      "target": "docs_test_conversations_17_concurrency_session_isolation_if_testable_via_two_clients",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L198",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_test_conversations_retail_insights_agent_test_conversations",
+      "target": "docs_test_conversations_18_persona_tone_consistency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_test_conversations_retail_insights_agent_test_conversations",
+      "target": "docs_test_conversations_1_golden_path_schema_discovery_analysis_report",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_test_conversations_retail_insights_agent_test_conversations",
+      "target": "docs_test_conversations_2_multi_turn_context_memory",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_test_conversations_retail_insights_agent_test_conversations",
+      "target": "docs_test_conversations_3_scope_guard_out_of_scope_refusal_scope_guard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_test_conversations_retail_insights_agent_test_conversations",
+      "target": "docs_test_conversations_4_scope_guard_pii_fishing_refusal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L58",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_test_conversations_retail_insights_agent_test_conversations",
+      "target": "docs_test_conversations_5_prompt_injection_instruction_override_attempts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_test_conversations_retail_insights_agent_test_conversations",
+      "target": "docs_test_conversations_6_sql_guard_disallowed_tables_write_ops_sql_guard_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L83",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_test_conversations_retail_insights_agent_test_conversations",
+      "target": "docs_test_conversations_7_sql_guard_pii_column_blocking",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L94",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_test_conversations_retail_insights_agent_test_conversations",
+      "target": "docs_test_conversations_8_sql_guard_row_limit_capping",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L102",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_test_conversations_retail_insights_agent_test_conversations",
+      "target": "docs_test_conversations_9_cost_guard_expensive_query_rejection_cost_guard_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TEST_CONVERSATIONS.md",
+      "source_location": "L209",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_test_conversations_retail_insights_agent_test_conversations",
+      "target": "docs_test_conversations_running_notes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/artifacts/prompts/retail_agent_persona.md",
-      "source_location": "L37",
+      "source_location": "L40",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_artifacts_prompts_retail_agent_persona",
@@ -19978,7 +20441,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/artifacts/prompts/retail_agent_persona.md",
-      "source_location": "L46",
+      "source_location": "L49",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_artifacts_prompts_retail_agent_persona",
@@ -20123,5 +20586,5 @@
       "source_file": "CLAUDE.md"
     }
   ],
-  "built_at_commit": "146cc7fc8d168ca0e1dbdd0f36756138509daa39"
+  "built_at_commit": "ffb3224cdb144578c1c70a1c8a595c84217c5a48"
 }
