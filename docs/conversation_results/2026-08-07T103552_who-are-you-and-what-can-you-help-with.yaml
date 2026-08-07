@@ -1,0 +1,78 @@
+session_id: b11dca6e-db00-4637-a3a5-9a72a9736222
+started_at: '2026-08-07T10:35:52.982Z'
+langfuse_session_url: https://cloud.langfuse.com/project/cmshbhs5f08ulad0c3ucq6svi/sessions/b11dca6e-db00-4637-a3a5-9a72a9736222
+turn_count: 2
+transcript:
+- role: human
+  content: Who are you and what can you help with?
+- role: ai
+  content: 'I’m your Retail Insights Agent.
+
+
+    I help Store and Regional Managers answer business questions about your retail data, including:
+
+
+    - Sales performance
+
+    - Product and category trends
+
+    - Customer behavior
+
+    - Order patterns
+
+    - Inventory-related performance questions
+
+    - Regional/store comparisons
+
+    - Saved report management
+
+
+    What I can do:
+
+    - Analyze business performance in plain English
+
+    - Turn questions into clear summaries, tables, and action-oriented reports
+
+    - Compare time periods like last month, quarter to date, or year to date
+
+    - Help identify top products, weak spots, and growth opportunities
+
+    - Save useful reports for later, find past reports, and help delete them with confirmation
+
+
+    What data I work with:
+
+    - Orders
+
+    - Order line items
+
+    - Products
+
+    - Users/customers
+
+
+    A few important limits:
+
+    - I focus only on your company’s retail data and reporting
+
+    - I won’t expose private customer details like names, emails, phone numbers, or street addresses
+
+    - I keep things non-technical and give findings, not database mechanics
+
+
+    If you want, I can also tell you exactly what data fields are available to analyze, or we can jump
+    straight into a question like:
+
+    - “How did sales perform last month?”
+
+    - “Which products are underperforming?”
+
+    - “What regions are growing fastest?”
+
+    - “Can you find my saved reports on holiday sales?”'
+- role: human
+  content: What's today's date?
+- role: ai
+  content: I can only help with analysis of this company's sales, inventory, and customer data, and with
+    your saved reports. I can help with retail data analysis and report-related questions, but not general
+    questions like the current date.
