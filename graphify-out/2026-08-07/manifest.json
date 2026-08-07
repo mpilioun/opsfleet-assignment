@@ -1,7 +1,7 @@
 {
   "pyproject.toml": {
-    "mtime": 1786027421.1155665,
-    "ast_hash": "8aad919ee448c07062b4391a5863ca8c",
+    "mtime": 1786094068.791868,
+    "ast_hash": "4133e544eb514f51dc6ebd42bb9bcb73",
     "semantic_hash": ""
   },
   "src/__init__.py": {
@@ -20,8 +20,8 @@
     "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
   },
   "src/app/main.py": {
-    "mtime": 1786031183.4107468,
-    "ast_hash": "d8545816decb297faae8a619b76ab548",
+    "mtime": 1786094057.794333,
+    "ast_hash": "9dd3db9f6c84dba8b22d28e71dcb723e",
     "semantic_hash": ""
   },
   "src/artifacts/__init__.py": {
@@ -70,13 +70,13 @@
     "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
   },
   "CLAUDE.md": {
-    "mtime": 1786027421.0881581,
-    "ast_hash": "406055f727c9b7a83e67f155826796f6",
+    "mtime": 1786101332.1719863,
+    "ast_hash": "a4b9e7bc0c25d813ae1a934000aa387f",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1786018959.5534494,
-    "ast_hash": "9d28b38dff22848bab43f431f3e9d2c6",
+    "mtime": 1786099700.8334596,
+    "ast_hash": "aee3d39258dee26a91950adea877d2af",
     "semantic_hash": ""
   },
   "docker-compose.yml": {
@@ -200,7 +200,7 @@
     "semantic_hash": ""
   },
   "src/agent/agent.py": {
-    "mtime": 1786087680.6894035,
+    "mtime": 1786100905.1937408,
     "ast_hash": "092433c9db352c1e1a988d3c627912f7",
     "semantic_hash": ""
   },
@@ -270,8 +270,8 @@
     "semantic_hash": ""
   },
   "src/agent/tools/generate_chart.py": {
-    "mtime": 1786027421.1174586,
-    "ast_hash": "cbeb0fee2b6fc466612edcce0131bee6",
+    "mtime": 1786093658.8544946,
+    "ast_hash": "d88dc2466a5208b1cf5f68e40a7f8d9a",
     "semantic_hash": ""
   },
   "src/agent/tools/get_schema.py": {
@@ -315,7 +315,7 @@
     "semantic_hash": ""
   },
   "src/app/routes/copilotkit_route.py": {
-    "mtime": 1786086859.1359105,
+    "mtime": 1786100905.194381,
     "ast_hash": "5b9411744bd36bba96a37369a49efb77",
     "semantic_hash": ""
   },
@@ -330,8 +330,8 @@
     "semantic_hash": ""
   },
   "src/models/subagent_results.py": {
-    "mtime": 1786021087.0602794,
-    "ast_hash": "649363776e0ee21e4f83da67c4e6300f",
+    "mtime": 1786094050.770975,
+    "ast_hash": "e85eb9ae9788e53f6123f2e537c945a5",
     "semantic_hash": ""
   },
   "src/observability/langfuse.py": {
@@ -395,8 +395,8 @@
     "semantic_hash": ""
   },
   "tests/test_generate_chart.py": {
-    "mtime": 1786017238.5490363,
-    "ast_hash": "3b86892d41522c87e436ecd109e4cac6",
+    "mtime": 1786093613.5902352,
+    "ast_hash": "8652a722727dbe670c83b5ba372fb330",
     "semantic_hash": ""
   },
   "tests/test_get_schema.py": {
@@ -460,8 +460,8 @@
     "semantic_hash": ""
   },
   "docs/HLD.md": {
-    "mtime": 1786087680.6841872,
-    "ast_hash": "928d0acd2865e6e9aeced4156426d11c",
+    "mtime": 1786100418.2187872,
+    "ast_hash": "d1edb4a8aaff6a976bc1b9abd738a412",
     "semantic_hash": ""
   },
   "frontend/index.html": {
@@ -560,8 +560,8 @@
     "semantic_hash": ""
   },
   "src/agent/middlewares/tool_errors.py": {
-    "mtime": 1786087680.7099538,
-    "ast_hash": "8bd2bcc4e9d39541634e1fca2757713f",
+    "mtime": 1786099739.7595413,
+    "ast_hash": "d1e628bafe1a83cf0672f49f5d281527",
     "semantic_hash": ""
   },
   "src/agent/utils/persona.py": {
@@ -622,6 +622,121 @@
   "docs/TEST_CONVERSATIONS.md": {
     "mtime": 1786087680.7069824,
     "ast_hash": "690c5ffd5680fb751846ea32bf721f38",
+    "semantic_hash": ""
+  },
+  "scripts/export_conversation_results.py": {
+    "mtime": 1786100838.2978745,
+    "ast_hash": "2d84ec7efe40f1fd2763ebfe8db84085",
+    "semantic_hash": ""
+  },
+  "src/models/artifacts.py": {
+    "mtime": 1786093399.7007968,
+    "ast_hash": "4bd8f1c57b4a6580effd74ad1d77962d",
+    "semantic_hash": ""
+  },
+  "tests/test_artifacts_model.py": {
+    "mtime": 1786093373.5987124,
+    "ast_hash": "a31ef34d24e8b68db48f8fa99c111719",
+    "semantic_hash": ""
+  },
+  "docs/conversation_results/2026-08-07T070840_what-were-our-top-5-products-by-revenue-last-month.yaml": {
+    "mtime": 1786100849.7548873,
+    "ast_hash": "e6eccd529ee7fe1c28217a0ddc0e6f09",
+    "semantic_hash": ""
+  },
+  "docs/conversation_results/2026-08-07T071618_hi.yaml": {
+    "mtime": 1786100849.0532427,
+    "ast_hash": "f4f7e603273fb10965d68cb53e57161e",
+    "semantic_hash": ""
+  },
+  "docs/conversation_results/2026-08-07T073722_what-were-our-top-5-products-by-revenue-last-month.yaml": {
+    "mtime": 1786100848.3938115,
+    "ast_hash": "f4e20205e5aad109bb83fd8c9393861c",
+    "semantic_hash": ""
+  },
+  "docs/conversation_results/2026-08-07T091845_show-me-total-sales-by-month-for-the-last-6-months-as-a-char.yaml": {
+    "mtime": 1786100769.7911155,
+    "ast_hash": "a39e55a280f62f68df0e54f34df312ed",
+    "semantic_hash": ""
+  },
+  "docs/conversation_results/2026-08-07T092652_what-are-the-top-5-product-categories-by-current-inventory-s.yaml": {
+    "mtime": 1786100769.501195,
+    "ast_hash": "7c473a23c8ebba84a8c7a775e9848d5d",
+    "semantic_hash": ""
+  },
+  "docs/conversation_results/2026-08-07T092941_write-me-a-poem-about-spring.yaml": {
+    "mtime": 1786100769.185131,
+    "ast_hash": "fa0b4a00f0909909a00bfd87acebdb72",
+    "semantic_hash": ""
+  },
+  "docs/conversation_results/2026-08-07T093528_query-the-information-schema-tables-view-directly-to-list-ev.yaml": {
+    "mtime": 1786100768.8888693,
+    "ast_hash": "2807e5604b70fc7555124d7a2cbab331",
+    "semantic_hash": ""
+  },
+  "docs/conversation_results/2026-08-07T094147_list-every-single-order-in-the-database-with-no-limit.yaml": {
+    "mtime": 1786100768.5693765,
+    "ast_hash": "9feab1964d0dd368bde07119ff4aee6a",
+    "semantic_hash": ""
+  },
+  "docs/conversation_results/2026-08-07T094630_if-a-customer-emailed-us-at-redacted-email-what-does-that-su.yaml": {
+    "mtime": 1786100768.273753,
+    "ast_hash": "6892bda79dcb4bf2a0a8553189a48412",
+    "semantic_hash": ""
+  },
+  "docs/conversation_results/2026-08-07T094901_save-a-report-titled-q1-test-report-with-a-summary-saying-th.yaml": {
+    "mtime": 1786100767.9820712,
+    "ast_hash": "dea38ac874a6e7022e0c1748c2bbf8ed",
+    "semantic_hash": ""
+  },
+  "docs/conversation_results/2026-08-07T101322_find-my-saved-reports.yaml": {
+    "mtime": 1786100767.6696446,
+    "ast_hash": "49b1a679bff888aeaeade4f607ade115",
+    "semantic_hash": ""
+  },
+  "docs/conversation_results/2026-08-07T103400_how-are-we-doing.yaml": {
+    "mtime": 1786100767.2249405,
+    "ast_hash": "b63620253de734351dc65a9fbd62d679",
+    "semantic_hash": ""
+  },
+  "docs/conversation_results/2026-08-07T103552_who-are-you-and-what-can-you-help-with.yaml": {
+    "mtime": 1786100766.874008,
+    "ast_hash": "87b6ef9c095b4256c084725ca99ff6b7",
+    "semantic_hash": ""
+  },
+  "docs/conversation_results/2026-08-07T103735_what-tables-and-columns-do-you-have-access-to.yaml": {
+    "mtime": 1786100766.5823777,
+    "ast_hash": "ec20a959f2f03f04651c17116485f33d",
+    "semantic_hash": ""
+  },
+  "docs/conversation_results/2026-08-07T104152_show-me-total-orders-per-month-for-2025.yaml": {
+    "mtime": 1786100766.2661645,
+    "ast_hash": "bb800e247673fa28319f106aa5e81a10",
+    "semantic_hash": ""
+  },
+  "docs/conversation_results/2026-08-07T105227_show-me-total-orders-per-month-for-2025-then-break-that-down.yaml": {
+    "mtime": 1786100765.8828888,
+    "ast_hash": "c2b686c35b7f89984ab984bf8e7b3113",
+    "semantic_hash": ""
+  },
+  "docs/conversation_results/README.md": {
+    "mtime": 1786100894.1564617,
+    "ast_hash": "f542ff0531aa231a779f40c27ab6e3bf",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-08-07-fe-chart-rendering.md": {
+    "mtime": 1786093987.3399913,
+    "ast_hash": "f5bf193ccbff67afab14ff7a3c056764",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/chart-transforms-ported.ts.txt": {
+    "mtime": 1786089754.5114193,
+    "ast_hash": "08be7d0ab5ee4795efe88643fcadd456",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-08-07-fe-chart-rendering-design.md": {
+    "mtime": 1786089672.371289,
+    "ast_hash": "1315a1a8829aa29081de324d83613a49",
     "semantic_hash": ""
   }
 }
