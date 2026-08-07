@@ -5,16 +5,21 @@ import { Chat } from "./copilot/chat";
 
 const STORAGE_KEY = "retail-insights-user-id";
 
-function getOrCreateUserId(): string {
-  const existing = localStorage.getItem(STORAGE_KEY);
-  if (existing) return existing;
-  const generated = uuidv4();
-  localStorage.setItem(STORAGE_KEY, generated);
-  return generated;
+// ponytail: native prompt() once per page load - reload to switch user.
+// Cached at module scope so StrictMode's double-invoked initializer asks once.
+let askedUserId: string | undefined;
+
+function askUserId(): string {
+  if (askedUserId) return askedUserId;
+  const last = localStorage.getItem(STORAGE_KEY) ?? "";
+  const entered = window.prompt("Demo user ID:", last)?.trim();
+  askedUserId = entered || last || uuidv4();
+  localStorage.setItem(STORAGE_KEY, askedUserId);
+  return askedUserId;
 }
 
 export default function App() {
-  const [userId] = useState<string>(getOrCreateUserId);
+  const [userId] = useState<string>(askUserId);
 
   return (
     <div className="app-shell">
