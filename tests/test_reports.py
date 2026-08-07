@@ -1,7 +1,12 @@
 import pytest
 from langgraph.store.memory import InMemoryStore
 
-from src.agent.utils.reports import create_report, delete_reports_by_ids, list_reports
+from src.agent.utils.reports import (
+    create_report,
+    delete_reports_by_ids,
+    get_report,
+    list_reports,
+)
 
 
 @pytest.fixture
@@ -37,6 +42,25 @@ async def test_reports_are_scoped_per_user(store):
     alice_reports = await list_reports(store, user_id="alice")
 
     assert [r["title"] for r in alice_reports] == ["Alice's"]
+
+
+async def test_get_report_returns_body(store):
+    report_id = await create_report(
+        store, user_id="alice", thread_id="t1", title="Q1", content="revenue up 12%"
+    )
+
+    report = await get_report(store, user_id="alice", report_id=report_id)
+
+    assert report["content"] == "revenue up 12%"
+
+
+async def test_get_report_is_scoped_per_user(store):
+    report_id = await create_report(
+        store, user_id="alice", thread_id="t1", title="Q1", content="secret"
+    )
+
+    assert await get_report(store, user_id="bob", report_id=report_id) is None
+    assert await get_report(store, user_id="alice", report_id="nope") is None
 
 
 async def test_delete_reports_by_ids(store):

@@ -14,6 +14,10 @@ const findSchema = z.object({
   this_conversation_only: z.boolean().optional(),
 });
 
+const readSchema = z.object({
+  report_id: z.string().optional(),
+});
+
 const deleteSchema = z.object({
   report_ids: z.array(z.string()).optional(),
 });
@@ -73,6 +77,37 @@ export const useReportRenderers = (): void => {
             {parameters?.query && (
               <ToolCard.Body>
                 <KVRow label="Query">{parameters.query}</KVRow>
+              </ToolCard.Body>
+            )}
+          </ToolCard.Root>
+        );
+      },
+    },
+    [],
+  );
+
+  useRenderTool(
+    {
+      name: TOOL_NAMES.READ_REPORT,
+      parameters: readSchema,
+      render: ({ status, parameters, result }) => {
+        const errored = status === "complete" && isErrorResult(result);
+        return (
+          <ToolCard.Root status={status} variant={errored ? "error" : "default"}>
+            <ToolCard.Header title="Open report">
+              <ToolCard.Subtitle>
+                <MutedText>
+                  {status !== "complete"
+                    ? "Opening the saved report…"
+                    : errored
+                      ? result
+                      : "Opened the saved report"}
+                </MutedText>
+              </ToolCard.Subtitle>
+            </ToolCard.Header>
+            {parameters?.report_id && (
+              <ToolCard.Body>
+                <KVRow label="Report">{parameters.report_id}</KVRow>
               </ToolCard.Body>
             )}
           </ToolCard.Root>

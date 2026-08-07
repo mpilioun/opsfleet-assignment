@@ -299,9 +299,11 @@ the same boundary for defense in depth.
 ## 6. Requirement 3 — High-Stakes Oversight (Saved Reports)
 
 Reports live in the same Store, namespaced per user (`("reports", user_id)`) — no new
-SQL tables. Three tools: `find_reports` (read-only, supports a `this_conversation_only`
+SQL tables. Four tools: `find_reports` (read-only, supports a `this_conversation_only`
 filter and semantic "mentioning Client X" search via the same pgvector index),
-`save_report`, and `delete_reports`.
+`read_report` (opens one report by id and returns its body, so a saved report can be
+summarized or built on later — `find_reports` deliberately returns only titles/ids to
+keep listings cheap), `save_report`, and `delete_reports`.
 
 `delete_reports` is the one tool wired into deepagents' native
 `HumanInTheLoopMiddleware` (`interrupt_on={"delete_reports": {"allowed_decisions":

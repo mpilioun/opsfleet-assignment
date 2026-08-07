@@ -1,18 +1,61 @@
 from types import SimpleNamespace
 from unittest.mock import AsyncMock, patch
 
-from langchain_core.messages import HumanMessage
+from langchain_core.messages import AIMessage, HumanMessage
 
-from src.agent.middlewares.guard import ScopeResult, _last_human_message_content, scope_guard
+from src.agent.middlewares.guard import (
+    PREVIOUS_TURN_CHARS,
+    ScopeResult,
+    _classifier_input,
+    scope_guard,
+)
 
 
-def test_last_human_message_content_finds_most_recent():
+def test_classifier_input_finds_most_recent_user_message():
     messages = [HumanMessage(content="first"), HumanMessage(content="second")]
-    assert _last_human_message_content(messages) == "second"
+    assert _classifier_input(messages) == "second"
 
 
-def test_last_human_message_content_empty_when_none():
-    assert _last_human_message_content([]) == ""
+def test_classifier_input_empty_when_none():
+    assert _classifier_input([]) == ""
+
+
+def test_classifier_input_includes_the_assistant_turn_being_replied_to():
+    messages = [
+        HumanMessage(content="what is my last report?"),
+        AIMessage(content="Your latest saved report is 'July 2026 Top 5 Products'."),
+        HumanMessage(content="open it and summarise"),
+    ]
+
+    result = _classifier_input(messages)
+
+    assert "July 2026 Top 5 Products" in result
+    assert "open it and summarise" in result
+
+
+def test_classifier_input_ignores_assistant_turns_after_the_latest_user_message():
+    messages = [
+        AIMessage(content="stale"),
+        HumanMessage(content="latest question"),
+        AIMessage(content="not yet replied to"),
+    ]
+
+    assert _classifier_input(messages).endswith("latest question")
+    assert "not yet replied to" not in _classifier_input(messages)
+
+
+def test_classifier_input_truncates_a_long_assistant_turn():
+    messages = [
+        HumanMessage(content="show me the report"),
+        AIMessage(content="head" + "x" * 10_000 + "tail"),
+        HumanMessage(content="summarise it"),
+    ]
+
+    result = _classifier_input(messages)
+
+    assert "head" in result
+    assert "tail" not in result
+    assert len(result) < PREVIOUS_TURN_CHARS + 500
 
 
 @patch("src.agent.middlewares.guard.run_structured", new_callable=AsyncMock)

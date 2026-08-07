@@ -54,6 +54,14 @@ async def list_reports(
     return reports
 
 
+async def get_report(
+    store: Any, *, user_id: str, report_id: str
+) -> dict[str, Any] | None:
+    """Fetch one saved report, body included. None if this user has no such report."""
+    item = await store.aget(_namespace(user_id), report_id)
+    return item.value if item is not None else None
+
+
 async def delete_reports_by_ids(
     store: Any, *, user_id: str, report_ids: list[str]
 ) -> list[str]:

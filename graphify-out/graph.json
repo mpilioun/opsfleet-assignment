@@ -654,8 +654,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_approval_card",
-      "community": 32,
-      "community_name": "agent-provider.tsx",
+      "community": 33,
+      "community_name": "tool-card.tsx",
       "norm_label": "approval-card.tsx"
     },
     {
@@ -665,8 +665,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_approval_card_approvalcardroot",
-      "community": 32,
-      "community_name": "agent-provider.tsx",
+      "community": 33,
+      "community_name": "tool-card.tsx",
       "norm_label": "approvalcardroot()"
     },
     {
@@ -676,8 +676,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_approval_card_approvalcardheader",
-      "community": 32,
-      "community_name": "agent-provider.tsx",
+      "community": 33,
+      "community_name": "tool-card.tsx",
       "norm_label": "approvalcardheader()"
     },
     {
@@ -687,8 +687,8 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_approval_card_approvalcardbody",
-      "community": 32,
-      "community_name": "agent-provider.tsx",
+      "community": 33,
+      "community_name": "tool-card.tsx",
       "norm_label": "approvalcardbody()"
     },
     {
@@ -698,8 +698,8 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_approval_card_approvalcardtoolrow",
-      "community": 32,
-      "community_name": "agent-provider.tsx",
+      "community": 33,
+      "community_name": "tool-card.tsx",
       "norm_label": "approvalcardtoolrow()"
     },
     {
@@ -709,8 +709,8 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_approval_card_approvalcardargssection",
-      "community": 32,
-      "community_name": "agent-provider.tsx",
+      "community": 33,
+      "community_name": "tool-card.tsx",
       "norm_label": "approvalcardargssection()"
     },
     {
@@ -720,8 +720,8 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_approval_card_approvalcarddefaultactions",
-      "community": 32,
-      "community_name": "agent-provider.tsx",
+      "community": 33,
+      "community_name": "tool-card.tsx",
       "norm_label": "approvalcarddefaultactions()"
     },
     {
@@ -731,8 +731,8 @@
       "source_location": "L79",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_approval_card_approvalcard",
-      "community": 32,
-      "community_name": "agent-provider.tsx",
+      "community": 33,
+      "community_name": "tool-card.tsx",
       "norm_label": "approvalcard"
     },
     {
@@ -918,8 +918,8 @@
       "source_location": "L95",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_interrupt_context_useinterruptcontext",
-      "community": 32,
-      "community_name": "agent-provider.tsx",
+      "community": 33,
+      "community_name": "tool-card.tsx",
       "norm_label": "useinterruptcontext()"
     },
     {
@@ -1094,8 +1094,8 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_tool_display_argsblock",
-      "community": 32,
-      "community_name": "agent-provider.tsx",
+      "community": 33,
+      "community_name": "tool-card.tsx",
       "norm_label": "argsblock()"
     },
     {
@@ -1319,10 +1319,21 @@
       "norm_label": "findschema"
     },
     {
-      "label": "deleteSchema",
+      "label": "readSchema",
       "file_type": "code",
       "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
       "source_location": "L17",
+      "_origin": "ast",
+      "id": "frontend_src_copilot_components_tool_renderers_report_renderers_readschema",
+      "community": 33,
+      "community_name": "tool-card.tsx",
+      "norm_label": "readschema"
+    },
+    {
+      "label": "deleteSchema",
+      "file_type": "code",
+      "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
+      "source_location": "L21",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_tool_renderers_report_renderers_deleteschema",
       "community": 33,
@@ -1333,7 +1344,7 @@
       "label": "verifySchema",
       "file_type": "code",
       "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
-      "source_location": "L21",
+      "source_location": "L25",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_tool_renderers_report_renderers_verifyschema",
       "community": 33,
@@ -1344,7 +1355,7 @@
       "label": "useReportRenderers()",
       "file_type": "code",
       "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
-      "source_location": "L25",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_tool_renderers_report_renderers_usereportrenderers",
       "community": 33,
@@ -2428,7 +2439,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "scripts_eval_golden",
-      "community": 38,
+      "community": 21,
       "community_name": "eval_golden.py",
       "norm_label": "eval_golden.py"
     },
@@ -2439,7 +2450,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "scripts_eval_golden_final_report_text",
-      "community": 38,
+      "community": 21,
       "community_name": "eval_golden.py",
       "norm_label": "_final_report_text()"
     },
@@ -2450,7 +2461,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "scripts_eval_golden_run_one",
-      "community": 38,
+      "community": 21,
       "community_name": "eval_golden.py",
       "norm_label": "_run_one()"
     },
@@ -2461,7 +2472,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "scripts_eval_golden_main",
-      "community": 38,
+      "community": 21,
       "community_name": "eval_golden.py",
       "norm_label": "main()"
     },
@@ -2472,7 +2483,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "scripts_eval_golden_rationale_1",
-      "community": 38,
+      "community": 21,
       "community_name": "eval_golden.py",
       "norm_label": "offline qa eval: replay each golden-bucket seed question through the live agent..."
     },
@@ -2604,8 +2615,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "scripts_probe_llm",
-      "community": 36,
-      "community_name": "run_structured",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "probe_llm.py"
     },
     {
@@ -2615,8 +2626,8 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "scripts_probe_llm_main",
-      "community": 36,
-      "community_name": "run_structured",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "main()"
     },
     {
@@ -2670,8 +2681,8 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "src_agent_agent_build_agent",
-      "community": 60,
-      "community_name": "build_agent",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "build_agent()"
     },
     {
@@ -2791,8 +2802,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_agent_backend_build_backend",
-      "community": 2,
-      "community_name": "logging.py",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "build_backend()"
     },
     {
@@ -2802,8 +2813,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "basestore",
-      "community": 2,
-      "community_name": "logging.py",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "basestore"
     },
     {
@@ -2813,8 +2824,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "compositebackend",
-      "community": 2,
-      "community_name": "logging.py",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "compositebackend"
     },
     {
@@ -2824,8 +2835,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_agent_backend_rationale_16",
-      "community": 2,
-      "community_name": "logging.py",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "ephemeral state by default; /memory/ persists per-user in the store; /skills/..."
     },
     {
@@ -2846,8 +2857,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_agent_middlewares_datetime_prompt",
-      "community": 37,
-      "community_name": "datetime_prompt",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "datetime_prompt.py"
     },
     {
@@ -2857,8 +2868,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_agent_middlewares_datetime_prompt_datetime_section",
-      "community": 37,
-      "community_name": "datetime_prompt",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "datetime_section()"
     },
     {
@@ -2868,8 +2879,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_agent_middlewares_datetime_prompt_py_dynamic_prompt",
-      "community": 37,
-      "community_name": "datetime_prompt",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "dynamic_prompt"
     },
     {
@@ -2879,8 +2890,8 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "src_agent_middlewares_datetime_prompt_datetime_prompt",
-      "community": 37,
-      "community_name": "datetime_prompt",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "datetime_prompt()"
     },
     {
@@ -2890,8 +2901,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_agent_middlewares_datetime_prompt_py_modelrequest",
-      "community": 37,
-      "community_name": "datetime_prompt",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "modelrequest"
     },
     {
@@ -2901,8 +2912,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_agent_middlewares_datetime_prompt_rationale_1",
-      "community": 37,
-      "community_name": "datetime_prompt",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "grounds every model call in the real current date. the llm has no clock, so..."
     },
     {
@@ -2912,8 +2923,8 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_agent_middlewares_datetime_prompt_rationale_14",
-      "community": 37,
-      "community_name": "datetime_prompt",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "current-datetime block appended to a system prompt."
     },
     {
@@ -2923,8 +2934,8 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "src_agent_middlewares_datetime_prompt_rationale_30",
-      "community": 37,
-      "community_name": "datetime_prompt",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "append the datetime section after whatever is already in the system message..."
     },
     {
@@ -2935,18 +2946,18 @@
       "_origin": "ast",
       "id": "src_agent_middlewares_guard",
       "community": 31,
-      "community_name": "guard.py",
+      "community_name": "test_guard.py",
       "norm_label": "guard.py"
     },
     {
       "label": "ScopeResult",
       "file_type": "code",
       "source_file": "src/agent/middlewares/guard.py",
-      "source_location": "L35",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "src_agent_middlewares_guard_scoperesult",
       "community": 31,
-      "community_name": "guard.py",
+      "community_name": "test_guard.py",
       "norm_label": "scoperesult"
     },
     {
@@ -2957,19 +2968,19 @@
       "_origin": "ast",
       "id": "src_agent_middlewares_guard_py_basemodel",
       "community": 31,
-      "community_name": "guard.py",
+      "community_name": "test_guard.py",
       "norm_label": "basemodel"
     },
     {
-      "label": "_last_human_message_content()",
+      "label": "_classifier_input()",
       "file_type": "code",
       "source_file": "src/agent/middlewares/guard.py",
-      "source_location": "L42",
+      "source_location": "L51",
       "_origin": "ast",
-      "id": "src_agent_middlewares_guard_last_human_message_content",
+      "id": "src_agent_middlewares_guard_classifier_input",
       "community": 31,
-      "community_name": "guard.py",
-      "norm_label": "_last_human_message_content()"
+      "community_name": "test_guard.py",
+      "norm_label": "_classifier_input()"
     },
     {
       "label": "before_agent",
@@ -2978,19 +2989,19 @@
       "source_location": "",
       "_origin": "ast",
       "id": "before_agent",
-      "community": 60,
-      "community_name": "build_agent",
+      "community": 31,
+      "community_name": "test_guard.py",
       "norm_label": "before_agent"
     },
     {
       "label": "scope_guard()",
       "file_type": "code",
       "source_file": "src/agent/middlewares/guard.py",
-      "source_location": "L50",
+      "source_location": "L73",
       "_origin": "ast",
       "id": "src_agent_middlewares_guard_scope_guard",
-      "community": 60,
-      "community_name": "build_agent",
+      "community": 31,
+      "community_name": "test_guard.py",
       "norm_label": "scope_guard()"
     },
     {
@@ -3001,8 +3012,19 @@
       "_origin": "ast",
       "id": "src_agent_middlewares_guard_rationale_1",
       "community": 31,
-      "community_name": "guard.py",
+      "community_name": "test_guard.py",
       "norm_label": "scope/safety guard (requirement 2, \"safeguarded against malicious users\"): a..."
+    },
+    {
+      "label": "The latest user message, plus the assistant turn it replies to. Without that\u2026",
+      "file_type": "rationale",
+      "source_file": "src/agent/middlewares/guard.py",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "src_agent_middlewares_guard_rationale_52",
+      "community": 31,
+      "community_name": "test_guard.py",
+      "norm_label": "the latest user message, plus the assistant turn it replies to. without that..."
     },
     {
       "label": "persona_prompt.py",
@@ -3022,8 +3044,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_agent_middlewares_persona_prompt_py_dynamic_prompt",
-      "community": 28,
-      "community_name": "persona_prompt",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "dynamic_prompt"
     },
     {
@@ -3033,8 +3055,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_agent_middlewares_persona_prompt_persona_prompt",
-      "community": 28,
-      "community_name": "persona_prompt",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "persona_prompt()"
     },
     {
@@ -3044,8 +3066,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_agent_middlewares_persona_prompt_py_modelrequest",
-      "community": 28,
-      "community_name": "persona_prompt",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "modelrequest"
     },
     {
@@ -3055,8 +3077,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_agent_middlewares_persona_prompt_rationale_12",
-      "community": 28,
-      "community_name": "persona_prompt",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "prepend the live persona (store, falling back to the artifact default) ahead of..."
     },
     {
@@ -3511,6 +3533,72 @@
       "norm_label": "inspect the available data. call with no arguments for the full dataset..."
     },
     {
+      "label": "read_report.py",
+      "file_type": "code",
+      "source_file": "src/agent/tools/read_report.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_agent_tools_read_report",
+      "community": 2,
+      "community_name": "logging.py",
+      "norm_label": "read_report.py"
+    },
+    {
+      "label": "tool",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_agent_tools_read_report_py_tool",
+      "community": 2,
+      "community_name": "logging.py",
+      "norm_label": "tool"
+    },
+    {
+      "label": "read_report()",
+      "file_type": "code",
+      "source_file": "src/agent/tools/read_report.py",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "src_agent_tools_read_report_read_report",
+      "community": 2,
+      "community_name": "logging.py",
+      "norm_label": "read_report()"
+    },
+    {
+      "label": "ToolRuntime",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_agent_tools_read_report_py_toolruntime",
+      "community": 2,
+      "community_name": "logging.py",
+      "norm_label": "toolruntime"
+    },
+    {
+      "label": "ToolMessage",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_agent_tools_read_report_py_toolmessage",
+      "community": 2,
+      "community_name": "logging.py",
+      "norm_label": "toolmessage"
+    },
+    {
+      "label": "Open one of the user's saved reports and return its full body, so you can\u2026",
+      "file_type": "rationale",
+      "source_file": "src/agent/tools/read_report.py",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "src_agent_tools_read_report_rationale_14",
+      "community": 2,
+      "community_name": "logging.py",
+      "norm_label": "open one of the user's saved reports and return its full body, so you can..."
+    },
+    {
       "label": "run_sql.py",
       "file_type": "code",
       "source_file": "src/agent/tools/run_sql.py",
@@ -3671,8 +3759,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_agent_tools_search_golden_bucket",
-      "community": 2,
-      "community_name": "logging.py",
+      "community": 6,
+      "community_name": "test_golden_bucket.py",
       "norm_label": "search_golden_bucket.py"
     },
     {
@@ -3737,8 +3825,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_agent_tools_verify_output",
-      "community": 21,
-      "community_name": "verify_output.py",
+      "community": 2,
+      "community_name": "logging.py",
       "norm_label": "verify_output.py"
     },
     {
@@ -3749,7 +3837,7 @@
       "_origin": "ast",
       "id": "src_agent_tools_verify_output_verifyresult",
       "community": 21,
-      "community_name": "verify_output.py",
+      "community_name": "eval_golden.py",
       "norm_label": "verifyresult"
     },
     {
@@ -3760,7 +3848,7 @@
       "_origin": "ast",
       "id": "src_agent_tools_verify_output_py_basemodel",
       "community": 21,
-      "community_name": "verify_output.py",
+      "community_name": "eval_golden.py",
       "norm_label": "basemodel"
     },
     {
@@ -3771,7 +3859,7 @@
       "_origin": "ast",
       "id": "src_agent_tools_verify_output_py_tool",
       "community": 21,
-      "community_name": "verify_output.py",
+      "community_name": "eval_golden.py",
       "norm_label": "tool"
     },
     {
@@ -3782,7 +3870,7 @@
       "_origin": "ast",
       "id": "src_agent_tools_verify_output_verify_output",
       "community": 21,
-      "community_name": "verify_output.py",
+      "community_name": "eval_golden.py",
       "norm_label": "verify_output()"
     },
     {
@@ -3793,7 +3881,7 @@
       "_origin": "ast",
       "id": "src_agent_tools_verify_output_py_toolruntime",
       "community": 21,
-      "community_name": "verify_output.py",
+      "community_name": "eval_golden.py",
       "norm_label": "toolruntime"
     },
     {
@@ -3804,7 +3892,7 @@
       "_origin": "ast",
       "id": "src_agent_tools_verify_output_py_toolmessage",
       "community": 21,
-      "community_name": "verify_output.py",
+      "community_name": "eval_golden.py",
       "norm_label": "toolmessage"
     },
     {
@@ -3815,7 +3903,7 @@
       "_origin": "ast",
       "id": "src_agent_tools_verify_output_rationale_29",
       "community": 21,
-      "community_name": "verify_output.py",
+      "community_name": "eval_golden.py",
       "norm_label": "llm-judge self-check: verify a draft report actually answers the original..."
     },
     {
@@ -4013,7 +4101,7 @@
       "_origin": "ast",
       "id": "src_agent_utils_persona",
       "community": 28,
-      "community_name": "persona_prompt",
+      "community_name": "persona.py",
       "norm_label": "persona.py"
     },
     {
@@ -4024,7 +4112,7 @@
       "_origin": "ast",
       "id": "src_agent_utils_persona_get_active_persona",
       "community": 28,
-      "community_name": "persona_prompt",
+      "community_name": "persona.py",
       "norm_label": "get_active_persona()"
     },
     {
@@ -4035,7 +4123,7 @@
       "_origin": "ast",
       "id": "src_agent_utils_persona_py_any",
       "community": 28,
-      "community_name": "persona_prompt",
+      "community_name": "persona.py",
       "norm_label": "any"
     },
     {
@@ -4046,7 +4134,7 @@
       "_origin": "ast",
       "id": "src_agent_utils_persona_set_active_persona",
       "community": 28,
-      "community_name": "persona_prompt",
+      "community_name": "persona.py",
       "norm_label": "set_active_persona()"
     },
     {
@@ -4057,7 +4145,7 @@
       "_origin": "ast",
       "id": "src_agent_utils_persona_rationale_1",
       "community": 28,
-      "community_name": "persona_prompt",
+      "community_name": "persona.py",
       "norm_label": "persona hot-reload (requirement 8: the ceo changes report tone weekly, without..."
     },
     {
@@ -4068,7 +4156,7 @@
       "_origin": "ast",
       "id": "src_agent_utils_persona_rationale_33",
       "community": 28,
-      "community_name": "persona_prompt",
+      "community_name": "persona.py",
       "norm_label": "updates the live override. if no store is configured (e.g. test mode), degrades..."
     },
     {
@@ -4127,10 +4215,21 @@
       "norm_label": "list_reports()"
     },
     {
-      "label": "delete_reports_by_ids()",
+      "label": "get_report()",
       "file_type": "code",
       "source_file": "src/agent/utils/reports.py",
       "source_location": "L57",
+      "_origin": "ast",
+      "id": "src_agent_utils_reports_get_report",
+      "community": 2,
+      "community_name": "logging.py",
+      "norm_label": "get_report()"
+    },
+    {
+      "label": "delete_reports_by_ids()",
+      "file_type": "code",
+      "source_file": "src/agent/utils/reports.py",
+      "source_location": "L65",
       "_origin": "ast",
       "id": "src_agent_utils_reports_delete_reports_by_ids",
       "community": 2,
@@ -4160,12 +4259,23 @@
       "norm_label": "list saved reports, optionally scoped to one conversation and/or matched..."
     },
     {
-      "label": "Delete the given report ids for this user. Returns the ids that were actually\u2026",
+      "label": "Fetch one saved report, body included. None if this user has no such report.",
       "file_type": "rationale",
       "source_file": "src/agent/utils/reports.py",
       "source_location": "L60",
       "_origin": "ast",
       "id": "src_agent_utils_reports_rationale_60",
+      "community": 2,
+      "community_name": "logging.py",
+      "norm_label": "fetch one saved report, body included. none if this user has no such report."
+    },
+    {
+      "label": "Delete the given report ids for this user. Returns the ids that were actually\u2026",
+      "file_type": "rationale",
+      "source_file": "src/agent/utils/reports.py",
+      "source_location": "L68",
+      "_origin": "ast",
+      "id": "src_agent_utils_reports_rationale_68",
       "community": 2,
       "community_name": "logging.py",
       "norm_label": "delete the given report ids for this user. returns the ids that were actually..."
@@ -4177,8 +4287,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_agent_utils_structured_llm",
-      "community": 36,
-      "community_name": "run_structured",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "structured_llm.py"
     },
     {
@@ -4188,8 +4298,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_agent_utils_structured_llm_run_structured",
-      "community": 36,
-      "community_name": "run_structured",
+      "community": 21,
+      "community_name": "eval_golden.py",
       "norm_label": "run_structured()"
     },
     {
@@ -4199,8 +4309,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_agent_utils_structured_llm_py_basemodel",
-      "community": 36,
-      "community_name": "run_structured",
+      "community": 21,
+      "community_name": "eval_golden.py",
       "norm_label": "basemodel"
     },
     {
@@ -4210,8 +4320,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_agent_utils_structured_llm_rationale_17",
-      "community": 36,
-      "community_name": "run_structured",
+      "community": 21,
+      "community_name": "eval_golden.py",
       "norm_label": "one-shot structured output via a forced tool call (toolstrategy), not..."
     },
     {
@@ -4683,8 +4793,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_clients_llm_client",
-      "community": 36,
-      "community_name": "run_structured",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "llm_client.py"
     },
     {
@@ -4694,8 +4804,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_clients_llm_client_get_llm_model",
-      "community": 36,
-      "community_name": "run_structured",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "get_llm_model()"
     },
     {
@@ -4705,8 +4815,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "chatopenai",
-      "community": 36,
-      "community_name": "run_structured",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "chatopenai"
     },
     {
@@ -4826,8 +4936,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_database_postgres_manager",
-      "community": 38,
-      "community_name": "eval_golden.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "postgres_manager.py"
     },
     {
@@ -4969,8 +5079,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_database_postgres_manager_rationale_1",
-      "community": 38,
-      "community_name": "eval_golden.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "postgresql connection pool and langgraph persistence management."
     },
     {
@@ -5123,8 +5233,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_models_subagent_results",
-      "community": 61,
-      "community_name": "subagent_results.py",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "subagent_results.py"
     },
     {
@@ -5134,8 +5244,8 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "src_models_subagent_results_dataanalystresult",
-      "community": 61,
-      "community_name": "subagent_results.py",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "dataanalystresult"
     },
     {
@@ -5145,8 +5255,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_models_subagent_results_py_basemodel",
-      "community": 61,
-      "community_name": "subagent_results.py",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "basemodel"
     },
     {
@@ -5156,8 +5266,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_models_subagent_results_reportwriterresult",
-      "community": 61,
-      "community_name": "subagent_results.py",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "reportwriterresult"
     },
     {
@@ -5167,8 +5277,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_models_subagent_results_rationale_5",
-      "community": 61,
-      "community_name": "subagent_results.py",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "structured terminal output of the data-analyst subagent."
     },
     {
@@ -5178,8 +5288,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_models_subagent_results_rationale_17",
-      "community": 61,
-      "community_name": "subagent_results.py",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "structured terminal output of the report-writer subagent."
     },
     {
@@ -5596,8 +5706,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_agent",
-      "community": 60,
-      "community_name": "build_agent",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "test_agent.py"
     },
     {
@@ -5607,8 +5717,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "tests_test_agent_test_build_agent_compiles",
-      "community": 60,
-      "community_name": "build_agent",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "test_build_agent_compiles()"
     },
     {
@@ -5618,8 +5728,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "tests_test_agent_rationale_7",
-      "community": 60,
-      "community_name": "build_agent",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "regression test: the whole graph (root + 2 subagents + tools + hitl + memory +..."
     },
     {
@@ -5630,7 +5740,7 @@
       "_origin": "ast",
       "id": "tests_test_app",
       "community": 28,
-      "community_name": "persona_prompt",
+      "community_name": "persona.py",
       "norm_label": "test_app.py"
     },
     {
@@ -5641,7 +5751,7 @@
       "_origin": "ast",
       "id": "tests_test_app_test_app_wires_up_expected_routes",
       "community": 28,
-      "community_name": "persona_prompt",
+      "community_name": "persona.py",
       "norm_label": "test_app_wires_up_expected_routes()"
     },
     {
@@ -5652,7 +5762,7 @@
       "_origin": "ast",
       "id": "tests_test_app_test_admin_persona_endpoint_updates_active_persona",
       "community": 28,
-      "community_name": "persona_prompt",
+      "community_name": "persona.py",
       "norm_label": "test_admin_persona_endpoint_updates_active_persona()"
     },
     {
@@ -5816,8 +5926,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_datetime_prompt",
-      "community": 37,
-      "community_name": "datetime_prompt",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "test_datetime_prompt.py"
     },
     {
@@ -5827,8 +5937,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "tests_test_datetime_prompt_test_section_states_the_real_current_year",
-      "community": 37,
-      "community_name": "datetime_prompt",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "test_section_states_the_real_current_year()"
     },
     {
@@ -5838,8 +5948,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "tests_test_datetime_prompt_prompt_for",
-      "community": 37,
-      "community_name": "datetime_prompt",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "_prompt_for()"
     },
     {
@@ -5849,8 +5959,8 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "tests_test_datetime_prompt_test_appends_after_existing_prompt",
-      "community": 37,
-      "community_name": "datetime_prompt",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "test_appends_after_existing_prompt()"
     },
     {
@@ -5860,8 +5970,8 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "tests_test_datetime_prompt_test_works_with_no_existing_prompt",
-      "community": 37,
-      "community_name": "datetime_prompt",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "test_works_with_no_existing_prompt()"
     },
     {
@@ -5871,7 +5981,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_eval_golden",
-      "community": 38,
+      "community": 21,
       "community_name": "eval_golden.py",
       "norm_label": "test_eval_golden.py"
     },
@@ -5882,7 +5992,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "tests_test_eval_golden_test_final_report_text_returns_last_ai_message",
-      "community": 38,
+      "community": 21,
       "community_name": "eval_golden.py",
       "norm_label": "test_final_report_text_returns_last_ai_message()"
     },
@@ -5893,7 +6003,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "tests_test_eval_golden_test_final_report_text_skips_empty_ai_messages",
-      "community": 38,
+      "community": 21,
       "community_name": "eval_golden.py",
       "norm_label": "test_final_report_text_skips_empty_ai_messages()"
     },
@@ -5904,7 +6014,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "tests_test_eval_golden_test_final_report_text_returns_empty_string_when_no_ai_message",
-      "community": 38,
+      "community": 21,
       "community_name": "eval_golden.py",
       "norm_label": "test_final_report_text_returns_empty_string_when_no_ai_message()"
     },
@@ -6224,30 +6334,63 @@
       "_origin": "ast",
       "id": "tests_test_guard",
       "community": 31,
-      "community_name": "guard.py",
+      "community_name": "test_guard.py",
       "norm_label": "test_guard.py"
     },
     {
-      "label": "test_last_human_message_content_finds_most_recent()",
-      "file_type": "code",
-      "source_file": "tests/test_guard.py",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "tests_test_guard_test_last_human_message_content_finds_most_recent",
-      "community": 31,
-      "community_name": "guard.py",
-      "norm_label": "test_last_human_message_content_finds_most_recent()"
-    },
-    {
-      "label": "test_last_human_message_content_empty_when_none()",
+      "label": "test_classifier_input_finds_most_recent_user_message()",
       "file_type": "code",
       "source_file": "tests/test_guard.py",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "tests_test_guard_test_last_human_message_content_empty_when_none",
+      "id": "tests_test_guard_test_classifier_input_finds_most_recent_user_message",
       "community": 31,
-      "community_name": "guard.py",
-      "norm_label": "test_last_human_message_content_empty_when_none()"
+      "community_name": "test_guard.py",
+      "norm_label": "test_classifier_input_finds_most_recent_user_message()"
+    },
+    {
+      "label": "test_classifier_input_empty_when_none()",
+      "file_type": "code",
+      "source_file": "tests/test_guard.py",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "tests_test_guard_test_classifier_input_empty_when_none",
+      "community": 31,
+      "community_name": "test_guard.py",
+      "norm_label": "test_classifier_input_empty_when_none()"
+    },
+    {
+      "label": "test_classifier_input_includes_the_assistant_turn_being_replied_to()",
+      "file_type": "code",
+      "source_file": "tests/test_guard.py",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "tests_test_guard_test_classifier_input_includes_the_assistant_turn_being_replied_to",
+      "community": 31,
+      "community_name": "test_guard.py",
+      "norm_label": "test_classifier_input_includes_the_assistant_turn_being_replied_to()"
+    },
+    {
+      "label": "test_classifier_input_ignores_assistant_turns_after_the_latest_user_message()",
+      "file_type": "code",
+      "source_file": "tests/test_guard.py",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "tests_test_guard_test_classifier_input_ignores_assistant_turns_after_the_latest_user_message",
+      "community": 31,
+      "community_name": "test_guard.py",
+      "norm_label": "test_classifier_input_ignores_assistant_turns_after_the_latest_user_message()"
+    },
+    {
+      "label": "test_classifier_input_truncates_a_long_assistant_turn()",
+      "file_type": "code",
+      "source_file": "tests/test_guard.py",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "tests_test_guard_test_classifier_input_truncates_a_long_assistant_turn",
+      "community": 31,
+      "community_name": "test_guard.py",
+      "norm_label": "test_classifier_input_truncates_a_long_assistant_turn()"
     },
     {
       "label": "patch",
@@ -6257,40 +6400,40 @@
       "_origin": "ast",
       "id": "tests_test_guard_py_patch",
       "community": 31,
-      "community_name": "guard.py",
+      "community_name": "test_guard.py",
       "norm_label": "patch"
     },
     {
       "label": "test_in_scope_request_passes_through()",
       "file_type": "code",
       "source_file": "tests/test_guard.py",
-      "source_location": "L19",
+      "source_location": "L62",
       "_origin": "ast",
       "id": "tests_test_guard_test_in_scope_request_passes_through",
       "community": 31,
-      "community_name": "guard.py",
+      "community_name": "test_guard.py",
       "norm_label": "test_in_scope_request_passes_through()"
     },
     {
       "label": "test_out_of_scope_request_is_refused()",
       "file_type": "code",
       "source_file": "tests/test_guard.py",
-      "source_location": "L29",
+      "source_location": "L72",
       "_origin": "ast",
       "id": "tests_test_guard_test_out_of_scope_request_is_refused",
       "community": 31,
-      "community_name": "guard.py",
+      "community_name": "test_guard.py",
       "norm_label": "test_out_of_scope_request_is_refused()"
     },
     {
       "label": "test_classifier_failure_fails_open()",
       "file_type": "code",
       "source_file": "tests/test_guard.py",
-      "source_location": "L42",
+      "source_location": "L85",
       "_origin": "ast",
       "id": "tests_test_guard_test_classifier_failure_fails_open",
       "community": 31,
-      "community_name": "guard.py",
+      "community_name": "test_guard.py",
       "norm_label": "test_classifier_failure_fails_open()"
     },
     {
@@ -6345,7 +6488,7 @@
       "_origin": "ast",
       "id": "tests_test_persona",
       "community": 28,
-      "community_name": "persona_prompt",
+      "community_name": "persona.py",
       "norm_label": "test_persona.py"
     },
     {
@@ -6356,7 +6499,7 @@
       "_origin": "ast",
       "id": "tests_test_persona_test_falls_back_to_default_when_store_empty",
       "community": 28,
-      "community_name": "persona_prompt",
+      "community_name": "persona.py",
       "norm_label": "test_falls_back_to_default_when_store_empty()"
     },
     {
@@ -6367,7 +6510,7 @@
       "_origin": "ast",
       "id": "tests_test_persona_test_set_then_get_returns_live_override",
       "community": 28,
-      "community_name": "persona_prompt",
+      "community_name": "persona.py",
       "norm_label": "test_set_then_get_returns_live_override()"
     },
     {
@@ -6378,7 +6521,7 @@
       "_origin": "ast",
       "id": "tests_test_persona_test_get_is_served_from_cache_without_hitting_store_again",
       "community": 28,
-      "community_name": "persona_prompt",
+      "community_name": "persona.py",
       "norm_label": "test_get_is_served_from_cache_without_hitting_store_again()"
     },
     {
@@ -6389,7 +6532,7 @@
       "_origin": "ast",
       "id": "tests_test_persona_prompt",
       "community": 28,
-      "community_name": "persona_prompt",
+      "community_name": "persona.py",
       "norm_label": "test_persona_prompt.py"
     },
     {
@@ -6400,7 +6543,7 @@
       "_origin": "ast",
       "id": "tests_test_persona_prompt_fake_request",
       "community": 28,
-      "community_name": "persona_prompt",
+      "community_name": "persona.py",
       "norm_label": "_fake_request()"
     },
     {
@@ -6411,7 +6554,7 @@
       "_origin": "ast",
       "id": "tests_test_persona_prompt_py_modelrequest",
       "community": 28,
-      "community_name": "persona_prompt",
+      "community_name": "persona.py",
       "norm_label": "modelrequest"
     },
     {
@@ -6422,7 +6565,7 @@
       "_origin": "ast",
       "id": "tests_test_persona_prompt_test_persona_prepended_when_other_content_exists",
       "community": 28,
-      "community_name": "persona_prompt",
+      "community_name": "persona.py",
       "norm_label": "test_persona_prepended_when_other_content_exists()"
     },
     {
@@ -6433,7 +6576,7 @@
       "_origin": "ast",
       "id": "tests_test_persona_prompt_test_persona_alone_when_no_other_content",
       "community": 28,
-      "community_name": "persona_prompt",
+      "community_name": "persona.py",
       "norm_label": "test_persona_alone_when_no_other_content()"
     },
     {
@@ -6451,7 +6594,7 @@
       "label": "_fake_runtime()",
       "file_type": "code",
       "source_file": "tests/test_report_tools.py",
-      "source_location": "L12",
+      "source_location": "L13",
       "_origin": "ast",
       "id": "tests_test_report_tools_fake_runtime",
       "community": 2,
@@ -6473,7 +6616,7 @@
       "label": "_configured()",
       "file_type": "code",
       "source_file": "tests/test_report_tools.py",
-      "source_location": "L17",
+      "source_location": "L18",
       "_origin": "ast",
       "id": "tests_test_report_tools_configured",
       "community": 2,
@@ -6484,7 +6627,7 @@
       "label": "test_save_then_find_report()",
       "file_type": "code",
       "source_file": "tests/test_report_tools.py",
-      "source_location": "L27",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "tests_test_report_tools_test_save_then_find_report",
       "community": 2,
@@ -6495,7 +6638,7 @@
       "label": "test_find_reports_scoped_to_this_conversation()",
       "file_type": "code",
       "source_file": "tests/test_report_tools.py",
-      "source_location": "L39",
+      "source_location": "L40",
       "_origin": "ast",
       "id": "tests_test_report_tools_test_find_reports_scoped_to_this_conversation",
       "community": 2,
@@ -6503,10 +6646,32 @@
       "norm_label": "test_find_reports_scoped_to_this_conversation()"
     },
     {
+      "label": "test_read_report_returns_the_body()",
+      "file_type": "code",
+      "source_file": "tests/test_report_tools.py",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "tests_test_report_tools_test_read_report_returns_the_body",
+      "community": 2,
+      "community_name": "logging.py",
+      "norm_label": "test_read_report_returns_the_body()"
+    },
+    {
+      "label": "test_read_report_cannot_read_another_users_report()",
+      "file_type": "code",
+      "source_file": "tests/test_report_tools.py",
+      "source_location": "L73",
+      "_origin": "ast",
+      "id": "tests_test_report_tools_test_read_report_cannot_read_another_users_report",
+      "community": 2,
+      "community_name": "logging.py",
+      "norm_label": "test_read_report_cannot_read_another_users_report()"
+    },
+    {
       "label": "test_delete_reports_requires_ids()",
       "file_type": "code",
       "source_file": "tests/test_report_tools.py",
-      "source_location": "L55",
+      "source_location": "L90",
       "_origin": "ast",
       "id": "tests_test_report_tools_test_delete_reports_requires_ids",
       "community": 2,
@@ -6517,7 +6682,7 @@
       "label": "test_delete_reports_removes_saved_report()",
       "file_type": "code",
       "source_file": "tests/test_report_tools.py",
-      "source_location": "L65",
+      "source_location": "L100",
       "_origin": "ast",
       "id": "tests_test_report_tools_test_delete_reports_removes_saved_report",
       "community": 2,
@@ -6528,7 +6693,7 @@
       "label": "test_delete_reports_cannot_touch_another_users_reports()",
       "file_type": "code",
       "source_file": "tests/test_report_tools.py",
-      "source_location": "L80",
+      "source_location": "L115",
       "_origin": "ast",
       "id": "tests_test_report_tools_test_delete_reports_cannot_touch_another_users_reports",
       "community": 2,
@@ -6561,7 +6726,7 @@
       "label": "store()",
       "file_type": "code",
       "source_file": "tests/test_reports.py",
-      "source_location": "L8",
+      "source_location": "L13",
       "_origin": "ast",
       "id": "tests_test_reports_store",
       "community": 2,
@@ -6572,7 +6737,7 @@
       "label": "test_create_and_list_report()",
       "file_type": "code",
       "source_file": "tests/test_reports.py",
-      "source_location": "L12",
+      "source_location": "L17",
       "_origin": "ast",
       "id": "tests_test_reports_test_create_and_list_report",
       "community": 2,
@@ -6583,7 +6748,7 @@
       "label": "test_list_reports_scoped_to_thread()",
       "file_type": "code",
       "source_file": "tests/test_reports.py",
-      "source_location": "L24",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "tests_test_reports_test_list_reports_scoped_to_thread",
       "community": 2,
@@ -6594,7 +6759,7 @@
       "label": "test_reports_are_scoped_per_user()",
       "file_type": "code",
       "source_file": "tests/test_reports.py",
-      "source_location": "L33",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "tests_test_reports_test_reports_are_scoped_per_user",
       "community": 2,
@@ -6602,10 +6767,32 @@
       "norm_label": "test_reports_are_scoped_per_user()"
     },
     {
+      "label": "test_get_report_returns_body()",
+      "file_type": "code",
+      "source_file": "tests/test_reports.py",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "tests_test_reports_test_get_report_returns_body",
+      "community": 2,
+      "community_name": "logging.py",
+      "norm_label": "test_get_report_returns_body()"
+    },
+    {
+      "label": "test_get_report_is_scoped_per_user()",
+      "file_type": "code",
+      "source_file": "tests/test_reports.py",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "tests_test_reports_test_get_report_is_scoped_per_user",
+      "community": 2,
+      "community_name": "logging.py",
+      "norm_label": "test_get_report_is_scoped_per_user()"
+    },
+    {
       "label": "test_delete_reports_by_ids()",
       "file_type": "code",
       "source_file": "tests/test_reports.py",
-      "source_location": "L42",
+      "source_location": "L66",
       "_origin": "ast",
       "id": "tests_test_reports_test_delete_reports_by_ids",
       "community": 2,
@@ -6616,7 +6803,7 @@
       "label": "test_delete_does_not_cross_user_boundary()",
       "file_type": "code",
       "source_file": "tests/test_reports.py",
-      "source_location": "L53",
+      "source_location": "L77",
       "_origin": "ast",
       "id": "tests_test_reports_test_delete_does_not_cross_user_boundary",
       "community": 2,
@@ -7004,8 +7191,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_structured_llm",
-      "community": 36,
-      "community_name": "run_structured",
+      "community": 21,
+      "community_name": "eval_golden.py",
       "norm_label": "test_structured_llm.py"
     },
     {
@@ -7015,8 +7202,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "tests_test_structured_llm_fakeresult",
-      "community": 36,
-      "community_name": "run_structured",
+      "community": 21,
+      "community_name": "eval_golden.py",
       "norm_label": "_fakeresult"
     },
     {
@@ -7026,8 +7213,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_structured_llm_py_basemodel",
-      "community": 36,
-      "community_name": "run_structured",
+      "community": 21,
+      "community_name": "eval_golden.py",
       "norm_label": "basemodel"
     },
     {
@@ -7037,8 +7224,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_structured_llm_py_patch",
-      "community": 36,
-      "community_name": "run_structured",
+      "community": 21,
+      "community_name": "eval_golden.py",
       "norm_label": "patch"
     },
     {
@@ -7048,8 +7235,8 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "tests_test_structured_llm_test_run_structured_returns_structured_response",
-      "community": 36,
-      "community_name": "run_structured",
+      "community": 21,
+      "community_name": "eval_golden.py",
       "norm_label": "test_run_structured_returns_structured_response()"
     },
     {
@@ -7059,8 +7246,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_tool_errors",
-      "community": 62,
-      "community_name": "test_tool_errors.py",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "test_tool_errors.py"
     },
     {
@@ -7070,8 +7257,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "tests_test_tool_errors_boundary",
-      "community": 62,
-      "community_name": "test_tool_errors.py",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "_boundary()"
     },
     {
@@ -7081,8 +7268,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "tests_test_tool_errors_test_passes_through_successful_tool_result",
-      "community": 62,
-      "community_name": "test_tool_errors.py",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "test_passes_through_successful_tool_result()"
     },
     {
@@ -7092,8 +7279,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "tests_test_tool_errors_test_lets_graph_interrupts_propagate",
-      "community": 62,
-      "community_name": "test_tool_errors.py",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "test_lets_graph_interrupts_propagate()"
     },
     {
@@ -7103,8 +7290,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "tests_test_tool_errors_test_converts_tool_exception_into_error_tool_message",
-      "community": 62,
-      "community_name": "test_tool_errors.py",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "test_converts_tool_exception_into_error_tool_message()"
     },
     {
@@ -7114,8 +7301,8 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "tests_test_tool_errors_rationale_26",
-      "community": 62,
-      "community_name": "test_tool_errors.py",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "swallowing a graphinterrupt would silently kill the hitl confirmation flow."
     },
     {
@@ -7126,7 +7313,7 @@
       "_origin": "ast",
       "id": "tests_test_verify_output",
       "community": 21,
-      "community_name": "verify_output.py",
+      "community_name": "eval_golden.py",
       "norm_label": "test_verify_output.py"
     },
     {
@@ -7137,7 +7324,7 @@
       "_origin": "ast",
       "id": "tests_test_verify_output_fake_runtime",
       "community": 21,
-      "community_name": "verify_output.py",
+      "community_name": "eval_golden.py",
       "norm_label": "_fake_runtime()"
     },
     {
@@ -7148,7 +7335,7 @@
       "_origin": "ast",
       "id": "tests_test_verify_output_py_simplenamespace",
       "community": 21,
-      "community_name": "verify_output.py",
+      "community_name": "eval_golden.py",
       "norm_label": "simplenamespace"
     },
     {
@@ -7159,7 +7346,7 @@
       "_origin": "ast",
       "id": "tests_test_verify_output_py_patch",
       "community": 21,
-      "community_name": "verify_output.py",
+      "community_name": "eval_golden.py",
       "norm_label": "patch"
     },
     {
@@ -7170,7 +7357,7 @@
       "_origin": "ast",
       "id": "tests_test_verify_output_test_verify_output_passes",
       "community": 21,
-      "community_name": "verify_output.py",
+      "community_name": "eval_golden.py",
       "norm_label": "test_verify_output_passes()"
     },
     {
@@ -7181,7 +7368,7 @@
       "_origin": "ast",
       "id": "tests_test_verify_output_test_verify_output_reports_issues",
       "community": 21,
-      "community_name": "verify_output.py",
+      "community_name": "eval_golden.py",
       "norm_label": "test_verify_output_reports_issues()"
     },
     {
@@ -7192,7 +7379,7 @@
       "_origin": "ast",
       "id": "tests_test_verify_output_test_verify_output_handles_judge_failure",
       "community": 21,
-      "community_name": "verify_output.py",
+      "community_name": "eval_golden.py",
       "norm_label": "test_verify_output_handles_judge_failure()"
     },
     {
@@ -7364,7 +7551,7 @@
       "label": "7. Requirement 4 \u2014 Continuous Improvement",
       "file_type": "document",
       "source_file": "docs/HLD.md",
-      "source_location": "L317",
+      "source_location": "L319",
       "_origin": "ast",
       "id": "docs_hld_7_requirement_4_continuous_improvement",
       "community": 29,
@@ -7375,7 +7562,7 @@
       "label": "8. Requirement 5 \u2014 Resilience & Graceful Error Handling",
       "file_type": "document",
       "source_file": "docs/HLD.md",
-      "source_location": "L329",
+      "source_location": "L331",
       "_origin": "ast",
       "id": "docs_hld_8_requirement_5_resilience_graceful_error_handling",
       "community": 29,
@@ -7386,7 +7573,7 @@
       "label": "9. Requirement 6 \u2014 Quality Assurance",
       "file_type": "document",
       "source_file": "docs/HLD.md",
-      "source_location": "L375",
+      "source_location": "L377",
       "_origin": "ast",
       "id": "docs_hld_9_requirement_6_quality_assurance",
       "community": 29,
@@ -7397,7 +7584,7 @@
       "label": "10. Requirement 7 \u2014 Observability",
       "file_type": "document",
       "source_file": "docs/HLD.md",
-      "source_location": "L395",
+      "source_location": "L397",
       "_origin": "ast",
       "id": "docs_hld_10_requirement_7_observability",
       "community": 29,
@@ -7408,7 +7595,7 @@
       "label": "11. Requirement 8 \u2014 Agility (Persona Management)",
       "file_type": "document",
       "source_file": "docs/HLD.md",
-      "source_location": "L417",
+      "source_location": "L419",
       "_origin": "ast",
       "id": "docs_hld_11_requirement_8_agility_persona_management",
       "community": 29,
@@ -7419,7 +7606,7 @@
       "label": "12. Setup instructions",
       "file_type": "document",
       "source_file": "docs/HLD.md",
-      "source_location": "L444",
+      "source_location": "L446",
       "_origin": "ast",
       "id": "docs_hld_12_setup_instructions",
       "community": 29,
@@ -7430,7 +7617,7 @@
       "label": "13. Known gaps / what a production pass adds",
       "file_type": "document",
       "source_file": "docs/HLD.md",
-      "source_location": "L492",
+      "source_location": "L494",
       "_origin": "ast",
       "id": "docs_hld_13_known_gaps_what_a_production_pass_adds",
       "community": 29,
@@ -7947,7 +8134,7 @@
       "label": "What you refuse",
       "file_type": "document",
       "source_file": "src/artifacts/prompts/retail_agent_persona.md",
-      "source_location": "L26",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "src_artifacts_prompts_retail_agent_persona_what_you_refuse",
       "community": 41,
@@ -7958,7 +8145,7 @@
       "label": "Destructive actions",
       "file_type": "document",
       "source_file": "src/artifacts/prompts/retail_agent_persona.md",
-      "source_location": "L40",
+      "source_location": "L43",
       "_origin": "ast",
       "id": "src_artifacts_prompts_retail_agent_persona_destructive_actions",
       "community": 41,
@@ -7969,7 +8156,7 @@
       "label": "Style",
       "file_type": "document",
       "source_file": "src/artifacts/prompts/retail_agent_persona.md",
-      "source_location": "L49",
+      "source_location": "L52",
       "_origin": "ast",
       "id": "src_artifacts_prompts_retail_agent_persona_style",
       "community": 41,
@@ -10111,7 +10298,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
-      "source_location": "L31",
+      "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast",
       "source": "frontend_src_copilot_components_tool_renderers_report_renderers_usereportrenderers",
@@ -10567,7 +10754,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
-      "source_location": "L17",
+      "source_location": "L21",
       "weight": 1.0,
       "_origin": "ast",
       "source": "frontend_src_copilot_components_tool_renderers_report_renderers",
@@ -10589,6 +10776,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_report_renderers",
+      "target": "frontend_src_copilot_components_tool_renderers_report_renderers_readschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
@@ -10600,7 +10798,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
-      "source_location": "L25",
+      "source_location": "L29",
       "weight": 1.0,
       "_origin": "ast",
       "source": "frontend_src_copilot_components_tool_renderers_report_renderers",
@@ -10611,7 +10809,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
-      "source_location": "L21",
+      "source_location": "L25",
       "weight": 1.0,
       "_origin": "ast",
       "source": "frontend_src_copilot_components_tool_renderers_report_renderers",
@@ -13224,18 +13422,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/agent/middlewares/guard.py",
-      "source_location": "L42",
+      "source_location": "L51",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_agent_middlewares_guard",
-      "target": "src_agent_middlewares_guard_last_human_message_content",
+      "target": "src_agent_middlewares_guard_classifier_input",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/agent/middlewares/guard.py",
-      "source_location": "L50",
+      "source_location": "L73",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_agent_middlewares_guard",
@@ -13246,7 +13444,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/agent/middlewares/guard.py",
-      "source_location": "L35",
+      "source_location": "L41",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_agent_middlewares_guard",
@@ -13328,7 +13526,7 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "src/agent/middlewares/guard.py",
-      "source_location": "L35",
+      "source_location": "L41",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_agent_middlewares_guard_scoperesult",
@@ -13353,7 +13551,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_guard.py",
-      "source_location": "L20",
+      "source_location": "L63",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_guard_test_in_scope_request_passes_through",
@@ -13365,22 +13563,33 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_guard.py",
-      "source_location": "L30",
+      "source_location": "L73",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_guard_test_out_of_scope_request_is_refused",
       "target": "src_agent_middlewares_guard_scoperesult"
     },
     {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/middlewares/guard.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_agent_middlewares_guard_rationale_52",
+      "target": "src_agent_middlewares_guard_classifier_input",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/agent/middlewares/guard.py",
-      "source_location": "L51",
+      "source_location": "L74",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_agent_middlewares_guard_scope_guard",
-      "target": "src_agent_middlewares_guard_last_human_message_content",
+      "target": "src_agent_middlewares_guard_classifier_input",
       "confidence_score": 1.0
     },
     {
@@ -13392,7 +13601,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_guard",
-      "target": "src_agent_middlewares_guard_last_human_message_content",
+      "target": "src_agent_middlewares_guard_classifier_input",
       "confidence_score": 1.0
     },
     {
@@ -13400,11 +13609,11 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_guard.py",
-      "source_location": "L15",
+      "source_location": "L20",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "tests_test_guard_test_last_human_message_content_empty_when_none",
-      "target": "src_agent_middlewares_guard_last_human_message_content",
+      "source": "tests_test_guard_test_classifier_input_empty_when_none",
+      "target": "src_agent_middlewares_guard_classifier_input",
       "confidence_score": 1.0
     },
     {
@@ -13412,18 +13621,54 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_guard.py",
-      "source_location": "L11",
+      "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "tests_test_guard_test_last_human_message_content_finds_most_recent",
-      "target": "src_agent_middlewares_guard_last_human_message_content",
+      "source": "tests_test_guard_test_classifier_input_finds_most_recent_user_message",
+      "target": "src_agent_middlewares_guard_classifier_input",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_guard.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_guard_test_classifier_input_ignores_assistant_turns_after_the_latest_user_message",
+      "target": "src_agent_middlewares_guard_classifier_input",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_guard.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_guard_test_classifier_input_includes_the_assistant_turn_being_replied_to",
+      "target": "src_agent_middlewares_guard_classifier_input",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_guard.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_guard_test_classifier_input_truncates_a_long_assistant_turn",
+      "target": "src_agent_middlewares_guard_classifier_input",
       "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "src/agent/middlewares/guard.py",
-      "source_location": "L49",
+      "source_location": "L72",
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
@@ -13437,7 +13682,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/agent/middlewares/guard.py",
-      "source_location": "L56",
+      "source_location": "L79",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_agent_middlewares_guard_scope_guard",
@@ -14005,7 +14250,7 @@
       "context": "collection",
       "confidence": "INFERRED",
       "source_file": "src/agent/tools/__init__.py",
-      "source_location": "L12",
+      "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
       "confidence_score": 0.8,
@@ -14029,7 +14274,7 @@
       "context": "collection",
       "confidence": "INFERRED",
       "source_file": "src/agent/tools/__init__.py",
-      "source_location": "L12",
+      "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
       "confidence_score": 0.8,
@@ -14053,7 +14298,7 @@
       "context": "collection",
       "confidence": "INFERRED",
       "source_file": "src/agent/tools/__init__.py",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
       "confidence_score": 0.8,
@@ -14077,7 +14322,7 @@
       "context": "collection",
       "confidence": "INFERRED",
       "source_file": "src/agent/tools/__init__.py",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
       "confidence_score": 0.8,
@@ -14093,6 +14338,30 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_agent_tools_init",
+      "target": "src_agent_tools_read_report",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "source_file": "src/agent/tools/__init__.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 0.8,
+      "source": "src_agent_tools_init",
+      "target": "src_agent_tools_read_report_read_report"
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/tools/__init__.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_agent_tools_init",
       "target": "src_agent_tools_run_sql",
       "confidence_score": 1.0
     },
@@ -14101,7 +14370,7 @@
       "context": "collection",
       "confidence": "INFERRED",
       "source_file": "src/agent/tools/__init__.py",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
       "confidence_score": 0.8,
@@ -14113,7 +14382,7 @@
       "context": "export",
       "confidence": "EXTRACTED",
       "source_file": "src/agent/tools/__init__.py",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_agent_tools_init",
@@ -14125,7 +14394,7 @@
       "context": "collection",
       "confidence": "INFERRED",
       "source_file": "src/agent/tools/__init__.py",
-      "source_location": "L12",
+      "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
       "confidence_score": 0.8,
@@ -14137,7 +14406,7 @@
       "context": "export",
       "confidence": "EXTRACTED",
       "source_file": "src/agent/tools/__init__.py",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_agent_tools_init",
@@ -14149,7 +14418,7 @@
       "context": "collection",
       "confidence": "INFERRED",
       "source_file": "src/agent/tools/__init__.py",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
       "confidence_score": 0.8,
@@ -14161,7 +14430,7 @@
       "context": "export",
       "confidence": "EXTRACTED",
       "source_file": "src/agent/tools/__init__.py",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_agent_tools_init",
@@ -14173,7 +14442,7 @@
       "context": "collection",
       "confidence": "INFERRED",
       "source_file": "src/agent/tools/__init__.py",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
       "confidence_score": 0.8,
@@ -14929,6 +15198,184 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/agent/tools/read_report.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_agent_tools_read_report",
+      "target": "src_agent_tools_read_report_read_report",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/tools/read_report.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_agent_tools_read_report",
+      "target": "src_agent_utils_agent_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/tools/read_report.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_agent_tools_read_report",
+      "target": "src_agent_utils_agent_config_get_user_id",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/tools/read_report.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_agent_tools_read_report",
+      "target": "src_agent_utils_reports",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/tools/read_report.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_agent_tools_read_report",
+      "target": "src_agent_utils_reports_get_report",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/tools/read_report.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_agent_tools_read_report",
+      "target": "src_observability_logging",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/tools/read_report.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_agent_tools_read_report",
+      "target": "src_observability_logging_get_logger",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_report_tools.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_report_tools",
+      "target": "src_agent_tools_read_report",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/tools/read_report.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast",
+      "source": "src_agent_tools_read_report_read_report",
+      "target": "src_agent_tools_read_report_py_tool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/tools/read_report.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_agent_tools_read_report_rationale_14",
+      "target": "src_agent_tools_read_report_read_report",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/tools/read_report.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_agent_tools_read_report_read_report",
+      "target": "src_agent_tools_read_report_py_toolmessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/tools/read_report.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_agent_tools_read_report_read_report",
+      "target": "src_agent_tools_read_report_py_toolruntime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/agent/tools/read_report.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_agent_tools_read_report_read_report",
+      "target": "src_agent_utils_agent_config_get_user_id"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/agent/tools/read_report.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_agent_tools_read_report_read_report",
+      "target": "src_agent_utils_reports_get_report"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_report_tools.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_report_tools",
+      "target": "src_agent_tools_read_report_read_report",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/agent/tools/run_sql.py",
       "source_location": "L15",
       "weight": 1.0,
@@ -15346,7 +15793,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_report_tools.py",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_report_tools",
@@ -15441,7 +15888,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_report_tools.py",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_report_tools",
@@ -16460,11 +16907,22 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/agent/utils/reports.py",
-      "source_location": "L57",
+      "source_location": "L65",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_agent_utils_reports",
       "target": "src_agent_utils_reports_delete_reports_by_ids",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/utils/reports.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_agent_utils_reports",
+      "target": "src_agent_utils_reports_get_report",
       "confidence_score": 1.0
     },
     {
@@ -16553,10 +17011,22 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/agent/utils/reports.py",
-      "source_location": "L61",
+      "source_location": "L69",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_agent_utils_reports_delete_reports_by_ids",
+      "target": "src_agent_utils_reports_namespace",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/utils/reports.py",
+      "source_location": "L61",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_agent_utils_reports_get_report",
       "target": "src_agent_utils_reports_namespace",
       "confidence_score": 1.0
     },
@@ -16601,7 +17071,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_reports.py",
-      "source_location": "L13",
+      "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_reports_test_create_and_list_report",
@@ -16613,7 +17083,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_reports.py",
-      "source_location": "L54",
+      "source_location": "L78",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_reports_test_delete_does_not_cross_user_boundary",
@@ -16625,7 +17095,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_reports.py",
-      "source_location": "L43",
+      "source_location": "L67",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_reports_test_delete_reports_by_ids",
@@ -16637,7 +17107,31 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_reports.py",
-      "source_location": "L25",
+      "source_location": "L58",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_reports_test_get_report_is_scoped_per_user",
+      "target": "src_agent_utils_reports_create_report",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_reports.py",
+      "source_location": "L48",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_reports_test_get_report_returns_body",
+      "target": "src_agent_utils_reports_create_report",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_reports.py",
+      "source_location": "L30",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_reports_test_list_reports_scoped_to_thread",
@@ -16649,7 +17143,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_reports.py",
-      "source_location": "L34",
+      "source_location": "L39",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_reports_test_reports_are_scoped_per_user",
@@ -16661,10 +17155,22 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "src/agent/utils/reports.py",
-      "source_location": "L57",
+      "source_location": "L65",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_agent_utils_reports_delete_reports_by_ids",
+      "target": "src_agent_utils_reports_py_any",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/utils/reports.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_agent_utils_reports_get_report",
       "target": "src_agent_utils_reports_py_any",
       "confidence_score": 1.0
     },
@@ -16708,7 +17214,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_reports.py",
-      "source_location": "L17",
+      "source_location": "L22",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_reports_test_create_and_list_report",
@@ -16720,7 +17226,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_reports.py",
-      "source_location": "L59",
+      "source_location": "L83",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_reports_test_delete_does_not_cross_user_boundary",
@@ -16732,7 +17238,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_reports.py",
-      "source_location": "L49",
+      "source_location": "L73",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_reports_test_delete_reports_by_ids",
@@ -16744,7 +17250,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_reports.py",
-      "source_location": "L28",
+      "source_location": "L33",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_reports_test_list_reports_scoped_to_thread",
@@ -16756,7 +17262,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_reports.py",
-      "source_location": "L37",
+      "source_location": "L42",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_reports_test_reports_are_scoped_per_user",
@@ -16771,6 +17277,53 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_agent_utils_reports_rationale_60",
+      "target": "src_agent_utils_reports_get_report",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_reports.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_reports",
+      "target": "src_agent_utils_reports_get_report",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_reports.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_reports_test_get_report_is_scoped_per_user",
+      "target": "src_agent_utils_reports_get_report",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_reports.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_reports_test_get_report_returns_body",
+      "target": "src_agent_utils_reports_get_report",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/utils/reports.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_agent_utils_reports_rationale_68",
       "target": "src_agent_utils_reports_delete_reports_by_ids",
       "confidence_score": 1.0
     },
@@ -16791,7 +17344,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_reports.py",
-      "source_location": "L56",
+      "source_location": "L80",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_reports_test_delete_does_not_cross_user_boundary",
@@ -16803,7 +17356,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_reports.py",
-      "source_location": "L46",
+      "source_location": "L70",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_reports_test_delete_reports_by_ids",
@@ -19701,7 +20254,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_guard.py",
-      "source_location": "L42",
+      "source_location": "L85",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_guard",
@@ -19716,7 +20269,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_guard",
-      "target": "tests_test_guard_test_in_scope_request_passes_through",
+      "target": "tests_test_guard_test_classifier_input_empty_when_none",
       "confidence_score": 1.0
     },
     {
@@ -19727,25 +20280,58 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_guard",
-      "target": "tests_test_guard_test_last_human_message_content_empty_when_none",
+      "target": "tests_test_guard_test_classifier_input_finds_most_recent_user_message",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_guard.py",
-      "source_location": "L9",
+      "source_location": "L36",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_guard",
-      "target": "tests_test_guard_test_last_human_message_content_finds_most_recent",
+      "target": "tests_test_guard_test_classifier_input_ignores_assistant_turns_after_the_latest_user_message",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_guard.py",
-      "source_location": "L29",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_guard",
+      "target": "tests_test_guard_test_classifier_input_includes_the_assistant_turn_being_replied_to",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_guard.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_guard",
+      "target": "tests_test_guard_test_classifier_input_truncates_a_long_assistant_turn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_guard.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_guard",
+      "target": "tests_test_guard_test_in_scope_request_passes_through",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_guard.py",
+      "source_location": "L72",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_guard",
@@ -19756,7 +20342,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_guard.py",
-      "source_location": "L41",
+      "source_location": "L84",
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
@@ -19768,7 +20354,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_guard.py",
-      "source_location": "L18",
+      "source_location": "L61",
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
@@ -19780,7 +20366,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_guard.py",
-      "source_location": "L28",
+      "source_location": "L71",
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
@@ -19951,7 +20537,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_report_tools.py",
-      "source_location": "L17",
+      "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_report_tools",
@@ -19962,7 +20548,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_report_tools.py",
-      "source_location": "L12",
+      "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_report_tools",
@@ -19973,7 +20559,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_report_tools.py",
-      "source_location": "L80",
+      "source_location": "L115",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_report_tools",
@@ -19984,7 +20570,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_report_tools.py",
-      "source_location": "L65",
+      "source_location": "L100",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_report_tools",
@@ -19995,7 +20581,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_report_tools.py",
-      "source_location": "L55",
+      "source_location": "L90",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_report_tools",
@@ -20006,7 +20592,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_report_tools.py",
-      "source_location": "L39",
+      "source_location": "L40",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_report_tools",
@@ -20017,7 +20603,29 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_report_tools.py",
-      "source_location": "L27",
+      "source_location": "L73",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_report_tools",
+      "target": "tests_test_report_tools_test_read_report_cannot_read_another_users_report",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_report_tools.py",
+      "source_location": "L56",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_report_tools",
+      "target": "tests_test_report_tools_test_read_report_returns_the_body",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_report_tools.py",
+      "source_location": "L28",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_report_tools",
@@ -20029,7 +20637,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_report_tools.py",
-      "source_location": "L12",
+      "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_report_tools_fake_runtime",
@@ -20041,7 +20649,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_report_tools.py",
-      "source_location": "L82",
+      "source_location": "L117",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_report_tools_test_delete_reports_cannot_touch_another_users_reports",
@@ -20053,7 +20661,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_report_tools.py",
-      "source_location": "L67",
+      "source_location": "L102",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_report_tools_test_delete_reports_removes_saved_report",
@@ -20065,7 +20673,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_report_tools.py",
-      "source_location": "L57",
+      "source_location": "L92",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_report_tools_test_delete_reports_requires_ids",
@@ -20077,7 +20685,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_report_tools.py",
-      "source_location": "L41",
+      "source_location": "L42",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_report_tools_test_find_reports_scoped_to_this_conversation",
@@ -20089,7 +20697,31 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_report_tools.py",
-      "source_location": "L29",
+      "source_location": "L75",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_report_tools_test_read_report_cannot_read_another_users_report",
+      "target": "tests_test_report_tools_fake_runtime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_report_tools.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_report_tools_test_read_report_returns_the_body",
+      "target": "tests_test_report_tools_fake_runtime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_report_tools.py",
+      "source_location": "L30",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_report_tools_test_save_then_find_report",
@@ -20101,7 +20733,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_report_tools.py",
-      "source_location": "L84",
+      "source_location": "L119",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_report_tools_test_delete_reports_cannot_touch_another_users_reports",
@@ -20113,7 +20745,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_report_tools.py",
-      "source_location": "L69",
+      "source_location": "L104",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_report_tools_test_delete_reports_removes_saved_report",
@@ -20125,7 +20757,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_report_tools.py",
-      "source_location": "L59",
+      "source_location": "L94",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_report_tools_test_delete_reports_requires_ids",
@@ -20137,7 +20769,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_report_tools.py",
-      "source_location": "L43",
+      "source_location": "L44",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_report_tools_test_find_reports_scoped_to_this_conversation",
@@ -20149,7 +20781,31 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_report_tools.py",
-      "source_location": "L31",
+      "source_location": "L77",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_report_tools_test_read_report_cannot_read_another_users_report",
+      "target": "tests_test_report_tools_configured",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_report_tools.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_report_tools_test_read_report_returns_the_body",
+      "target": "tests_test_report_tools_configured",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_report_tools.py",
+      "source_location": "L32",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_report_tools_test_save_then_find_report",
@@ -20160,7 +20816,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_reports.py",
-      "source_location": "L8",
+      "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_reports",
@@ -20171,7 +20827,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_reports.py",
-      "source_location": "L12",
+      "source_location": "L17",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_reports",
@@ -20182,7 +20838,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_reports.py",
-      "source_location": "L53",
+      "source_location": "L77",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_reports",
@@ -20193,7 +20849,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_reports.py",
-      "source_location": "L42",
+      "source_location": "L66",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_reports",
@@ -20204,7 +20860,29 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_reports.py",
-      "source_location": "L24",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_reports",
+      "target": "tests_test_reports_test_get_report_is_scoped_per_user",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_reports.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_reports",
+      "target": "tests_test_reports_test_get_report_returns_body",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_reports.py",
+      "source_location": "L29",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_reports",
@@ -20215,7 +20893,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_reports.py",
-      "source_location": "L33",
+      "source_location": "L38",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_reports",
@@ -20226,7 +20904,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_reports.py",
-      "source_location": "L7",
+      "source_location": "L12",
       "weight": 1.0,
       "context": "decorator",
       "_origin": "ast",
@@ -21012,7 +21690,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/HLD.md",
-      "source_location": "L395",
+      "source_location": "L397",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_hld_retail_insights_agent_high_level_design",
@@ -21023,7 +21701,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/HLD.md",
-      "source_location": "L417",
+      "source_location": "L419",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_hld_retail_insights_agent_high_level_design",
@@ -21034,7 +21712,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/HLD.md",
-      "source_location": "L444",
+      "source_location": "L446",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_hld_retail_insights_agent_high_level_design",
@@ -21045,7 +21723,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/HLD.md",
-      "source_location": "L492",
+      "source_location": "L494",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_hld_retail_insights_agent_high_level_design",
@@ -21122,7 +21800,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/HLD.md",
-      "source_location": "L317",
+      "source_location": "L319",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_hld_retail_insights_agent_high_level_design",
@@ -21133,7 +21811,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/HLD.md",
-      "source_location": "L329",
+      "source_location": "L331",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_hld_retail_insights_agent_high_level_design",
@@ -21144,7 +21822,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/HLD.md",
-      "source_location": "L375",
+      "source_location": "L377",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_hld_retail_insights_agent_high_level_design",
@@ -21628,7 +22306,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/artifacts/prompts/retail_agent_persona.md",
-      "source_location": "L40",
+      "source_location": "L43",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_artifacts_prompts_retail_agent_persona",
@@ -21639,7 +22317,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/artifacts/prompts/retail_agent_persona.md",
-      "source_location": "L49",
+      "source_location": "L52",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_artifacts_prompts_retail_agent_persona",
@@ -21661,7 +22339,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/artifacts/prompts/retail_agent_persona.md",
-      "source_location": "L26",
+      "source_location": "L29",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_artifacts_prompts_retail_agent_persona",
@@ -21784,5 +22462,5 @@
       "source_file": "CLAUDE.md"
     }
   ],
-  "built_at_commit": "265aa78d764a61fddebd993d6ec174b32195bd56"
+  "built_at_commit": "cf9ae2434197e837208f3624cc47add03ed592d3"
 }

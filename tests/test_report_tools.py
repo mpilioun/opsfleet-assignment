@@ -6,6 +6,7 @@ from langgraph.store.memory import InMemoryStore
 
 from src.agent.tools.delete_reports import delete_reports
 from src.agent.tools.find_reports import find_reports
+from src.agent.tools.read_report import read_report
 from src.agent.tools.save_report import save_report
 
 
@@ -50,6 +51,40 @@ async def test_find_reports_scoped_to_this_conversation():
 
     assert "Thread1 report" in result.content
     assert "Thread2 report" not in result.content
+
+
+async def test_read_report_returns_the_body():
+    store = InMemoryStore()
+    runtime = _fake_runtime(store)
+
+    with _configured():
+        save_result = await save_report.coroutine(
+            title="Q1 Report", content="revenue up 12%", runtime=runtime
+        )
+        report_id = save_result.content.split()[-1].rstrip(".")
+
+        result = await read_report.coroutine(report_id=report_id, runtime=runtime)
+
+    assert result.status == "success"
+    assert "Q1 Report" in result.content
+    assert "revenue up 12%" in result.content
+
+
+async def test_read_report_cannot_read_another_users_report():
+    store = InMemoryStore()
+    runtime = _fake_runtime(store)
+
+    with _configured(user_id="alice"):
+        save_result = await save_report.coroutine(
+            title="Alice's report", content="secret", runtime=runtime
+        )
+    report_id = save_result.content.split()[-1].rstrip(".")
+
+    with _configured(user_id="bob"):
+        result = await read_report.coroutine(report_id=report_id, runtime=runtime)
+
+    assert result.status == "error"
+    assert "secret" not in result.content
 
 
 async def test_delete_reports_requires_ids():

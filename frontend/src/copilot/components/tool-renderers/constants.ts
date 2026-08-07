@@ -14,5 +14,6 @@ export const TOOL_NAMES = {
   // Root agent (saved reports library)
   SAVE_REPORT: "save_report",
   FIND_REPORTS: "find_reports",
+  READ_REPORT: "read_report",
   DELETE_REPORTS: "delete_reports",
 } as const;
