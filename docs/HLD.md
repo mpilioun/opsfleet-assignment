@@ -242,6 +242,22 @@ system learning *which analyses were good*, distinct from user preference learni
   SQL/PII layers are separate, still-active defenses regardless), `verify_output`
   returns an error `ToolMessage` the report-writer can react to instead of crashing
   the graph.
+- **Any tool hitting a dead dependency degrades instead of killing the run**:
+  LangGraph's `ToolNode` only converts `ToolInvocationError` (bad tool args) into a
+  `ToolMessage` — every other exception propagates and ends the run. The
+  `tool_error_boundary` middleware (`middlewares/tool_errors.py`, registered on the
+  root agent and both subagents) wraps every tool call via the framework's own
+  `wrap_tool_call` hook and turns a failure — Postgres down, the embeddings API
+  rate-limiting a store search, matplotlib failing to write a PNG — into an error
+  `ToolMessage` telling the model the failure is transient, not a bad query. One
+  middleware rather than a try/except per tool, so it also covers deepagents'
+  built-in tools and anything added later.
+- **Third-party calls are bounded**: every BigQuery call carries
+  `BQ_TIMEOUT_SECONDS` (60s) — `job_timeout_ms` so BigQuery cancels the job
+  server-side rather than leaving it running and billing, plus a client-side
+  `result(timeout=)`/`get_table(timeout=)` so a hung API call can't hold a chat turn
+  open indefinitely. Postgres has `PG_TIMEOUT`, LLM calls have
+  `LITELLM_MAX_RETRIES` plus the proxy's fallback chain.
 - **UI never crashes on an agent-side failure**: FastAPI's AG-UI endpoint streams
   `RUN_ERROR` events over the same SSE channel as normal output; CopilotKit renders
   that as a chat-visible error rather than tearing down the page. `onError` in

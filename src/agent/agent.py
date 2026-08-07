@@ -10,6 +10,7 @@ from src.agent.middlewares.datetime_prompt import datetime_prompt
 from src.agent.middlewares.guard import scope_guard
 from src.agent.middlewares.persona_prompt import persona_prompt
 from src.agent.middlewares.pii import PII_MIDDLEWARE
+from src.agent.middlewares.tool_errors import tool_error_boundary
 from src.agent.subagents.data_analyst_subagent import build_data_analyst_subagent
 from src.agent.subagents.report_writer_subagent import build_report_writer_subagent
 from src.agent.tools import ROOT_TOOLS
@@ -46,7 +47,13 @@ def build_agent():
         backend=build_backend(store),
         permissions=[SKILLS_READ_ONLY_PERMISSION],
         memory=[PREFERENCES_FILE],
-        middleware=[scope_guard, persona_prompt, datetime_prompt, *PII_MIDDLEWARE],
+        middleware=[
+            scope_guard,
+            persona_prompt,
+            datetime_prompt,
+            tool_error_boundary,
+            *PII_MIDDLEWARE,
+        ],
         interrupt_on=INTERRUPT_ON,
         checkpointer=postgres_manager.get_checkpointer(),
         store=store,
