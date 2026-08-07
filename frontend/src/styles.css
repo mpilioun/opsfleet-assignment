@@ -8,6 +8,11 @@
   --warn: #fbbf24;
   --danger: #ef4343;
   --info: #19d5e6;
+  /* A rendered report is shown on paper, not on the dark chrome around it. */
+  --paper: #ffffff;
+  --paper-text: #1b2027;
+  --paper-muted: #5b6472;
+  --paper-border: #d8dde5;
   color-scheme: dark;
 }
 
@@ -219,6 +224,82 @@ body {
   max-width: 100%;
   border-radius: 8px;
   border: 1px solid var(--border);
+}
+
+/* --- saved report shown as an attachment --- */
+
+.report-doc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.report-doc details {
+  width: 100%;
+  border: 1px solid var(--paper-border);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--paper-text);
+  overflow: hidden;
+}
+
+/* display:flex on <summary> drops the native disclosure marker, so draw one. */
+.report-doc-summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.report-doc-summary::-webkit-details-marker {
+  display: none;
+}
+
+.report-doc-summary::before {
+  content: "▸";
+  color: var(--paper-muted);
+}
+
+.report-doc details[open] .report-doc-summary::before {
+  content: "▾";
+}
+
+.report-doc-name {
+  font-weight: 500;
+}
+
+.report-doc-meta {
+  margin-left: auto;
+  color: var(--paper-muted);
+}
+
+.report-doc-body {
+  padding: 10px 12px;
+  max-height: 420px;
+  overflow: auto;
+  font-size: 13px;
+  line-height: 1.5;
+  border-top: 1px solid var(--paper-border);
+}
+
+.report-doc-body table {
+  border-collapse: collapse;
+}
+
+.report-doc-body th,
+.report-doc-body td {
+  border: 1px solid var(--paper-border);
+  padding: 4px 8px;
+  text-align: left;
+}
+
+.report-doc-download {
+  padding: 5px 12px;
+  font-size: 12px;
+  text-decoration: none;
 }
 
 /* --- key/value helpers --- */
