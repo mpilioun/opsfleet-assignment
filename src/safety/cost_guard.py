@@ -1,5 +1,7 @@
 from google.cloud import bigquery
 
+from src.clients.bq_client import BQ_TIMEOUT_SECONDS
+
 # 500 MB per query keeps a chat session comfortably inside BigQuery's 1 TB/month free tier.
 DEFAULT_MAX_BYTES_BILLED = 500_000_000
 
@@ -22,6 +24,7 @@ def check_query_cost(
     dry_run_job = client.query(
         sql_query,
         job_config=bigquery.QueryJobConfig(dry_run=True, use_query_cache=False),
+        timeout=BQ_TIMEOUT_SECONDS,
     )
     estimated_bytes = dry_run_job.total_bytes_processed
     if estimated_bytes > max_bytes_billed:

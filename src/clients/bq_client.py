@@ -7,6 +7,10 @@ from src.observability.logging import get_logger
 
 logger = get_logger(__name__)
 
+# A chat turn that waits longer than this is already a bad experience; job_timeout_ms
+# also makes BigQuery cancel the job server-side rather than leaving it billing.
+BQ_TIMEOUT_SECONDS = 60.0
+
 
 class BigQueryRunner:
     """A lean BigQuery client for executing SQL queries and returning DataFrame results."""
@@ -45,8 +49,13 @@ class BigQueryRunner:
         """
         try:
             logger.info("Executing BigQuery query")
-            query_job = self.client.query(sql_query)
-            df = query_job.result().to_dataframe()
+            query_job = self.client.query(
+                sql_query,
+                job_config=bigquery.QueryJobConfig(
+                    job_timeout_ms=int(BQ_TIMEOUT_SECONDS * 1000)
+                ),
+            )
+            df = query_job.result(timeout=BQ_TIMEOUT_SECONDS).to_dataframe()
             logger.info(f"Query completed successfully, returned {len(df)} rows")
             return df
         except Exception as e:
@@ -64,7 +73,7 @@ class BigQueryRunner:
         """
         try:
             table_ref = f"{self.dataset_id}.{table_name}"
-            table = self.client.get_table(table_ref)
+            table = self.client.get_table(table_ref, timeout=BQ_TIMEOUT_SECONDS)
             schema_info = []
             for field in table.schema:
                 schema_info.append(

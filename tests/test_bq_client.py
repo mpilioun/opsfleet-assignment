@@ -2,7 +2,7 @@ from unittest.mock import MagicMock, patch
 
 import pandas as pd
 
-from src.clients.bq_client import BigQueryRunner
+from src.clients.bq_client import BQ_TIMEOUT_SECONDS, BigQueryRunner
 
 
 @patch("src.clients.bq_client.bigquery.Client")
@@ -16,8 +16,15 @@ def test_execute_query_returns_dataframe(mock_client_cls):
     runner = BigQueryRunner(project_id="test-project")
     df = runner.execute_query("SELECT 1")
 
-    mock_client.query.assert_called_once_with("SELECT 1")
     assert list(df["a"]) == [1, 2]
+    # Both bounds matter: job_timeout_ms cancels the job server-side, result(timeout)
+    # stops the request hanging a chat turn.
+    job_config = mock_client.query.call_args.kwargs["job_config"]
+    assert int(job_config.job_timeout_ms) == int(BQ_TIMEOUT_SECONDS * 1000)
+    assert (
+        mock_client.query.return_value.result.call_args.kwargs["timeout"]
+        == BQ_TIMEOUT_SECONDS
+    )
 
 
 @patch("src.clients.bq_client.bigquery.Client")
