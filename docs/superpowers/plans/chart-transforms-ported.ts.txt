@@ -1,0 +1,643 @@
+import type { ChartArtifact, ChartType } from "../types/artifacts";
+
+type PlotlyData = Record<string, unknown>;
+type PlotlyLayout = Record<string, unknown>;
+
+const PLOTLY_COLORS = [
+  "#19d5e6",
+  "#b97aff",
+  "#00e686",
+  "#ff6b6b",
+  "#ffa94d",
+  "#74c0fc",
+  "#e599f7",
+  "#63e6be",
+  "#ffd43b",
+  "#ff8787",
+];
+
+function extractValues(
+  records: Record<string, string | number | null>[],
+  key: string,
+): (string | number | null)[] {
+  return records.map((r) => r[key] ?? null);
+}
+
+function extractNumeric(
+  records: Record<string, string | number | null>[],
+  key: string,
+): number[] {
+  return records.map((r) => {
+    const v = r[key];
+    if (typeof v === "number" && Number.isFinite(v)) return v;
+    if (typeof v === "string") {
+      const n = Number(v);
+      return Number.isFinite(n) ? n : 0;
+    }
+    return 0;
+  });
+}
+
+function uniqueOrdered(values: (string | number | null)[]): string[] {
+  const seen = new Set<string>();
+  const result: string[] = [];
+  for (const v of values) {
+    const s = String(v ?? "");
+    if (!seen.has(s)) {
+      seen.add(s);
+      result.push(s);
+    }
+  }
+  return result;
+}
+
+export type PlotlyChartData = {
+  data: PlotlyData[];
+  layout: PlotlyLayout;
+};
+
+function makeBaseLayout(title?: string): PlotlyLayout {
+  return {
+    title: title
+      ? { text: title, font: { color: "#E0E6EB", size: 14 } }
+      : undefined,
+    paper_bgcolor: "transparent",
+    plot_bgcolor: "transparent",
+    font: { color: "#7B899D", size: 12 },
+    margin: { t: title ? 40 : 20, r: 20, b: 40, l: 50 },
+    xaxis: {
+      gridcolor: "rgba(43,48,59,0.5)",
+      zerolinecolor: "rgba(43,48,59,0.5)",
+    },
+    yaxis: {
+      gridcolor: "rgba(43,48,59,0.5)",
+      zerolinecolor: "rgba(43,48,59,0.5)",
+    },
+    legend: { font: { color: "#7B899D" } },
+    autosize: true,
+  };
+}
+
+function buildTickPrefix(artifact: ChartArtifact): string | undefined {
+  return artifact.series?.[0]?.value_prefix;
+}
+
+function buildTickSuffix(artifact: ChartArtifact): string | undefined {
+  return artifact.series?.[0]?.value_suffix;
+}
+
+export function toLineChartPlotly(artifact: ChartArtifact): PlotlyChartData {
+  const xKey = artifact.x_key ?? "x";
+  const x = extractValues(artifact.data, xKey);
+  const layout = makeBaseLayout(artifact.title);
+  layout.yaxis = {
+    ...(layout.yaxis as object),
+    tickprefix: buildTickPrefix(artifact),
+    ticksuffix: buildTickSuffix(artifact),
+  };
+
+  const data: PlotlyData[] = (artifact.series ?? []).map((s, i) => ({
+    type: "scatter",
+    mode: "lines+markers",
+    x,
+    y: extractNumeric(artifact.data, s.data_key),
+    name: s.label ?? s.data_key,
+    line: { color: PLOTLY_COLORS[i % PLOTLY_COLORS.length], width: 2 },
+    marker: { size: 5 },
+  }));
+
+  return { data, layout };
+}
+
+export function toAreaChartPlotly(artifact: ChartArtifact): PlotlyChartData {
+  const xKey = artifact.x_key ?? "x";
+  const x = extractValues(artifact.data, xKey);
+  const layout = makeBaseLayout(artifact.title);
+  layout.yaxis = {
+    ...(layout.yaxis as object),
+    tickprefix: buildTickPrefix(artifact),
+    ticksuffix: buildTickSuffix(artifact),
+  };
+
+  const data: PlotlyData[] = (artifact.series ?? []).map((s, i) => ({
+    type: "scatter",
+    mode: "lines",
+    fill: i === 0 ? "tozeroy" : "tonexty",
+    x,
+    y: extractNumeric(artifact.data, s.data_key),
+    name: s.label ?? s.data_key,
+    line: { color: PLOTLY_COLORS[i % PLOTLY_COLORS.length], width: 2 },
+  }));
+
+  return { data, layout };
+}
+
+export function toBarChartPlotly(artifact: ChartArtifact): PlotlyChartData {
+  const xKey = artifact.x_key ?? "x";
+  const x = extractValues(artifact.data, xKey);
+  const layout = makeBaseLayout(artifact.title);
+  layout.barmode = "group";
+  layout.yaxis = {
+    ...(layout.yaxis as object),
+    tickprefix: buildTickPrefix(artifact),
+    ticksuffix: buildTickSuffix(artifact),
+  };
+
+  const data: PlotlyData[] = (artifact.series ?? []).map((s, i) => ({
+    type: "bar",
+    x,
+    y: extractNumeric(artifact.data, s.data_key),
+    name: s.label ?? s.data_key,
+    marker: { color: PLOTLY_COLORS[i % PLOTLY_COLORS.length] },
+  }));
+
+  return { data, layout };
+}
+
+export function toStackedBarPlotly(artifact: ChartArtifact): PlotlyChartData {
+  const xKey = artifact.x_key ?? "x";
+  const x = extractValues(artifact.data, xKey);
+  const layout = makeBaseLayout(artifact.title);
+  layout.barmode = "stack";
+  layout.yaxis = {
+    ...(layout.yaxis as object),
+    tickprefix: buildTickPrefix(artifact),
+    ticksuffix: buildTickSuffix(artifact),
+  };
+
+  const data: PlotlyData[] = (artifact.series ?? []).map((s, i) => ({
+    type: "bar",
+    x,
+    y: extractNumeric(artifact.data, s.data_key),
+    name: s.label ?? s.data_key,
+    marker: { color: PLOTLY_COLORS[i % PLOTLY_COLORS.length] },
+  }));
+
+  return { data, layout };
+}
+
+export function toGroupedBarPlotly(artifact: ChartArtifact): PlotlyChartData {
+  return toBarChartPlotly(artifact);
+}
+
+export function toPieChartPlotly(artifact: ChartArtifact): PlotlyChartData {
+  const nameKey = artifact.name_key ?? artifact.x_key ?? "name";
+  const valueKey =
+    artifact.value_key ?? artifact.series?.[0]?.data_key ?? "value";
+
+  const labels = artifact.data.map((r) => String(r[nameKey] ?? ""));
+  const values = extractNumeric(artifact.data, valueKey);
+
+  const layout = makeBaseLayout(artifact.title);
+
+  const data: PlotlyData[] = [
+    {
+      type: "pie",
+      labels,
+      values,
+      marker: { colors: PLOTLY_COLORS },
+      textfont: { color: "#E0E6EB" },
+      hole: 0.4,
+    },
+  ];
+
+  return { data, layout };
+}
+
+export function toScatterChartPlotly(
+  artifact: ChartArtifact,
+): PlotlyChartData {
+  const xKey = artifact.x_key ?? "x";
+  const layout = makeBaseLayout(artifact.title);
+  layout.yaxis = {
+    ...(layout.yaxis as object),
+    tickprefix: buildTickPrefix(artifact),
+    ticksuffix: buildTickSuffix(artifact),
+  };
+
+  const data: PlotlyData[] = (artifact.series ?? []).map((s, i) => ({
+    type: "scatter",
+    mode: "markers",
+    x: extractNumeric(artifact.data, xKey),
+    y: extractNumeric(artifact.data, s.data_key),
+    name: s.label ?? s.data_key,
+    marker: {
+      color: PLOTLY_COLORS[i % PLOTLY_COLORS.length],
+      size: 8,
+    },
+  }));
+
+  return { data, layout };
+}
+
+export function toComboChartPlotly(artifact: ChartArtifact): PlotlyChartData {
+  const xKey = artifact.x_key ?? "x";
+  const x = extractValues(artifact.data, xKey);
+  const layout = makeBaseLayout(artifact.title);
+  layout.yaxis = {
+    ...(layout.yaxis as object),
+    tickprefix: buildTickPrefix(artifact),
+    ticksuffix: buildTickSuffix(artifact),
+  };
+
+  const data: PlotlyData[] = (artifact.series ?? []).map((s, i) => {
+    const renderAsLine = i > 0;
+    const y = extractNumeric(artifact.data, s.data_key);
+    const color = PLOTLY_COLORS[i % PLOTLY_COLORS.length];
+
+    if (!renderAsLine) {
+      return { type: "bar", x, y, name: s.label ?? s.data_key, marker: { color } };
+    }
+    return {
+      type: "scatter",
+      mode: "lines+markers",
+      x,
+      y,
+      name: s.label ?? s.data_key,
+      line: { color, width: 2 },
+      marker: { size: 5 },
+      yaxis: "y2",
+    };
+  });
+
+  const hasSecondAxis = data.some((d) => d.yaxis === "y2");
+  if (hasSecondAxis) {
+    layout.yaxis2 = {
+      overlaying: "y",
+      side: "right",
+      gridcolor: "rgba(43,48,59,0.3)",
+      font: { color: "#7B899D" },
+    };
+  }
+
+  return { data, layout };
+}
+
+export function toWaterfallPlotly(artifact: ChartArtifact): PlotlyChartData {
+  const categoryKey = artifact.x_key ?? artifact.name_key ?? "label";
+  const valueKey = artifact.value_key ?? artifact.series?.[0]?.data_key ?? "value";
+
+  const labels = artifact.data.map((r) => String(r[categoryKey] ?? ""));
+  const values = extractNumeric(artifact.data, valueKey);
+
+  const measure = artifact.data.map((r) => {
+    const kind = r["kind"] as string | null;
+    if (kind === "total") return "total";
+    return "relative";
+  });
+
+  const layout = makeBaseLayout(artifact.title);
+  layout.yaxis = {
+    ...(layout.yaxis as object),
+    tickprefix: buildTickPrefix(artifact),
+    ticksuffix: buildTickSuffix(artifact),
+  };
+
+  const data: PlotlyData[] = [
+    {
+      type: "waterfall",
+      x: labels,
+      y: values,
+      measure,
+      connector: { line: { color: "rgba(43,48,59,0.8)" } },
+      increasing: { marker: { color: "#00e686" } },
+      decreasing: { marker: { color: "#ef4343" } },
+      totals: { marker: { color: "#19d5e6" } },
+      textposition: "outside",
+      textfont: { color: "#7B899D" },
+    },
+  ];
+
+  return { data, layout };
+}
+
+export function toHeatmapPlotly(artifact: ChartArtifact): PlotlyChartData {
+  const xKey = artifact.x_key ?? "x";
+  const yKey = artifact.y_key ?? "y";
+  const valueKey = artifact.value_key ?? artifact.series?.[0]?.data_key ?? "value";
+
+  const xLabels = uniqueOrdered(extractValues(artifact.data, xKey));
+  const yLabels = uniqueOrdered(extractValues(artifact.data, yKey));
+
+  const zMatrix: number[][] = yLabels.map(() =>
+    new Array(xLabels.length).fill(0),
+  );
+
+  const xIndex = new Map(xLabels.map((v, i) => [v, i]));
+  const yIndex = new Map(yLabels.map((v, i) => [v, i]));
+
+  for (const row of artifact.data) {
+    const xi = xIndex.get(String(row[xKey] ?? ""));
+    const yi = yIndex.get(String(row[yKey] ?? ""));
+    if (xi !== undefined && yi !== undefined) {
+      const val = row[valueKey];
+      zMatrix[yi][xi] =
+        typeof val === "number" ? val : Number(val) || 0;
+    }
+  }
+
+  const layout = makeBaseLayout(artifact.title);
+  layout.margin = { t: artifact.title ? 40 : 20, r: 20, b: 80, l: 140 };
+  layout.xaxis = { ...(layout.xaxis as object), type: "category" };
+  layout.yaxis = { ...(layout.yaxis as object), type: "category", autorange: "reversed" };
+
+  const prefix = buildTickPrefix(artifact) ?? "";
+
+  const data: PlotlyData[] = [
+    {
+      type: "heatmap",
+      x: xLabels,
+      y: yLabels,
+      z: zMatrix,
+      colorscale: [
+        [0, "#1d212b"],
+        [0.25, "#1b3a5c"],
+        [0.5, "#19708a"],
+        [0.75, "#19d5e6"],
+        [1, "#00e686"],
+      ],
+      hovertemplate: `%{y}<br>%{x}<br>${prefix}%{z:,.0f}<extra></extra>`,
+      showscale: true,
+      colorbar: { tickfont: { color: "#7B899D" }, tickprefix: prefix },
+    },
+  ];
+
+  return { data, layout };
+}
+
+export function toHistogramPlotly(artifact: ChartArtifact): PlotlyChartData {
+  const binKey = artifact.x_key ?? "bin";
+  const countKey = artifact.value_key ?? artifact.series?.[0]?.data_key ?? "count";
+
+  const layout = makeBaseLayout(artifact.title);
+  layout.yaxis = {
+    ...(layout.yaxis as object),
+    tickprefix: buildTickPrefix(artifact),
+    ticksuffix: buildTickSuffix(artifact),
+  };
+
+  const hasBins = artifact.data.some((r) => r[binKey] !== undefined && r[countKey] !== undefined);
+
+  if (hasBins) {
+    const x = extractValues(artifact.data, binKey);
+    const y = extractNumeric(artifact.data, countKey);
+    const data: PlotlyData[] = [
+      {
+        type: "bar",
+        x,
+        y,
+        marker: { color: PLOTLY_COLORS[0] },
+        name: artifact.series?.[0]?.label ?? "Count",
+      },
+    ];
+    return { data, layout };
+  }
+
+  const values = extractNumeric(artifact.data, binKey);
+  const data: PlotlyData[] = [
+    {
+      type: "histogram",
+      x: values,
+      marker: { color: PLOTLY_COLORS[0] },
+      name: artifact.series?.[0]?.label ?? "Distribution",
+    },
+  ];
+
+  return { data, layout };
+}
+
+export function toBoxplotPlotly(artifact: ChartArtifact): PlotlyChartData {
+  const xKey = artifact.x_key ?? "category";
+  const valueKey = artifact.value_key ?? artifact.series?.[0]?.data_key ?? "value";
+
+  const layout = makeBaseLayout(artifact.title);
+  layout.yaxis = {
+    ...(layout.yaxis as object),
+    tickprefix: buildTickPrefix(artifact),
+    ticksuffix: buildTickSuffix(artifact),
+  };
+
+  const categories = uniqueOrdered(extractValues(artifact.data, xKey));
+
+  const data: PlotlyData[] = categories.map((cat, i) => {
+    const subset = artifact.data.filter((r) => String(r[xKey] ?? "") === cat);
+    return {
+      type: "box",
+      y: extractNumeric(subset, valueKey),
+      name: cat,
+      marker: { color: PLOTLY_COLORS[i % PLOTLY_COLORS.length] },
+      boxpoints: "outliers",
+    };
+  });
+
+  return { data, layout };
+}
+
+export function toTreemapPlotly(artifact: ChartArtifact): PlotlyChartData {
+  const nameKey = artifact.name_key ?? artifact.x_key ?? "name";
+  const valueKey = artifact.value_key ?? artifact.series?.[0]?.data_key ?? "value";
+  const parentKey = artifact.y_key ?? "parent";
+
+  const labels = artifact.data.map((r) => String(r[nameKey] ?? ""));
+  const values = extractNumeric(artifact.data, valueKey);
+  const parents = artifact.data.map((r) =>
+    r[parentKey] !== undefined ? String(r[parentKey] ?? "") : "",
+  );
+
+  const layout = makeBaseLayout(artifact.title);
+  layout.margin = { t: artifact.title ? 40 : 10, r: 10, b: 10, l: 10 };
+
+  const data: PlotlyData[] = [
+    {
+      type: "treemap",
+      labels,
+      parents,
+      values,
+      marker: {
+        colors: values,
+        colorscale: [
+          [0, "#1d212b"],
+          [0.5, "#19d5e6"],
+          [1, "#00e686"],
+        ],
+      },
+      textfont: { color: "#E0E6EB" },
+      pathbar: { textfont: { color: "#7B899D" } },
+    },
+  ];
+
+  return { data, layout };
+}
+
+export function toFunnelPlotly(artifact: ChartArtifact): PlotlyChartData {
+  const nameKey = artifact.name_key ?? artifact.x_key ?? "stage";
+  const valueKey = artifact.value_key ?? artifact.series?.[0]?.data_key ?? "value";
+
+  const labels = artifact.data.map((r) => String(r[nameKey] ?? ""));
+  const values = extractNumeric(artifact.data, valueKey);
+
+  const layout = makeBaseLayout(artifact.title);
+  layout.margin = { t: artifact.title ? 40 : 20, r: 20, b: 20, l: 100 };
+
+  const data: PlotlyData[] = [
+    {
+      type: "funnel",
+      y: labels,
+      x: values,
+      textinfo: "value+percent initial",
+      marker: {
+        color: values.map((_, i) => PLOTLY_COLORS[i % PLOTLY_COLORS.length]),
+      },
+      textfont: { color: "#E0E6EB" },
+    },
+  ];
+
+  return { data, layout };
+}
+
+export function toRadarPlotly(artifact: ChartArtifact): PlotlyChartData {
+  const categoryKey = artifact.x_key ?? artifact.name_key ?? "category";
+  const categories = uniqueOrdered(extractValues(artifact.data, categoryKey));
+
+  const layout = makeBaseLayout(artifact.title);
+  layout.polar = {
+    radialaxis: { gridcolor: "rgba(43,48,59,0.5)", color: "#7B899D" },
+    angularaxis: { gridcolor: "rgba(43,48,59,0.5)", color: "#7B899D" },
+    bgcolor: "transparent",
+  };
+
+  const data: PlotlyData[] = (artifact.series ?? []).map((s, i) => {
+    const valuesMap = new Map<string, number>();
+    for (const row of artifact.data) {
+      const cat = String(row[categoryKey] ?? "");
+      const val = row[s.data_key];
+      valuesMap.set(cat, typeof val === "number" ? val : Number(val) || 0);
+    }
+    const r = categories.map((c) => valuesMap.get(c) ?? 0);
+    return {
+      type: "scatterpolar",
+      mode: "lines+markers",
+      r: [...r, r[0]],
+      theta: [...categories, categories[0]],
+      fill: "toself",
+      name: s.label ?? s.data_key,
+      line: { color: PLOTLY_COLORS[i % PLOTLY_COLORS.length] },
+      marker: { size: 4 },
+    };
+  });
+
+  return { data, layout };
+}
+
+export function toCandlestickPlotly(artifact: ChartArtifact): PlotlyChartData {
+  const timeKey = artifact.x_key ?? "date";
+  const openKey = "open";
+  const highKey = "high";
+  const lowKey = "low";
+  const closeKey = artifact.value_key ?? artifact.series?.[0]?.data_key ?? "close";
+
+  const layout = makeBaseLayout(artifact.title);
+  layout.xaxis = { ...(layout.xaxis as object), rangeslider: { visible: false } };
+
+  const data: PlotlyData[] = [
+    {
+      type: "candlestick",
+      x: extractValues(artifact.data, timeKey),
+      open: extractNumeric(artifact.data, openKey),
+      high: extractNumeric(artifact.data, highKey),
+      low: extractNumeric(artifact.data, lowKey),
+      close: extractNumeric(artifact.data, closeKey),
+      increasing: { line: { color: "#00e686" } },
+      decreasing: { line: { color: "#ef4343" } },
+    },
+  ];
+
+  return { data, layout };
+}
+
+export function toTableChartPlotly(artifact: ChartArtifact): PlotlyChartData {
+  const keys = Object.keys(artifact.data[0] ?? {});
+  const header = keys.map((k) => k.replace(/_/g, " "));
+  const cells = keys.map((k) => artifact.data.map((r) => r[k] ?? ""));
+
+  const layout = makeBaseLayout(artifact.title);
+  layout.margin = { t: artifact.title ? 40 : 10, r: 10, b: 10, l: 10 };
+
+  const data: PlotlyData[] = [
+    {
+      type: "table",
+      header: {
+        values: header,
+        fill: { color: "#1d212b" },
+        font: { color: "#E0E6EB", size: 12 },
+        align: "left",
+      },
+      cells: {
+        values: cells,
+        fill: { color: "#0f131a" },
+        font: { color: "#7B899D", size: 11 },
+        align: "left",
+      },
+    },
+  ];
+
+  return { data, layout };
+}
+
+export function toKpiCardPlotly(artifact: ChartArtifact): PlotlyChartData {
+  const valueKey = artifact.value_key ?? artifact.series?.[0]?.data_key ?? "value";
+  const prefix = buildTickPrefix(artifact) ?? "";
+  const suffix = buildTickSuffix(artifact) ?? "";
+  const value = artifact.data[0]?.[valueKey] ?? 0;
+  const displayValue = `${prefix}${typeof value === "number" ? value.toLocaleString() : value}${suffix}`;
+
+  const layout = makeBaseLayout();
+  layout.margin = { t: 10, r: 10, b: 10, l: 10 };
+  layout.xaxis = { visible: false };
+  layout.yaxis = { visible: false };
+  layout.annotations = [
+    {
+      text: artifact.title ?? "",
+      x: 0.5,
+      y: 0.75,
+      xref: "paper",
+      yref: "paper",
+      showarrow: false,
+      font: { size: 14, color: "#7B899D" },
+    },
+    {
+      text: displayValue,
+      x: 0.5,
+      y: 0.35,
+      xref: "paper",
+      yref: "paper",
+      showarrow: false,
+      font: { size: 32, color: "#19d5e6" },
+    },
+  ];
+
+  return { data: [], layout };
+}
+
+export type ChartTransformFn = (artifact: ChartArtifact) => PlotlyChartData;
+
+export const chartTransformMap: Record<ChartType, ChartTransformFn> = {
+  line: toLineChartPlotly,
+  bar: toBarChartPlotly,
+  pie: toPieChartPlotly,
+  scatter: toScatterChartPlotly,
+  area: toAreaChartPlotly,
+  stackedBar: toStackedBarPlotly,
+  groupedBar: toGroupedBarPlotly,
+  combo: toComboChartPlotly,
+  waterfall: toWaterfallPlotly,
+  heatmap: toHeatmapPlotly,
+  histogram: toHistogramPlotly,
+  boxplot: toBoxplotPlotly,
+  treemap: toTreemapPlotly,
+  funnel: toFunnelPlotly,
+  radar: toRadarPlotly,
+  candlestick: toCandlestickPlotly,
+  tableChart: toTableChartPlotly,
+  kpiCard: toKpiCardPlotly,
+};
