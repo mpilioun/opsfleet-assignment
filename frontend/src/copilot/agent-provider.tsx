@@ -9,7 +9,7 @@ import {
   type Decision,
   type ToolAction,
 } from "./components/interrupts/interrupt-context";
-import { useChartRenderer } from "./components/chart-renderer";
+import { useRetailToolRenderers } from "./components/tool-renderers";
 import { parseInterruptValue } from "./interrupt-utils";
 import { useThread } from "./use-thread";
 
@@ -57,7 +57,7 @@ const AgentRegistrations: React.FC<{ children: ReactNode }> = ({ children }) => 
     },
   });
 
-  useChartRenderer();
+  useRetailToolRenderers();
 
   return <>{children}</>;
 };

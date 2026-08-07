@@ -1,9 +1,10 @@
 import { useRenderTool } from "@copilotkit/react-core/v2";
 import { z } from "zod";
 
-import { AGENT_BACKEND_URL } from "../../config";
-import { isErrorResult, MutedText } from "./tool-display";
-import { ToolCard } from "./tool-card";
+import { AGENT_BACKEND_URL } from "../../../config";
+import { ToolCard } from "../tool-card";
+import { isErrorResult, MutedText } from "../tool-display";
+import { TOOL_NAMES } from "./constants";
 
 const chartSchema = z.object({
   title: z.string().optional(),
@@ -23,7 +24,7 @@ function extractChartUrl(result: string | undefined): string | null {
 export const useChartRenderer = (): void => {
   useRenderTool(
     {
-      name: "generate_chart",
+      name: TOOL_NAMES.GENERATE_CHART,
       parameters: chartSchema,
       render: ({ status, parameters, result }) => {
         const errored = status === "complete" && isErrorResult(result);
