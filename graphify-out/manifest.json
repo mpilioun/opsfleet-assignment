@@ -85,13 +85,13 @@
     "semantic_hash": ""
   },
   "frontend/package.json": {
-    "mtime": 1786017362.577374,
-    "ast_hash": "12e657e933e2d576fb77afacf153aca0",
+    "mtime": 1786107769.4379632,
+    "ast_hash": "1ab9d15e119bd5c667b3be6420122d2e",
     "semantic_hash": ""
   },
   "frontend/src/App.tsx": {
-    "mtime": 1786019149.0202491,
-    "ast_hash": "0173d170446a00cbfdcac719592a8aaf",
+    "mtime": 1786106956.5903258,
+    "ast_hash": "a6695962d174d5bfc9f23e92062c0bff",
     "semantic_hash": ""
   },
   "frontend/src/config.ts": {
@@ -125,8 +125,8 @@
     "semantic_hash": ""
   },
   "frontend/src/copilot/components/tool-display.tsx": {
-    "mtime": 1786087680.6845417,
-    "ast_hash": "cdec1f6a14bf6f79341aca79db2e97ba",
+    "mtime": 1786107875.6280198,
+    "ast_hash": "63314ff1dbf5fcb76d1cb2e414ce8aed",
     "semantic_hash": ""
   },
   "frontend/src/copilot/interrupt-utils.ts": {
@@ -230,7 +230,7 @@
     "semantic_hash": ""
   },
   "src/agent/middlewares/guard.py": {
-    "mtime": 1786106722.893792,
+    "mtime": 1786106956.6046493,
     "ast_hash": "f0eec3d1d67c1dbcdd6b1fc7cb94f361",
     "semantic_hash": ""
   },
@@ -255,7 +255,7 @@
     "semantic_hash": ""
   },
   "src/agent/tools/__init__.py": {
-    "mtime": 1786106567.251871,
+    "mtime": 1786106956.605047,
     "ast_hash": "99df1f71621f5923edbc6bf5a034cc2b",
     "semantic_hash": ""
   },
@@ -410,7 +410,7 @@
     "semantic_hash": ""
   },
   "tests/test_guard.py": {
-    "mtime": 1786106731.7079287,
+    "mtime": 1786106956.6064084,
     "ast_hash": "8e191c84bfdc26a361f6bd07f404ec53",
     "semantic_hash": ""
   },
@@ -420,12 +420,12 @@
     "semantic_hash": ""
   },
   "tests/test_report_tools.py": {
-    "mtime": 1786106616.5570114,
+    "mtime": 1786106956.6067467,
     "ast_hash": "af01a7058da280759c85f3e2b47e487a",
     "semantic_hash": ""
   },
   "tests/test_reports.py": {
-    "mtime": 1786106608.4841256,
+    "mtime": 1786106956.6069434,
     "ast_hash": "b36cbcfac31145e7e45a861087e97aa9",
     "semantic_hash": ""
   },
@@ -460,7 +460,7 @@
     "semantic_hash": ""
   },
   "docs/HLD.md": {
-    "mtime": 1786106644.9735394,
+    "mtime": 1786106956.5895996,
     "ast_hash": "883024593e60948040ae48bfb6e65f08",
     "semantic_hash": ""
   },
@@ -485,7 +485,7 @@
     "semantic_hash": ""
   },
   "src/artifacts/prompts/retail_agent_persona.md": {
-    "mtime": 1786106590.5297694,
+    "mtime": 1786106956.6061568,
     "ast_hash": "8fb30b7128b452b7361e097c1a603132",
     "semantic_hash": ""
   },
@@ -535,7 +535,7 @@
     "semantic_hash": ""
   },
   "src/agent/utils/reports.py": {
-    "mtime": 1786106554.9184265,
+    "mtime": 1786106956.6057022,
     "ast_hash": "4a44cd68ca47a4112fb12147bff8197d",
     "semantic_hash": ""
   },
@@ -590,7 +590,7 @@
     "semantic_hash": ""
   },
   "frontend/src/copilot/components/tool-renderers/constants.ts": {
-    "mtime": 1786106594.3875968,
+    "mtime": 1786106956.5907807,
     "ast_hash": "596428cf7f1bbda435cf1a69b14c78d1",
     "semantic_hash": ""
   },
@@ -610,8 +610,8 @@
     "semantic_hash": ""
   },
   "frontend/src/copilot/components/tool-renderers/report-renderers.tsx": {
-    "mtime": 1786106601.964486,
-    "ast_hash": "d7630d5565a052ee9da4fc372e8e8679",
+    "mtime": 1786107862.3075387,
+    "ast_hash": "5f334cdd35cbb2c6a525ce0336e9d789",
     "semantic_hash": ""
   },
   "frontend/src/copilot/components/tool-renderers/subagent-renderers.tsx": {
@@ -745,8 +745,18 @@
     "semantic_hash": ""
   },
   "src/agent/tools/read_report.py": {
-    "mtime": 1786106651.2556238,
+    "mtime": 1786106956.6054404,
     "ast_hash": "717ad968402b5a884094fb8369742b44",
+    "semantic_hash": ""
+  },
+  "frontend/src/copilot/components/report-document.test.ts": {
+    "mtime": 1786107967.1739492,
+    "ast_hash": "1a6374df20bf0e0ae6fcf8e208bcb769",
+    "semantic_hash": ""
+  },
+  "frontend/src/copilot/components/report-document.tsx": {
+    "mtime": 1786107960.4331431,
+    "ast_hash": "d72c4e6e4d6612813770e4f57bfd57cd",
     "semantic_hash": ""
   }
 }

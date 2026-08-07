@@ -32,6 +32,7 @@ const ERROR_MARKERS = [
   "unknown table",
   "were found",
   "nothing deleted",
+  "no saved report",
 ];
 
 export const isErrorResult = (result: string | undefined): boolean => {

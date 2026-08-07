@@ -1,12 +1,16 @@
 import { useRenderTool } from "@copilotkit/react-core/v2";
 import { z } from "zod";
 
+import { ReportDocument, splitReportResult } from "../report-document";
 import { ToolCard } from "../tool-card";
 import { isErrorResult, KVRow, MutedText } from "../tool-display";
 import { TOOL_NAMES } from "./constants";
 
 const saveSchema = z.object({
   title: z.string().optional(),
+  // The full report body is already streamed as a tool argument - rendering it
+  // here costs nothing extra over the wire.
+  content: z.string().optional(),
 });
 
 const findSchema = z.object({
@@ -48,7 +52,11 @@ export const useReportRenderers = (): void => {
             </ToolCard.Header>
             {parameters?.title && (
               <ToolCard.Body>
-                <KVRow label="Title">{parameters.title}</KVRow>
+                <ReportDocument
+                  title={parameters.title}
+                  content={parameters.content ?? ""}
+                  streaming={status !== "complete"}
+                />
               </ToolCard.Body>
             )}
           </ToolCard.Root>
@@ -92,6 +100,7 @@ export const useReportRenderers = (): void => {
       parameters: readSchema,
       render: ({ status, parameters, result }) => {
         const errored = status === "complete" && isErrorResult(result);
+        const doc = status === "complete" && !errored && result ? splitReportResult(result) : null;
         return (
           <ToolCard.Root status={status} variant={errored ? "error" : "default"}>
             <ToolCard.Header title="Open report">
@@ -105,10 +114,16 @@ export const useReportRenderers = (): void => {
                 </MutedText>
               </ToolCard.Subtitle>
             </ToolCard.Header>
-            {parameters?.report_id && (
+            {doc ? (
               <ToolCard.Body>
-                <KVRow label="Report">{parameters.report_id}</KVRow>
+                <ReportDocument title={doc.title} content={doc.content} />
               </ToolCard.Body>
+            ) : (
+              parameters?.report_id && (
+                <ToolCard.Body>
+                  <KVRow label="Report">{parameters.report_id}</KVRow>
+                </ToolCard.Body>
+              )
             )}
           </ToolCard.Root>
         );
