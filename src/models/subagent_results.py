@@ -17,6 +17,3 @@ class ReportWriterResult(BaseModel):
     """Structured terminal output of the report-writer subagent."""
 
     report: str = Field(description="The final report/answer text to show the user.")
-    chart_path: str | None = Field(
-        default=None, description="Path to a generated chart image, if one was created."
-    )

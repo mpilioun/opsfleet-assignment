@@ -1,11 +1,9 @@
 """FastAPI application entry point."""
 
 from contextlib import asynccontextmanager
-from pathlib import Path
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from src.config.env_config import env_config
@@ -17,8 +15,6 @@ from src.agent.api.ag_ui_agent_wrapper import build_ag_ui_agent
 from src.agent.utils import golden_bucket, persona
 from src.app.routes.copilotkit_route import setup_copilotkit_endpoint
 from src.database.postgres_manager import postgres_manager
-
-CHARTS_DIR = Path("charts")
 
 
 @asynccontextmanager
@@ -46,9 +42,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-CHARTS_DIR.mkdir(exist_ok=True)
-app.mount("/charts", StaticFiles(directory=str(CHARTS_DIR)), name="charts")
 
 
 @app.get("/")
