@@ -1,10 +1,11 @@
-ALways use conventional commit names
+## Conventions
 
-always run make compile for formatting at the end of you code changes
+- Commits: Conventional Commits format, always.
+- After code changes: run `make compile` (formatting).
+- New features/utils: always add unit tests.
+- Every tool: log `"Agent Called Tool"` at start, with `extra={"tool_name": tool_name}`.
 
-for all new features utils whatever create tests units and more
 
-At the start of each tool add a log that says Agent Called Tool and in extra={"tool_name":tool_name}
 ## After editing code — always review
 
 Whenever you finish editing code, before considering the task done, run both review
