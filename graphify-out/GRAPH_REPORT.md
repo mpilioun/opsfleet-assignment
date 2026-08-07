@@ -1,16 +1,16 @@
-# Graph Report - opsfleet-assignment  (2026-08-06)
+# Graph Report - opsfleet-assignment  (2026-08-07)
 
 ## Corpus Check
-- 109 files · ~17,897 words
+- 122 files · ~22,029 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 614 nodes · 947 edges · 60 communities (51 shown, 9 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 29 edges (avg confidence: 0.64)
+- 695 nodes · 1110 edges · 54 communities (46 shown, 8 thin omitted)
+- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 33 edges (avg confidence: 0.66)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `2cd582b2`
+- Built from commit: `ffb3224c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -28,25 +28,19 @@
 - opsfleet-assignment (project)
 - agent.py
 - eval_golden.py
-- test_run_sql.py
+- validate_and_prepare_sql
 - generate_chart
 - runtime/package.json
 - dependencies
 - compilerOptions
-- langfuse.py
-- validate_and_prepare_sql
+- Retail Insights Agent — Test Conversations
+- persona.py
 - Retail Insights Agent — High-Level Design
 - index.ts
 - guard.py
 - agent-provider.tsx
 - tool-card.tsx
 - compilerOptions
-- interrupt-utils.ts
-- chart-renderer.tsx
-- approval-card.tsx
-- interrupt-context.tsx
-- App.tsx
-- InterruptActions
 - retail_agent_persona.md
 - golden-bucket-retrieval/SKILL.md
 - sql-self-repair/SKILL.md
@@ -54,16 +48,16 @@
 - report-writing/SKILL.md
 
 ## God Nodes (most connected - your core abstractions)
-1. `validate_and_prepare_sql()` - 19 edges
-2. `Retail Insights Agent — High-Level Design` - 15 edges
-3. `build_agent()` - 14 edges
-4. `get_logger()` - 14 edges
-5. `compilerOptions` - 13 edges
-6. `datetime_prompt()` - 12 edges
-7. `list_reports()` - 12 edges
-8. `run_structured()` - 12 edges
-9. `BigQueryRunner` - 12 edges
-10. `get_llm_model()` - 12 edges
+1. `validate_and_prepare_sql()` - 20 edges
+2. `Retail Insights Agent — Test Conversations` - 20 edges
+3. `build_agent()` - 16 edges
+4. `get_logger()` - 15 edges
+5. `Retail Insights Agent — High-Level Design` - 15 edges
+6. `compilerOptions` - 13 edges
+7. `datetime_prompt()` - 12 edges
+8. `list_reports()` - 12 edges
+9. `run_structured()` - 12 edges
+10. `BigQueryRunner` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `test_final_report_text_returns_empty_string_when_no_ai_message()` --calls--> `_final_report_text()`  [EXTRACTED]
@@ -83,18 +77,18 @@
 ## Hyperedges (group relationships)
 - **Post-Edit Workflow Steps** — claude_md_conventional_commits, claude_md_make_compile, claude_md_code_review_skill, claude_md_ponytail_review_skill [INFERRED 0.85]
 
-## Communities (60 total, 9 thin omitted)
+## Communities (54 total, 8 thin omitted)
 
 ### Community 0 - "PostgresManager"
-Cohesion: 0.13
-Nodes (11): AsyncConnectionPool, AsyncPostgresSaver, AsyncPostgresStore, _build_store_index_config(), PostgresManager, PostgreSQL connection pool and LangGraph persistence management., Indexes the "question" field of golden-bucket trios and the "content" field of…, Owns the async connection pool and hands out checkpointer/store instances. (+3 more)
+Cohesion: 0.14
+Nodes (10): AsyncConnectionPool, AsyncPostgresSaver, AsyncPostgresStore, _build_store_index_config(), PostgresManager, Indexes the "question" field of golden-bucket trios and the "content" field of…, Owns the async connection pool and hands out checkpointer/store instances., Open the pool and run checkpointer/store schema setup once. Call on startup. (+2 more)
 
 ### Community 1 - "main.py"
-Cohesion: 0.11
-Nodes (19): get, LangGraphAgent, LangGraphAGUIAgent, build_ag_ui_agent(), CopilotKit/AG-UI integration for the retail insights agent - same pattern as…, Inject user_id/thread_id into configurable and attach Langfuse metadata., RetailInsightsAGUIAgent, add_langgraph_fastapi_endpoint_with_factory() (+11 more)
+Cohesion: 0.05
+Nodes (43): BaseSettings, CallbackHandler, get, Langfuse, LangGraphAgent, LangGraphAGUIAgent, post, build_ag_ui_agent() (+35 more)
 
 ### Community 2 - "logging.py"
-Cohesion: 0.07
+Cohesion: 0.08
 Nodes (47): uuid, Logger, delete_reports(), tool, ToolMessage, ToolRuntime, Permanently delete the given saved reports (by id, resolved via find_reports…, find_reports() (+39 more)
 
 ### Community 3 - "pg (Postgres service)"
@@ -114,16 +108,16 @@ Cohesion: 0.10
 Nodes (31): tool, ToolMessage, ToolRuntime, Search the golden bucket for past analyst-approved Question->SQL->Report…, search_golden_bucket(), add_candidate_trio(), ensure_seeded(), promote_to_golden() (+23 more)
 
 ### Community 13 - "agent.py"
-Cohesion: 0.08
-Nodes (35): BaseStore, ChatOpenAI, CompositeBackend, dynamic_prompt, ModelRequest, main(), build_agent(), build_backend() (+27 more)
+Cohesion: 0.06
+Nodes (47): BaseStore, ChatOpenAI, CompositeBackend, main(), build_agent(), build_backend(), Ephemeral state by default; /memory/ persists per-user in the Store; /skills/…, datetime_prompt() (+39 more)
 
 ### Community 21 - "eval_golden.py"
-Cohesion: 0.10
+Cohesion: 0.11
 Nodes (27): _final_report_text(), main(), Offline QA eval: replay each golden-bucket seed question through the live agent…, _run_one(), BaseModel, tool, ToolMessage, ToolRuntime (+19 more)
 
-### Community 22 - "test_run_sql.py"
-Cohesion: 0.12
-Nodes (27): Client, Exception, _count_recent_run_sql_failures(), tool, ToolMessage, ToolRuntime, Consecutive run_sql failures counting back from the latest message, reset by a…, Validate and execute a read-only SQL query against BigQuery (orders,… (+19 more)
+### Community 22 - "validate_and_prepare_sql"
+Cohesion: 0.07
+Nodes (46): Client, Exception, _count_recent_run_sql_failures(), tool, ToolMessage, ToolRuntime, Consecutive run_sql failures counting back from the latest message, reset by a…, Validate and execute a read-only SQL query against BigQuery (orders,… (+38 more)
 
 ### Community 23 - "generate_chart"
 Cohesion: 0.20
@@ -141,13 +135,13 @@ Nodes (37): @copilotkit/react-core, @copilotkit/react-ui, @copilotkit/runtime-cl
 Cohesion: 0.11
 Nodes (18): compilerOptions, allowImportingTsExtensions, isolatedModules, jsx, lib, module, moduleResolution, noEmit (+10 more)
 
-### Community 27 - "langfuse.py"
-Cohesion: 0.11
-Nodes (18): BaseSettings, CallbackHandler, Langfuse, EnvironmentConfig, flush_langfuse(), get_langfuse_callback(), get_langfuse_client(), init_langfuse() (+10 more)
+### Community 27 - "Retail Insights Agent — Test Conversations"
+Cohesion: 0.10
+Nodes (20): 10. PII middleware — output-side redaction (`pii.py`), 11. Human-in-the-loop approval — `delete_reports`, 12. Report lifecycle edge cases, 13. Chart generation edge cases (`generate_chart`, `verify_output`), 14. Golden bucket / semantic lookup (`search_golden_bucket`), 15. Malformed / adversarial input, 16. Ambiguous / underspecified requests, 17. Concurrency / session isolation (if testable via two clients) (+12 more)
 
-### Community 28 - "validate_and_prepare_sql"
-Cohesion: 0.20
-Nodes (17): Parse, validate, and row-cap a model-generated SQL string. Raises SqlGuardError…, SqlGuardError, validate_and_prepare_sql(), test_cte_alias_is_not_treated_as_a_table(), test_cte_body_still_validates_table_whitelist(), test_direct_pii_column_is_blocked(), test_disallowed_table_is_blocked(), test_existing_limit_is_capped() (+9 more)
+### Community 28 - "persona.py"
+Cohesion: 0.18
+Nodes (12): get_active_persona(), Any, Persona hot-reload (requirement 8: the CEO changes report tone weekly, without…, Updates the live override. If no Store is configured (e.g. test mode), degrades…, set_active_persona(), _fake_request(), ModelRequest, test_persona_alone_when_no_other_content() (+4 more)
 
 ### Community 29 - "Retail Insights Agent — High-Level Design"
 Cohesion: 0.12
@@ -162,60 +156,40 @@ Cohesion: 0.25
 Nodes (12): before_agent, _last_human_message_content(), BaseModel, Scope/safety guard (requirement 2, "safeguarded against malicious users"): a…, scope_guard(), ScopeResult, patch, test_classifier_failure_fails_open() (+4 more)
 
 ### Community 32 - "agent-provider.tsx"
-Cohesion: 0.24
-Nodes (9): AGENT_NAME, COPILOT_RUNTIME_URL, AgentContext, AgentContextValue, AgentProvider(), InterruptRenderer(), useInterruptState(), useThread() (+1 more)
+Cohesion: 0.05
+Nodes (40): App(), getOrCreateUserId(), AGENT_BACKEND_URL, AGENT_NAME, COPILOT_RUNTIME_URL, AgentContext, AgentContextValue, AgentProvider() (+32 more)
 
 ### Community 33 - "tool-card.tsx"
-Cohesion: 0.17
-Nodes (6): RenderStatus, Tone, ToolCard, ToolCardContext, ToolCardContextValue, ToolCardVariant
+Cohesion: 0.10
+Nodes (28): RenderStatus, Tone, ToolCard, ToolCardContext, ToolCardContextValue, ToolCardVariant, ERROR_MARKERS, isErrorResult() (+20 more)
 
 ### Community 34 - "compilerOptions"
 Cohesion: 0.17
 Nodes (11): compilerOptions, esModuleInterop, module, moduleResolution, noEmit, outDir, skipLibCheck, strict (+3 more)
-
-### Community 35 - "interrupt-utils.ts"
-Cohesion: 0.29
-Nodes (10): AgentRegistrations(), ActionRequest, EMPTY_INTERRUPT, InterruptValue, isRecord(), normalize(), parseInterruptValue(), ReviewConfig (+2 more)
-
-### Community 36 - "chart-renderer.tsx"
-Cohesion: 0.29
-Nodes (8): AGENT_BACKEND_URL, chartSchema, extractChartUrl(), useChartRenderer(), ArgsBlock(), isErrorResult(), KVRow(), MutedText()
-
-### Community 37 - "approval-card.tsx"
-Cohesion: 0.33
-Nodes (6): ApprovalCard, ApprovalCardArgsSection(), ApprovalCardDefaultActions(), ApprovalCardRoot(), ApprovalCardToolRow(), useInterruptContext()
-
-### Community 38 - "interrupt-context.tsx"
-Cohesion: 0.22
-Nodes (8): Decision, DecisionType, InterruptContext, InterruptContextValue, InterruptMeta, InterruptProvider(), InterruptState, ToolAction
-
-### Community 39 - "App.tsx"
-Cohesion: 0.39
-Nodes (4): App(), getOrCreateUserId(), useAgentContext(), Chat()
 
 ### Community 41 - "retail_agent_persona.md"
 Cohesion: 0.40
 Nodes (4): Destructive actions, Style, What you do, What you refuse
 
 ## Knowledge Gaps
-- **112 isolated node(s):** `name`, `private`, `version`, `type`, `dev` (+107 more)
+- **140 isolated node(s):** `name`, `private`, `version`, `type`, `dev` (+135 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `uuid` connect `logging.py` to `eval_golden.py`, `test_golden_bucket.py`?**
-  _High betweenness centrality (0.082) - this node is a cross-community bridge._
+  _High betweenness centrality (0.070) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `dependencies` to `logging.py`?**
-  _High betweenness centrality (0.073) - this node is a cross-community bridge._
+  _High betweenness centrality (0.063) - this node is a cross-community bridge._
 - **Why does `uuid` connect `logging.py` to `dependencies`?**
-  _High betweenness centrality (0.073) - this node is a cross-community bridge._
-- **Are the 2 inferred relationships involving `build_agent()` (e.g. with `datetime_prompt()` and `scope_guard()`) actually correct?**
-  _`build_agent()` has 2 INFERRED edges - model-reasoned connections that need verification._
+  _High betweenness centrality (0.063) - this node is a cross-community bridge._
+- **Are the 4 inferred relationships involving `build_agent()` (e.g. with `datetime_prompt()` and `scope_guard()`) actually correct?**
+  _`build_agent()` has 4 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `name`, `private`, `version` to the rest of the system?**
-  _112 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _140 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `PostgresManager` be split into smaller, more focused modules?**
-  _Cohesion score 0.1286549707602339 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.13970588235294118 - nodes in this community are weakly interconnected._
 - **Should `main.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.10582010582010581 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05194805194805195 - nodes in this community are weakly interconnected._

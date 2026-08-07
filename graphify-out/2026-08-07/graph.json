@@ -467,8 +467,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "frontend_src_app",
-      "community": 39,
-      "community_name": "App.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "app.tsx"
     },
     {
@@ -478,8 +478,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "frontend_src_app_getorcreateuserid",
-      "community": 39,
-      "community_name": "App.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "getorcreateuserid()"
     },
     {
@@ -489,8 +489,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "frontend_src_app_app",
-      "community": 39,
-      "community_name": "App.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "app()"
     },
     {
@@ -533,8 +533,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "frontend_src_config_agent_backend_url",
-      "community": 36,
-      "community_name": "chart-renderer.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "agent_backend_url"
     },
     {
@@ -588,8 +588,8 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "frontend_src_copilot_agent_provider_agentregistrations",
-      "community": 35,
-      "community_name": "interrupt-utils.ts",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "agentregistrations()"
     },
     {
@@ -610,8 +610,8 @@
       "source_location": "L99",
       "_origin": "ast",
       "id": "frontend_src_copilot_agent_provider_useagentcontext",
-      "community": 39,
-      "community_name": "App.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "useagentcontext()"
     },
     {
@@ -621,8 +621,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "frontend_src_copilot_chat",
-      "community": 39,
-      "community_name": "App.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "chat.tsx"
     },
     {
@@ -632,8 +632,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "frontend_src_copilot_chat_retailchatview",
-      "community": 39,
-      "community_name": "App.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "retailchatview()"
     },
     {
@@ -643,53 +643,9 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "frontend_src_copilot_chat_chat",
-      "community": 39,
-      "community_name": "App.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "chat()"
-    },
-    {
-      "label": "chart-renderer.tsx",
-      "file_type": "code",
-      "source_file": "frontend/src/copilot/components/chart-renderer.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "frontend_src_copilot_components_chart_renderer",
-      "community": 36,
-      "community_name": "chart-renderer.tsx",
-      "norm_label": "chart-renderer.tsx"
-    },
-    {
-      "label": "chartSchema",
-      "file_type": "code",
-      "source_file": "frontend/src/copilot/components/chart-renderer.tsx",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "frontend_src_copilot_components_chart_renderer_chartschema",
-      "community": 36,
-      "community_name": "chart-renderer.tsx",
-      "norm_label": "chartschema"
-    },
-    {
-      "label": "extractChartUrl()",
-      "file_type": "code",
-      "source_file": "frontend/src/copilot/components/chart-renderer.tsx",
-      "source_location": "L15",
-      "_origin": "ast",
-      "id": "frontend_src_copilot_components_chart_renderer_extractcharturl",
-      "community": 36,
-      "community_name": "chart-renderer.tsx",
-      "norm_label": "extractcharturl()"
-    },
-    {
-      "label": "useChartRenderer()",
-      "file_type": "code",
-      "source_file": "frontend/src/copilot/components/chart-renderer.tsx",
-      "source_location": "L23",
-      "_origin": "ast",
-      "id": "frontend_src_copilot_components_chart_renderer_usechartrenderer",
-      "community": 36,
-      "community_name": "chart-renderer.tsx",
-      "norm_label": "usechartrenderer()"
     },
     {
       "label": "approval-card.tsx",
@@ -698,8 +654,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_approval_card",
-      "community": 37,
-      "community_name": "approval-card.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "approval-card.tsx"
     },
     {
@@ -709,8 +665,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_approval_card_approvalcardroot",
-      "community": 37,
-      "community_name": "approval-card.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "approvalcardroot()"
     },
     {
@@ -720,8 +676,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_approval_card_approvalcardheader",
-      "community": 37,
-      "community_name": "approval-card.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "approvalcardheader()"
     },
     {
@@ -731,8 +687,8 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_approval_card_approvalcardbody",
-      "community": 37,
-      "community_name": "approval-card.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "approvalcardbody()"
     },
     {
@@ -742,8 +698,8 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_approval_card_approvalcardtoolrow",
-      "community": 37,
-      "community_name": "approval-card.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "approvalcardtoolrow()"
     },
     {
@@ -753,8 +709,8 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_approval_card_approvalcardargssection",
-      "community": 37,
-      "community_name": "approval-card.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "approvalcardargssection()"
     },
     {
@@ -764,8 +720,8 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_approval_card_approvalcarddefaultactions",
-      "community": 37,
-      "community_name": "approval-card.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "approvalcarddefaultactions()"
     },
     {
@@ -775,8 +731,8 @@
       "source_location": "L79",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_approval_card_approvalcard",
-      "community": 37,
-      "community_name": "approval-card.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "approvalcard"
     },
     {
@@ -786,8 +742,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_interrupt_context",
-      "community": 38,
-      "community_name": "interrupt-context.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "interrupt-context.tsx"
     },
     {
@@ -797,8 +753,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_interrupt_context_decisiontype",
-      "community": 38,
-      "community_name": "interrupt-context.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "decisiontype"
     },
     {
@@ -808,8 +764,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_interrupt_context_decision",
-      "community": 38,
-      "community_name": "interrupt-context.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "decision"
     },
     {
@@ -819,8 +775,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_interrupt_context_toolaction",
-      "community": 38,
-      "community_name": "interrupt-context.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "toolaction"
     },
     {
@@ -830,8 +786,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_interrupt_context_interruptstate",
-      "community": 38,
-      "community_name": "interrupt-context.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "interruptstate"
     },
     {
@@ -841,8 +797,8 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_interrupt_context_interruptactions",
-      "community": 40,
-      "community_name": "InterruptActions",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "interruptactions"
     },
     {
@@ -852,8 +808,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_interrupt_context_interruptactions_approve",
-      "community": 40,
-      "community_name": "InterruptActions",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": ".approve()"
     },
     {
@@ -863,8 +819,8 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_interrupt_context_interruptactions_reject",
-      "community": 40,
-      "community_name": "InterruptActions",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": ".reject()"
     },
     {
@@ -874,8 +830,8 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_interrupt_context_interruptactions_startedit",
-      "community": 40,
-      "community_name": "InterruptActions",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": ".startedit()"
     },
     {
@@ -885,8 +841,8 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_interrupt_context_interruptactions_canceledit",
-      "community": 40,
-      "community_name": "InterruptActions",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": ".canceledit()"
     },
     {
@@ -896,8 +852,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_interrupt_context_interruptactions_submiteditwithargs",
-      "community": 40,
-      "community_name": "InterruptActions",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": ".submiteditwithargs()"
     },
     {
@@ -907,8 +863,8 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_interrupt_context_interruptmeta",
-      "community": 38,
-      "community_name": "interrupt-context.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "interruptmeta"
     },
     {
@@ -918,8 +874,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_interrupt_context_interruptcontextvalue",
-      "community": 38,
-      "community_name": "interrupt-context.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "interruptcontextvalue"
     },
     {
@@ -929,8 +885,8 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_interrupt_context_interruptcontext",
-      "community": 38,
-      "community_name": "interrupt-context.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "interruptcontext"
     },
     {
@@ -940,8 +896,8 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_interrupt_context_interruptprovider",
-      "community": 38,
-      "community_name": "interrupt-context.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "interruptprovider()"
     },
     {
@@ -962,8 +918,8 @@
       "source_location": "L95",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_interrupts_interrupt_context_useinterruptcontext",
-      "community": 37,
-      "community_name": "approval-card.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "useinterruptcontext()"
     },
     {
@@ -1094,8 +1050,8 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_tool_card_toolcard",
-      "community": 36,
-      "community_name": "chart-renderer.tsx",
+      "community": 33,
+      "community_name": "tool-card.tsx",
       "norm_label": "toolcard"
     },
     {
@@ -1105,8 +1061,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_tool_display",
-      "community": 37,
-      "community_name": "approval-card.tsx",
+      "community": 33,
+      "community_name": "tool-card.tsx",
       "norm_label": "tool-display.tsx"
     },
     {
@@ -1116,8 +1072,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_tool_display_kvrow",
-      "community": 37,
-      "community_name": "approval-card.tsx",
+      "community": 33,
+      "community_name": "tool-card.tsx",
       "norm_label": "kvrow()"
     },
     {
@@ -1127,8 +1083,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_tool_display_mutedtext",
-      "community": 36,
-      "community_name": "chart-renderer.tsx",
+      "community": 33,
+      "community_name": "tool-card.tsx",
       "norm_label": "mutedtext()"
     },
     {
@@ -1138,20 +1094,306 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_tool_display_argsblock",
-      "community": 37,
-      "community_name": "approval-card.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "argsblock()"
+    },
+    {
+      "label": "ERROR_MARKERS",
+      "file_type": "code",
+      "source_file": "frontend/src/copilot/components/tool-display.tsx",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "frontend_src_copilot_components_tool_display_error_markers",
+      "community": 33,
+      "community_name": "tool-card.tsx",
+      "norm_label": "error_markers"
     },
     {
       "label": "isErrorResult()",
       "file_type": "code",
       "source_file": "frontend/src/copilot/components/tool-display.tsx",
-      "source_location": "L18",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "frontend_src_copilot_components_tool_display_iserrorresult",
-      "community": 36,
-      "community_name": "chart-renderer.tsx",
+      "community": 33,
+      "community_name": "tool-card.tsx",
       "norm_label": "iserrorresult()"
+    },
+    {
+      "label": "chart-renderer.tsx",
+      "file_type": "code",
+      "source_file": "frontend/src/copilot/components/tool-renderers/chart-renderer.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_copilot_components_tool_renderers_chart_renderer",
+      "community": 33,
+      "community_name": "tool-card.tsx",
+      "norm_label": "chart-renderer.tsx"
+    },
+    {
+      "label": "chartSchema",
+      "file_type": "code",
+      "source_file": "frontend/src/copilot/components/tool-renderers/chart-renderer.tsx",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "frontend_src_copilot_components_tool_renderers_chart_renderer_chartschema",
+      "community": 33,
+      "community_name": "tool-card.tsx",
+      "norm_label": "chartschema"
+    },
+    {
+      "label": "extractChartUrl()",
+      "file_type": "code",
+      "source_file": "frontend/src/copilot/components/tool-renderers/chart-renderer.tsx",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "frontend_src_copilot_components_tool_renderers_chart_renderer_extractcharturl",
+      "community": 33,
+      "community_name": "tool-card.tsx",
+      "norm_label": "extractcharturl()"
+    },
+    {
+      "label": "useChartRenderer()",
+      "file_type": "code",
+      "source_file": "frontend/src/copilot/components/tool-renderers/chart-renderer.tsx",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "frontend_src_copilot_components_tool_renderers_chart_renderer_usechartrenderer",
+      "community": 33,
+      "community_name": "tool-card.tsx",
+      "norm_label": "usechartrenderer()"
+    },
+    {
+      "label": "constants.ts",
+      "file_type": "code",
+      "source_file": "frontend/src/copilot/components/tool-renderers/constants.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_copilot_components_tool_renderers_constants",
+      "community": 33,
+      "community_name": "tool-card.tsx",
+      "norm_label": "constants.ts"
+    },
+    {
+      "label": "TOOL_NAMES",
+      "file_type": "code",
+      "source_file": "frontend/src/copilot/components/tool-renderers/constants.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_copilot_components_tool_renderers_constants_tool_names",
+      "community": 33,
+      "community_name": "tool-card.tsx",
+      "norm_label": "tool_names"
+    },
+    {
+      "label": "data-renderers.tsx",
+      "file_type": "code",
+      "source_file": "frontend/src/copilot/components/tool-renderers/data-renderers.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_copilot_components_tool_renderers_data_renderers",
+      "community": 33,
+      "community_name": "tool-card.tsx",
+      "norm_label": "data-renderers.tsx"
+    },
+    {
+      "label": "sqlSchema",
+      "file_type": "code",
+      "source_file": "frontend/src/copilot/components/tool-renderers/data-renderers.tsx",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "frontend_src_copilot_components_tool_renderers_data_renderers_sqlschema",
+      "community": 33,
+      "community_name": "tool-card.tsx",
+      "norm_label": "sqlschema"
+    },
+    {
+      "label": "schemaSchema",
+      "file_type": "code",
+      "source_file": "frontend/src/copilot/components/tool-renderers/data-renderers.tsx",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "frontend_src_copilot_components_tool_renderers_data_renderers_schemaschema",
+      "community": 33,
+      "community_name": "tool-card.tsx",
+      "norm_label": "schemaschema"
+    },
+    {
+      "label": "useDataRenderers()",
+      "file_type": "code",
+      "source_file": "frontend/src/copilot/components/tool-renderers/data-renderers.tsx",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "frontend_src_copilot_components_tool_renderers_data_renderers_usedatarenderers",
+      "community": 33,
+      "community_name": "tool-card.tsx",
+      "norm_label": "usedatarenderers()"
+    },
+    {
+      "label": "golden-renderers.tsx",
+      "file_type": "code",
+      "source_file": "frontend/src/copilot/components/tool-renderers/golden-renderers.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_copilot_components_tool_renderers_golden_renderers",
+      "community": 33,
+      "community_name": "tool-card.tsx",
+      "norm_label": "golden-renderers.tsx"
+    },
+    {
+      "label": "goldenSchema",
+      "file_type": "code",
+      "source_file": "frontend/src/copilot/components/tool-renderers/golden-renderers.tsx",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "frontend_src_copilot_components_tool_renderers_golden_renderers_goldenschema",
+      "community": 33,
+      "community_name": "tool-card.tsx",
+      "norm_label": "goldenschema"
+    },
+    {
+      "label": "useGoldenBucketRenderers()",
+      "file_type": "code",
+      "source_file": "frontend/src/copilot/components/tool-renderers/golden-renderers.tsx",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "frontend_src_copilot_components_tool_renderers_golden_renderers_usegoldenbucketrenderers",
+      "community": 33,
+      "community_name": "tool-card.tsx",
+      "norm_label": "usegoldenbucketrenderers()"
+    },
+    {
+      "label": "index.tsx",
+      "file_type": "code",
+      "source_file": "frontend/src/copilot/components/tool-renderers/index.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_copilot_components_tool_renderers_index",
+      "community": 33,
+      "community_name": "tool-card.tsx",
+      "norm_label": "index.tsx"
+    },
+    {
+      "label": "useRetailToolRenderers()",
+      "file_type": "code",
+      "source_file": "frontend/src/copilot/components/tool-renderers/index.tsx",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "frontend_src_copilot_components_tool_renderers_index_useretailtoolrenderers",
+      "community": 33,
+      "community_name": "tool-card.tsx",
+      "norm_label": "useretailtoolrenderers()"
+    },
+    {
+      "label": "report-renderers.tsx",
+      "file_type": "code",
+      "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_copilot_components_tool_renderers_report_renderers",
+      "community": 33,
+      "community_name": "tool-card.tsx",
+      "norm_label": "report-renderers.tsx"
+    },
+    {
+      "label": "saveSchema",
+      "file_type": "code",
+      "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "frontend_src_copilot_components_tool_renderers_report_renderers_saveschema",
+      "community": 33,
+      "community_name": "tool-card.tsx",
+      "norm_label": "saveschema"
+    },
+    {
+      "label": "findSchema",
+      "file_type": "code",
+      "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "frontend_src_copilot_components_tool_renderers_report_renderers_findschema",
+      "community": 33,
+      "community_name": "tool-card.tsx",
+      "norm_label": "findschema"
+    },
+    {
+      "label": "deleteSchema",
+      "file_type": "code",
+      "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "frontend_src_copilot_components_tool_renderers_report_renderers_deleteschema",
+      "community": 33,
+      "community_name": "tool-card.tsx",
+      "norm_label": "deleteschema"
+    },
+    {
+      "label": "verifySchema",
+      "file_type": "code",
+      "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "frontend_src_copilot_components_tool_renderers_report_renderers_verifyschema",
+      "community": 33,
+      "community_name": "tool-card.tsx",
+      "norm_label": "verifyschema"
+    },
+    {
+      "label": "useReportRenderers()",
+      "file_type": "code",
+      "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "frontend_src_copilot_components_tool_renderers_report_renderers_usereportrenderers",
+      "community": 33,
+      "community_name": "tool-card.tsx",
+      "norm_label": "usereportrenderers()"
+    },
+    {
+      "label": "subagent-renderers.tsx",
+      "file_type": "code",
+      "source_file": "frontend/src/copilot/components/tool-renderers/subagent-renderers.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_copilot_components_tool_renderers_subagent_renderers",
+      "community": 33,
+      "community_name": "tool-card.tsx",
+      "norm_label": "subagent-renderers.tsx"
+    },
+    {
+      "label": "taskSchema",
+      "file_type": "code",
+      "source_file": "frontend/src/copilot/components/tool-renderers/subagent-renderers.tsx",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "frontend_src_copilot_components_tool_renderers_subagent_renderers_taskschema",
+      "community": 33,
+      "community_name": "tool-card.tsx",
+      "norm_label": "taskschema"
+    },
+    {
+      "label": "SUBAGENT_LABELS",
+      "file_type": "code",
+      "source_file": "frontend/src/copilot/components/tool-renderers/subagent-renderers.tsx",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "frontend_src_copilot_components_tool_renderers_subagent_renderers_subagent_labels",
+      "community": 33,
+      "community_name": "tool-card.tsx",
+      "norm_label": "subagent_labels"
+    },
+    {
+      "label": "useSubagentRenderers()",
+      "file_type": "code",
+      "source_file": "frontend/src/copilot/components/tool-renderers/subagent-renderers.tsx",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "frontend_src_copilot_components_tool_renderers_subagent_renderers_usesubagentrenderers",
+      "community": 33,
+      "community_name": "tool-card.tsx",
+      "norm_label": "usesubagentrenderers()"
     },
     {
       "label": "interrupt-utils.ts",
@@ -1160,8 +1402,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "frontend_src_copilot_interrupt_utils",
-      "community": 35,
-      "community_name": "interrupt-utils.ts",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "interrupt-utils.ts"
     },
     {
@@ -1171,8 +1413,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "frontend_src_copilot_interrupt_utils_actionrequest",
-      "community": 35,
-      "community_name": "interrupt-utils.ts",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "actionrequest"
     },
     {
@@ -1182,8 +1424,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "frontend_src_copilot_interrupt_utils_reviewconfig",
-      "community": 35,
-      "community_name": "interrupt-utils.ts",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "reviewconfig"
     },
     {
@@ -1193,8 +1435,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "frontend_src_copilot_interrupt_utils_interruptvalue",
-      "community": 35,
-      "community_name": "interrupt-utils.ts",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "interruptvalue"
     },
     {
@@ -1204,8 +1446,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "frontend_src_copilot_interrupt_utils_empty_interrupt",
-      "community": 35,
-      "community_name": "interrupt-utils.ts",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "empty_interrupt"
     },
     {
@@ -1215,8 +1457,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "frontend_src_copilot_interrupt_utils_isrecord",
-      "community": 35,
-      "community_name": "interrupt-utils.ts",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "isrecord()"
     },
     {
@@ -1226,8 +1468,8 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "frontend_src_copilot_interrupt_utils_toactionrequest",
-      "community": 35,
-      "community_name": "interrupt-utils.ts",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "toactionrequest()"
     },
     {
@@ -1237,8 +1479,8 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "frontend_src_copilot_interrupt_utils_toreviewconfig",
-      "community": 35,
-      "community_name": "interrupt-utils.ts",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "toreviewconfig()"
     },
     {
@@ -1248,8 +1490,8 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "frontend_src_copilot_interrupt_utils_normalize",
-      "community": 35,
-      "community_name": "interrupt-utils.ts",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "normalize()"
     },
     {
@@ -1259,8 +1501,8 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "frontend_src_copilot_interrupt_utils_parseinterruptvalue",
-      "community": 35,
-      "community_name": "interrupt-utils.ts",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "parseinterruptvalue()"
     },
     {
@@ -1303,8 +1545,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "frontend_src_main",
-      "community": 39,
-      "community_name": "App.tsx",
+      "community": 32,
+      "community_name": "agent-provider.tsx",
       "norm_label": "main.tsx"
     },
     {
@@ -2594,7 +2836,7 @@
       "_origin": "ast",
       "id": "src_agent_middlewares_guard",
       "community": 31,
-      "community_name": "guard.py",
+      "community_name": "run_structured",
       "norm_label": "guard.py"
     },
     {
@@ -2605,7 +2847,7 @@
       "_origin": "ast",
       "id": "src_agent_middlewares_guard_scoperesult",
       "community": 31,
-      "community_name": "guard.py",
+      "community_name": "run_structured",
       "norm_label": "scoperesult"
     },
     {
@@ -2616,7 +2858,7 @@
       "_origin": "ast",
       "id": "src_agent_middlewares_guard_py_basemodel",
       "community": 31,
-      "community_name": "guard.py",
+      "community_name": "run_structured",
       "norm_label": "basemodel"
     },
     {
@@ -2627,7 +2869,7 @@
       "_origin": "ast",
       "id": "src_agent_middlewares_guard_last_human_message_content",
       "community": 31,
-      "community_name": "guard.py",
+      "community_name": "run_structured",
       "norm_label": "_last_human_message_content()"
     },
     {
@@ -2638,7 +2880,7 @@
       "_origin": "ast",
       "id": "before_agent",
       "community": 31,
-      "community_name": "guard.py",
+      "community_name": "run_structured",
       "norm_label": "before_agent"
     },
     {
@@ -2649,7 +2891,7 @@
       "_origin": "ast",
       "id": "src_agent_middlewares_guard_scope_guard",
       "community": 31,
-      "community_name": "guard.py",
+      "community_name": "run_structured",
       "norm_label": "scope_guard()"
     },
     {
@@ -2660,7 +2902,7 @@
       "_origin": "ast",
       "id": "src_agent_middlewares_guard_rationale_1",
       "community": 31,
-      "community_name": "guard.py",
+      "community_name": "run_structured",
       "norm_label": "scope/safety guard (requirement 2, \"safeguarded against malicious users\"): a..."
     },
     {
@@ -3077,8 +3319,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_agent_tools_get_schema",
-      "community": 4,
-      "community_name": "BigQueryRunner",
+      "community": 22,
+      "community_name": "validate_and_prepare_sql",
       "norm_label": "get_schema.py"
     },
     {
@@ -3088,8 +3330,8 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "src_agent_tools_get_schema_format_table",
-      "community": 4,
-      "community_name": "BigQueryRunner",
+      "community": 22,
+      "community_name": "validate_and_prepare_sql",
       "norm_label": "_format_table()"
     },
     {
@@ -3099,8 +3341,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_agent_tools_get_schema_py_tool",
-      "community": 4,
-      "community_name": "BigQueryRunner",
+      "community": 22,
+      "community_name": "validate_and_prepare_sql",
       "norm_label": "tool"
     },
     {
@@ -3110,8 +3352,8 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "src_agent_tools_get_schema_get_schema",
-      "community": 4,
-      "community_name": "BigQueryRunner",
+      "community": 22,
+      "community_name": "validate_and_prepare_sql",
       "norm_label": "get_schema()"
     },
     {
@@ -3121,8 +3363,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_agent_tools_get_schema_py_toolruntime",
-      "community": 4,
-      "community_name": "BigQueryRunner",
+      "community": 22,
+      "community_name": "validate_and_prepare_sql",
       "norm_label": "toolruntime"
     },
     {
@@ -3132,8 +3374,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_agent_tools_get_schema_py_toolmessage",
-      "community": 4,
-      "community_name": "BigQueryRunner",
+      "community": 22,
+      "community_name": "validate_and_prepare_sql",
       "norm_label": "toolmessage"
     },
     {
@@ -3143,8 +3385,8 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "src_agent_tools_get_schema_rationale_29",
-      "community": 4,
-      "community_name": "BigQueryRunner",
+      "community": 22,
+      "community_name": "validate_and_prepare_sql",
       "norm_label": "returns (formatted section, ok). a failure is reported inline rather than..."
     },
     {
@@ -3154,8 +3396,8 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "src_agent_tools_get_schema_rationale_55",
-      "community": 4,
-      "community_name": "BigQueryRunner",
+      "community": 22,
+      "community_name": "validate_and_prepare_sql",
       "norm_label": "inspect the available data. call with no arguments for the full dataset..."
     },
     {
@@ -3385,8 +3627,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_agent_tools_verify_output",
-      "community": 21,
-      "community_name": "eval_golden.py",
+      "community": 2,
+      "community_name": "logging.py",
       "norm_label": "verify_output.py"
     },
     {
@@ -3660,8 +3902,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_agent_utils_persona",
-      "community": 28,
-      "community_name": "persona.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "persona.py"
     },
     {
@@ -3671,8 +3913,8 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_agent_utils_persona_get_active_persona",
-      "community": 28,
-      "community_name": "persona.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "get_active_persona()"
     },
     {
@@ -3682,8 +3924,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_agent_utils_persona_py_any",
-      "community": 28,
-      "community_name": "persona.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "any"
     },
     {
@@ -3693,8 +3935,8 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "src_agent_utils_persona_set_active_persona",
-      "community": 28,
-      "community_name": "persona.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "set_active_persona()"
     },
     {
@@ -3704,8 +3946,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_agent_utils_persona_rationale_1",
-      "community": 28,
-      "community_name": "persona.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "persona hot-reload (requirement 8: the ceo changes report tone weekly, without..."
     },
     {
@@ -3715,8 +3957,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "src_agent_utils_persona_rationale_33",
-      "community": 28,
-      "community_name": "persona.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "updates the live override. if no store is configured (e.g. test mode), degrades..."
     },
     {
@@ -3825,8 +4067,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_agent_utils_structured_llm",
-      "community": 21,
-      "community_name": "eval_golden.py",
+      "community": 13,
+      "community_name": "agent.py",
       "norm_label": "structured_llm.py"
     },
     {
@@ -3836,8 +4078,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_agent_utils_structured_llm_run_structured",
-      "community": 21,
-      "community_name": "eval_golden.py",
+      "community": 31,
+      "community_name": "run_structured",
       "norm_label": "run_structured()"
     },
     {
@@ -3847,8 +4089,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_agent_utils_structured_llm_py_basemodel",
-      "community": 21,
-      "community_name": "eval_golden.py",
+      "community": 31,
+      "community_name": "run_structured",
       "norm_label": "basemodel"
     },
     {
@@ -3858,8 +4100,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_agent_utils_structured_llm_rationale_17",
-      "community": 21,
-      "community_name": "eval_golden.py",
+      "community": 31,
+      "community_name": "run_structured",
       "norm_label": "one-shot structured output via a forced tool call (toolstrategy), not..."
     },
     {
@@ -5134,8 +5376,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_utils_bq_runner",
-      "community": 4,
-      "community_name": "BigQueryRunner",
+      "community": 22,
+      "community_name": "validate_and_prepare_sql",
       "norm_label": "bq_runner.py"
     },
     {
@@ -5145,8 +5387,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_utils_bq_runner_get_runner",
-      "community": 4,
-      "community_name": "BigQueryRunner",
+      "community": 22,
+      "community_name": "validate_and_prepare_sql",
       "norm_label": "get_runner()"
     },
     {
@@ -5200,8 +5442,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_app",
-      "community": 28,
-      "community_name": "persona.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "test_app.py"
     },
     {
@@ -5211,8 +5453,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "tests_test_app_test_app_wires_up_expected_routes",
-      "community": 28,
-      "community_name": "persona.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "test_app_wires_up_expected_routes()"
     },
     {
@@ -5222,8 +5464,8 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "tests_test_app_test_admin_persona_endpoint_updates_active_persona",
-      "community": 28,
-      "community_name": "persona.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "test_admin_persona_endpoint_updates_active_persona()"
     },
     {
@@ -5277,8 +5519,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_bq_runner",
-      "community": 4,
-      "community_name": "BigQueryRunner",
+      "community": 22,
+      "community_name": "validate_and_prepare_sql",
       "norm_label": "test_bq_runner.py"
     },
     {
@@ -5288,8 +5530,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_bq_runner_py_patch",
-      "community": 4,
-      "community_name": "BigQueryRunner",
+      "community": 22,
+      "community_name": "validate_and_prepare_sql",
       "norm_label": "patch"
     },
     {
@@ -5299,8 +5541,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "tests_test_bq_runner_test_get_runner_is_a_lazy_singleton",
-      "community": 4,
-      "community_name": "BigQueryRunner",
+      "community": 22,
+      "community_name": "validate_and_prepare_sql",
       "norm_label": "test_get_runner_is_a_lazy_singleton()"
     },
     {
@@ -5519,8 +5761,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_get_schema",
-      "community": 4,
-      "community_name": "BigQueryRunner",
+      "community": 28,
+      "community_name": "test_get_schema.py",
       "norm_label": "test_get_schema.py"
     },
     {
@@ -5530,8 +5772,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "tests_test_get_schema_runtime",
-      "community": 4,
-      "community_name": "BigQueryRunner",
+      "community": 28,
+      "community_name": "test_get_schema.py",
       "norm_label": "_runtime()"
     },
     {
@@ -5541,8 +5783,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_get_schema_py_simplenamespace",
-      "community": 4,
-      "community_name": "BigQueryRunner",
+      "community": 28,
+      "community_name": "test_get_schema.py",
       "norm_label": "simplenamespace"
     },
     {
@@ -5552,8 +5794,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "tests_test_get_schema_field",
-      "community": 4,
-      "community_name": "BigQueryRunner",
+      "community": 28,
+      "community_name": "test_get_schema.py",
       "norm_label": "_field()"
     },
     {
@@ -5563,8 +5805,8 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "tests_test_get_schema_test_rejects_unknown_table",
-      "community": 4,
-      "community_name": "BigQueryRunner",
+      "community": 28,
+      "community_name": "test_get_schema.py",
       "norm_label": "test_rejects_unknown_table()"
     },
     {
@@ -5574,8 +5816,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_get_schema_py_patch",
-      "community": 4,
-      "community_name": "BigQueryRunner",
+      "community": 28,
+      "community_name": "test_get_schema.py",
       "norm_label": "patch"
     },
     {
@@ -5585,8 +5827,8 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "tests_test_get_schema_test_single_table_lists_columns_and_marks_pii",
-      "community": 4,
-      "community_name": "BigQueryRunner",
+      "community": 28,
+      "community_name": "test_get_schema.py",
       "norm_label": "test_single_table_lists_columns_and_marks_pii()"
     },
     {
@@ -5596,8 +5838,8 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "tests_test_get_schema_test_no_argument_returns_full_overview",
-      "community": 4,
-      "community_name": "BigQueryRunner",
+      "community": 28,
+      "community_name": "test_get_schema.py",
       "norm_label": "test_no_argument_returns_full_overview()"
     },
     {
@@ -5607,8 +5849,8 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "tests_test_get_schema_test_failed_single_table_lookup_is_an_error",
-      "community": 4,
-      "community_name": "BigQueryRunner",
+      "community": 28,
+      "community_name": "test_get_schema.py",
       "norm_label": "test_failed_single_table_lookup_is_an_error()"
     },
     {
@@ -5618,8 +5860,8 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "tests_test_get_schema_test_one_unreadable_table_does_not_sink_the_overview",
-      "community": 4,
-      "community_name": "BigQueryRunner",
+      "community": 28,
+      "community_name": "test_get_schema.py",
       "norm_label": "test_one_unreadable_table_does_not_sink_the_overview()"
     },
     {
@@ -5762,7 +6004,7 @@
       "_origin": "ast",
       "id": "tests_test_guard",
       "community": 31,
-      "community_name": "guard.py",
+      "community_name": "run_structured",
       "norm_label": "test_guard.py"
     },
     {
@@ -5773,7 +6015,7 @@
       "_origin": "ast",
       "id": "tests_test_guard_test_last_human_message_content_finds_most_recent",
       "community": 31,
-      "community_name": "guard.py",
+      "community_name": "run_structured",
       "norm_label": "test_last_human_message_content_finds_most_recent()"
     },
     {
@@ -5784,7 +6026,7 @@
       "_origin": "ast",
       "id": "tests_test_guard_test_last_human_message_content_empty_when_none",
       "community": 31,
-      "community_name": "guard.py",
+      "community_name": "run_structured",
       "norm_label": "test_last_human_message_content_empty_when_none()"
     },
     {
@@ -5795,7 +6037,7 @@
       "_origin": "ast",
       "id": "tests_test_guard_py_patch",
       "community": 31,
-      "community_name": "guard.py",
+      "community_name": "run_structured",
       "norm_label": "patch"
     },
     {
@@ -5806,7 +6048,7 @@
       "_origin": "ast",
       "id": "tests_test_guard_test_in_scope_request_passes_through",
       "community": 31,
-      "community_name": "guard.py",
+      "community_name": "run_structured",
       "norm_label": "test_in_scope_request_passes_through()"
     },
     {
@@ -5817,7 +6059,7 @@
       "_origin": "ast",
       "id": "tests_test_guard_test_out_of_scope_request_is_refused",
       "community": 31,
-      "community_name": "guard.py",
+      "community_name": "run_structured",
       "norm_label": "test_out_of_scope_request_is_refused()"
     },
     {
@@ -5828,7 +6070,7 @@
       "_origin": "ast",
       "id": "tests_test_guard_test_classifier_failure_fails_open",
       "community": 31,
-      "community_name": "guard.py",
+      "community_name": "run_structured",
       "norm_label": "test_classifier_failure_fails_open()"
     },
     {
@@ -5882,8 +6124,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_persona",
-      "community": 28,
-      "community_name": "persona.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "test_persona.py"
     },
     {
@@ -5893,8 +6135,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "tests_test_persona_test_falls_back_to_default_when_store_empty",
-      "community": 28,
-      "community_name": "persona.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "test_falls_back_to_default_when_store_empty()"
     },
     {
@@ -5904,8 +6146,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "tests_test_persona_test_set_then_get_returns_live_override",
-      "community": 28,
-      "community_name": "persona.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "test_set_then_get_returns_live_override()"
     },
     {
@@ -5915,8 +6157,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "tests_test_persona_test_get_is_served_from_cache_without_hitting_store_again",
-      "community": 28,
-      "community_name": "persona.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "test_get_is_served_from_cache_without_hitting_store_again()"
     },
     {
@@ -5926,8 +6168,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_persona_prompt",
-      "community": 28,
-      "community_name": "persona.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "test_persona_prompt.py"
     },
     {
@@ -5937,8 +6179,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "tests_test_persona_prompt_fake_request",
-      "community": 28,
-      "community_name": "persona.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "_fake_request()"
     },
     {
@@ -5948,8 +6190,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_persona_prompt_py_modelrequest",
-      "community": 28,
-      "community_name": "persona.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "modelrequest"
     },
     {
@@ -5959,8 +6201,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "tests_test_persona_prompt_test_persona_prepended_when_other_content_exists",
-      "community": 28,
-      "community_name": "persona.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "test_persona_prepended_when_other_content_exists()"
     },
     {
@@ -5970,8 +6212,8 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "tests_test_persona_prompt_test_persona_alone_when_no_other_content",
-      "community": 28,
-      "community_name": "persona.py",
+      "community": 1,
+      "community_name": "main.py",
       "norm_label": "test_persona_alone_when_no_other_content()"
     },
     {
@@ -6542,8 +6784,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_structured_llm",
-      "community": 21,
-      "community_name": "eval_golden.py",
+      "community": 31,
+      "community_name": "run_structured",
       "norm_label": "test_structured_llm.py"
     },
     {
@@ -6553,8 +6795,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "tests_test_structured_llm_fakeresult",
-      "community": 21,
-      "community_name": "eval_golden.py",
+      "community": 31,
+      "community_name": "run_structured",
       "norm_label": "_fakeresult"
     },
     {
@@ -6564,8 +6806,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_structured_llm_py_basemodel",
-      "community": 21,
-      "community_name": "eval_golden.py",
+      "community": 31,
+      "community_name": "run_structured",
       "norm_label": "basemodel"
     },
     {
@@ -6575,8 +6817,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_structured_llm_py_patch",
-      "community": 21,
-      "community_name": "eval_golden.py",
+      "community": 31,
+      "community_name": "run_structured",
       "norm_label": "patch"
     },
     {
@@ -6586,8 +6828,8 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "tests_test_structured_llm_test_run_structured_returns_structured_response",
-      "community": 21,
-      "community_name": "eval_golden.py",
+      "community": 31,
+      "community_name": "run_structured",
       "norm_label": "test_run_structured_returns_structured_response()"
     },
     {
@@ -7883,11 +8125,11 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "frontend/src/copilot/components/chart-renderer.tsx",
+      "source_file": "frontend/src/copilot/components/tool-renderers/chart-renderer.tsx",
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "frontend_src_copilot_components_chart_renderer",
+      "source": "frontend_src_copilot_components_tool_renderers_chart_renderer",
       "target": "frontend_src_config",
       "confidence_score": 1.0
     },
@@ -7919,11 +8161,11 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "frontend/src/copilot/components/chart-renderer.tsx",
+      "source_file": "frontend/src/copilot/components/tool-renderers/chart-renderer.tsx",
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "frontend_src_copilot_components_chart_renderer",
+      "source": "frontend_src_copilot_components_tool_renderers_chart_renderer",
       "target": "frontend_src_config_agent_backend_url",
       "confidence_score": 1.0
     },
@@ -7991,30 +8233,6 @@
       "_origin": "ast",
       "source": "frontend_src_copilot_agent_provider",
       "target": "frontend_src_copilot_agent_provider_useagentcontext",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/copilot/agent-provider.tsx",
-      "source_location": "L12",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "frontend_src_copilot_agent_provider",
-      "target": "frontend_src_copilot_components_chart_renderer",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/copilot/agent-provider.tsx",
-      "source_location": "L12",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "frontend_src_copilot_agent_provider",
-      "target": "frontend_src_copilot_components_chart_renderer_usechartrenderer",
       "confidence_score": 1.0
     },
     {
@@ -8106,6 +8324,30 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/copilot/agent-provider.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_agent_provider",
+      "target": "frontend_src_copilot_components_tool_renderers_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/agent-provider.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_agent_provider",
+      "target": "frontend_src_copilot_components_tool_renderers_index_useretailtoolrenderers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/agent-provider.tsx",
       "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
@@ -8182,7 +8424,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "frontend_src_copilot_agent_provider_agentregistrations",
-      "target": "frontend_src_copilot_components_chart_renderer_usechartrenderer",
+      "target": "frontend_src_copilot_components_tool_renderers_index_useretailtoolrenderers",
       "confidence_score": 1.0
     },
     {
@@ -8254,123 +8496,6 @@
       "source": "frontend_src_copilot_chat",
       "target": "frontend_src_copilot_chat_retailchatview",
       "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/copilot/components/chart-renderer.tsx",
-      "source_location": "L8",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "frontend_src_copilot_components_chart_renderer",
-      "target": "frontend_src_copilot_components_chart_renderer_chartschema",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/copilot/components/chart-renderer.tsx",
-      "source_location": "L15",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "frontend_src_copilot_components_chart_renderer",
-      "target": "frontend_src_copilot_components_chart_renderer_extractcharturl",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/copilot/components/chart-renderer.tsx",
-      "source_location": "L23",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "frontend_src_copilot_components_chart_renderer",
-      "target": "frontend_src_copilot_components_chart_renderer_usechartrenderer",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/copilot/components/chart-renderer.tsx",
-      "source_location": "L6",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "frontend_src_copilot_components_chart_renderer",
-      "target": "frontend_src_copilot_components_tool_card",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/copilot/components/chart-renderer.tsx",
-      "source_location": "L6",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "frontend_src_copilot_components_chart_renderer",
-      "target": "frontend_src_copilot_components_tool_card_toolcard",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/copilot/components/chart-renderer.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "frontend_src_copilot_components_chart_renderer",
-      "target": "frontend_src_copilot_components_tool_display",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/copilot/components/chart-renderer.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "frontend_src_copilot_components_chart_renderer",
-      "target": "frontend_src_copilot_components_tool_display_iserrorresult",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/copilot/components/chart-renderer.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "frontend_src_copilot_components_chart_renderer",
-      "target": "frontend_src_copilot_components_tool_display_mutedtext",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/copilot/components/chart-renderer.tsx",
-      "source_location": "L30",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "frontend_src_copilot_components_chart_renderer_usechartrenderer",
-      "target": "frontend_src_copilot_components_chart_renderer_extractcharturl",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "frontend/src/copilot/components/chart-renderer.tsx",
-      "source_location": "L29",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "frontend_src_copilot_components_chart_renderer_usechartrenderer",
-      "target": "frontend_src_copilot_components_tool_display_iserrorresult"
     },
     {
       "relation": "contains",
@@ -8865,6 +8990,126 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/chart-renderer.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_chart_renderer",
+      "target": "frontend_src_copilot_components_tool_card",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/data-renderers.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_data_renderers",
+      "target": "frontend_src_copilot_components_tool_card",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/golden-renderers.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_golden_renderers",
+      "target": "frontend_src_copilot_components_tool_card",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_report_renderers",
+      "target": "frontend_src_copilot_components_tool_card",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/subagent-renderers.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_subagent_renderers",
+      "target": "frontend_src_copilot_components_tool_card",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/chart-renderer.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_chart_renderer",
+      "target": "frontend_src_copilot_components_tool_card_toolcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/data-renderers.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_data_renderers",
+      "target": "frontend_src_copilot_components_tool_card_toolcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/golden-renderers.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_golden_renderers",
+      "target": "frontend_src_copilot_components_tool_card_toolcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_report_renderers",
+      "target": "frontend_src_copilot_components_tool_card_toolcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/subagent-renderers.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_subagent_renderers",
+      "target": "frontend_src_copilot_components_tool_card_toolcard",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/copilot/components/tool-display.tsx",
@@ -8879,7 +9124,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/copilot/components/tool-display.tsx",
-      "source_location": "L18",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_display",
+      "target": "frontend_src_copilot_components_tool_display_error_markers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-display.tsx",
+      "source_location": "L37",
       "weight": 1.0,
       "_origin": "ast",
       "source": "frontend_src_copilot_components_tool_display",
@@ -8906,6 +9162,768 @@
       "_origin": "ast",
       "source": "frontend_src_copilot_components_tool_display",
       "target": "frontend_src_copilot_components_tool_display_mutedtext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/chart-renderer.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_chart_renderer",
+      "target": "frontend_src_copilot_components_tool_display",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/data-renderers.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_data_renderers",
+      "target": "frontend_src_copilot_components_tool_display",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/golden-renderers.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_golden_renderers",
+      "target": "frontend_src_copilot_components_tool_display",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_report_renderers",
+      "target": "frontend_src_copilot_components_tool_display",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/subagent-renderers.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_subagent_renderers",
+      "target": "frontend_src_copilot_components_tool_display",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/golden-renderers.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_golden_renderers",
+      "target": "frontend_src_copilot_components_tool_display_kvrow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_report_renderers",
+      "target": "frontend_src_copilot_components_tool_display_kvrow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/chart-renderer.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_chart_renderer",
+      "target": "frontend_src_copilot_components_tool_display_mutedtext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/data-renderers.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_data_renderers",
+      "target": "frontend_src_copilot_components_tool_display_mutedtext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/golden-renderers.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_golden_renderers",
+      "target": "frontend_src_copilot_components_tool_display_mutedtext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_report_renderers",
+      "target": "frontend_src_copilot_components_tool_display_mutedtext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/subagent-renderers.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_subagent_renderers",
+      "target": "frontend_src_copilot_components_tool_display_mutedtext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/copilot/components/tool-display.tsx",
+      "source_location": "L40",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_display_iserrorresult",
+      "target": "frontend_src_copilot_components_tool_display_error_markers"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/chart-renderer.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_chart_renderer",
+      "target": "frontend_src_copilot_components_tool_display_iserrorresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/copilot/components/tool-renderers/chart-renderer.tsx",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_chart_renderer_usechartrenderer",
+      "target": "frontend_src_copilot_components_tool_display_iserrorresult"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/data-renderers.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_data_renderers",
+      "target": "frontend_src_copilot_components_tool_display_iserrorresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/copilot/components/tool-renderers/data-renderers.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_data_renderers_usedatarenderers",
+      "target": "frontend_src_copilot_components_tool_display_iserrorresult"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_report_renderers",
+      "target": "frontend_src_copilot_components_tool_display_iserrorresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_report_renderers_usereportrenderers",
+      "target": "frontend_src_copilot_components_tool_display_iserrorresult"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/subagent-renderers.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_subagent_renderers",
+      "target": "frontend_src_copilot_components_tool_display_iserrorresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/copilot/components/tool-renderers/subagent-renderers.tsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_subagent_renderers_usesubagentrenderers",
+      "target": "frontend_src_copilot_components_tool_display_iserrorresult"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/chart-renderer.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_chart_renderer",
+      "target": "frontend_src_copilot_components_tool_renderers_chart_renderer_chartschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/chart-renderer.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_chart_renderer",
+      "target": "frontend_src_copilot_components_tool_renderers_chart_renderer_extractcharturl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/chart-renderer.tsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_chart_renderer",
+      "target": "frontend_src_copilot_components_tool_renderers_chart_renderer_usechartrenderer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/chart-renderer.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_chart_renderer",
+      "target": "frontend_src_copilot_components_tool_renderers_constants",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/chart-renderer.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_chart_renderer",
+      "target": "frontend_src_copilot_components_tool_renderers_constants_tool_names",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/index.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_index",
+      "target": "frontend_src_copilot_components_tool_renderers_chart_renderer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/chart-renderer.tsx",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_chart_renderer_usechartrenderer",
+      "target": "frontend_src_copilot_components_tool_renderers_chart_renderer_extractcharturl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/index.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_index",
+      "target": "frontend_src_copilot_components_tool_renderers_chart_renderer_usechartrenderer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/copilot/components/tool-renderers/index.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_index_useretailtoolrenderers",
+      "target": "frontend_src_copilot_components_tool_renderers_chart_renderer_usechartrenderer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/constants.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_constants",
+      "target": "frontend_src_copilot_components_tool_renderers_constants_tool_names",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/data-renderers.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_data_renderers",
+      "target": "frontend_src_copilot_components_tool_renderers_constants",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/golden-renderers.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_golden_renderers",
+      "target": "frontend_src_copilot_components_tool_renderers_constants",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_report_renderers",
+      "target": "frontend_src_copilot_components_tool_renderers_constants",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/subagent-renderers.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_subagent_renderers",
+      "target": "frontend_src_copilot_components_tool_renderers_constants",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/data-renderers.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_data_renderers",
+      "target": "frontend_src_copilot_components_tool_renderers_constants_tool_names",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/golden-renderers.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_golden_renderers",
+      "target": "frontend_src_copilot_components_tool_renderers_constants_tool_names",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_report_renderers",
+      "target": "frontend_src_copilot_components_tool_renderers_constants_tool_names",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/subagent-renderers.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_subagent_renderers",
+      "target": "frontend_src_copilot_components_tool_renderers_constants_tool_names",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/data-renderers.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_data_renderers",
+      "target": "frontend_src_copilot_components_tool_renderers_data_renderers_schemaschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/data-renderers.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_data_renderers",
+      "target": "frontend_src_copilot_components_tool_renderers_data_renderers_sqlschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/data-renderers.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_data_renderers",
+      "target": "frontend_src_copilot_components_tool_renderers_data_renderers_usedatarenderers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/index.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_index",
+      "target": "frontend_src_copilot_components_tool_renderers_data_renderers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/index.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_index",
+      "target": "frontend_src_copilot_components_tool_renderers_data_renderers_usedatarenderers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/copilot/components/tool-renderers/index.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_index_useretailtoolrenderers",
+      "target": "frontend_src_copilot_components_tool_renderers_data_renderers_usedatarenderers"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/golden-renderers.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_golden_renderers",
+      "target": "frontend_src_copilot_components_tool_renderers_golden_renderers_goldenschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/golden-renderers.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_golden_renderers",
+      "target": "frontend_src_copilot_components_tool_renderers_golden_renderers_usegoldenbucketrenderers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/index.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_index",
+      "target": "frontend_src_copilot_components_tool_renderers_golden_renderers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/index.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_index",
+      "target": "frontend_src_copilot_components_tool_renderers_golden_renderers_usegoldenbucketrenderers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/copilot/components/tool-renderers/index.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_index_useretailtoolrenderers",
+      "target": "frontend_src_copilot_components_tool_renderers_golden_renderers_usegoldenbucketrenderers"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/index.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_index",
+      "target": "frontend_src_copilot_components_tool_renderers_index_useretailtoolrenderers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/index.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_index",
+      "target": "frontend_src_copilot_components_tool_renderers_report_renderers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/index.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_index",
+      "target": "frontend_src_copilot_components_tool_renderers_report_renderers_usereportrenderers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/index.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_index",
+      "target": "frontend_src_copilot_components_tool_renderers_subagent_renderers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/index.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_index",
+      "target": "frontend_src_copilot_components_tool_renderers_subagent_renderers_usesubagentrenderers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/copilot/components/tool-renderers/index.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_index_useretailtoolrenderers",
+      "target": "frontend_src_copilot_components_tool_renderers_report_renderers_usereportrenderers"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/copilot/components/tool-renderers/index.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_index_useretailtoolrenderers",
+      "target": "frontend_src_copilot_components_tool_renderers_subagent_renderers_usesubagentrenderers"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_report_renderers",
+      "target": "frontend_src_copilot_components_tool_renderers_report_renderers_deleteschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_report_renderers",
+      "target": "frontend_src_copilot_components_tool_renderers_report_renderers_findschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_report_renderers",
+      "target": "frontend_src_copilot_components_tool_renderers_report_renderers_saveschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_report_renderers",
+      "target": "frontend_src_copilot_components_tool_renderers_report_renderers_usereportrenderers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/report-renderers.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_report_renderers",
+      "target": "frontend_src_copilot_components_tool_renderers_report_renderers_verifyschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/subagent-renderers.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_subagent_renderers",
+      "target": "frontend_src_copilot_components_tool_renderers_subagent_renderers_subagent_labels",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/subagent-renderers.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_subagent_renderers",
+      "target": "frontend_src_copilot_components_tool_renderers_subagent_renderers_taskschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/copilot/components/tool-renderers/subagent-renderers.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "frontend_src_copilot_components_tool_renderers_subagent_renderers",
+      "target": "frontend_src_copilot_components_tool_renderers_subagent_renderers_usesubagentrenderers",
       "confidence_score": 1.0
     },
     {
