@@ -1,7 +1,7 @@
 """Tool-boundary error backstop (requirement 5). LangGraph's ToolNode only converts
 `ToolInvocationError` (bad tool args) into a ToolMessage - any other exception
-(Postgres down, the embeddings API rate-limiting a store search, matplotlib failing
-to write a PNG) propagates out and kills the whole run. This turns one dependency
+(Postgres down, the embeddings API rate-limiting a store search, a Store write
+failing mid-save) propagates out and kills the whole run. This turns one dependency
 being down into an error ToolMessage the model can react to and route around.
 
 One middleware instead of a try/except in every tool: it also covers deepagents'

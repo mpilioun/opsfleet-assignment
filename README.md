@@ -32,7 +32,7 @@ running at once, each in its own terminal - `run-fe` alone won't talk to the age
 src/
   agent/          deepagents graph: root agent, subagents, tools, middleware
   agent/api/      AG-UI/CopilotKit wrapper around the compiled graph
-  app/            FastAPI app (AG-UI endpoint, admin routes, static charts)
+  app/            FastAPI app (AG-UI endpoint, thread state, persona admin route)
   artifacts/      persona/subagent prompts + skills (frontmatter markdown)
   clients/        LLM + BigQuery clients (bq_client.py is the assignment's reference file, untouched)
   config/         env settings
